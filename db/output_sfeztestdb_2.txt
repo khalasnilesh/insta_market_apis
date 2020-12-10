@@ -1,0 +1,141 @@
+INSERT INTO users (id,name,username,role,email) VALUES
+(11001,'stacytee','stacytee','consumer',null),
+(11002,'jjones','jjones','consumer',null),
+(11003,'marcoyinez','marcoyinez','consumer',null),
+(11004,'julieg','julieg','company','Julieg@hotmail.com'),
+(11005,'bobsmiththai','bobsmiththai','company','Bobsmith@hotmail.com'),
+(11006,'grillagriller','grillagriller','company','Cindy@gmail.com');
+
+INSERT INTO customers (id,name,description,photo,facebook,power_reviewer,user_id) VALUES
+(9001,'Stacy T','Taco expert. I love tacos.','12345','www.facebook.com/stacytfakeaccount',false,11001),
+(9002,'Jonathan Jones','Serial food eater','54321','www.facebook.com/jonjonesfakeaccount',true,11002),
+(9003,'Marco and Inez','Foood bloggers. Follow us on mifood.blog.com',null,'www.facebook.com/mifoodfakeaccont',true,11003);
+
+INSERT INTO companies (id,name,base_slug,order_sys_id,default_cat,description,email,facebook,featured_dish,hours,schedule,user_id) VALUES
+(1001,'Paco''s Tacos','pacostacos','1293770040725734215',6001,'Fresh street food tacos','Julieg@hotmail.com','www.facebook.com/pacostacos','56789','11am-8pm','M-F','11004'),
+(1002,'Thaitanic','thaitanic','1293768990807556920',6002,'Authentic Thai','Bobsmith@hotmail.com','www.facebook.com/thaitanic','98765','3pm-5pm','TWTF','11005'),
+(1003,'Grilla Cheese',null,'1293768990807556920',6008,'Thick slabs of grilled cheese on Texas toast','Cindy@gmail.com','www.facebook.com/grillacheese','11111','11am-3pm','MTWTFSS','11006'),
+(1004,null,null,null,null,null,null,null,null,null,null,null),
+(1005,null,null,null,null,null,null,null,null,null,null,null),
+(1006,null,null,null,null,null,null,null,null,null,null,null);
+
+INSERT INTO units (id,name,type,company_id,latitude,longitude) VALUES
+(2001,'Thaitanic Truck #1','Truck',1002,30.2544287, -97.7371197 ),
+(2002,'Thaitanic Cart #1','Cart',1002,30.2560786,-97.76350909999996),
+(2003,'Paco''s Tacos Truck #1','Truck',1001,30.2560786,-97.76350909999996);
+
+INSERT INTO food_parks (id,name,city,state,postal_code,country,latitude,longitude) VALUES
+(3001,'The Picnic','Austin','TX','78704','US',30.2635748, -97.7627071),
+(3002,'Alamo Drafthouse','Austin','TX','78704','US',30.2560786,-97.76350909999996),
+(3003,'Austin Food Park','Austin','TX','78702','US',30.2544287, -97.7371197 ),
+(3004,'Truck Garden Food Park - Av. Roberto Freire','Ponta Negra','RN',null,'BR',-5.874374,-35.178695),
+(3005,'Neide Artesanato/Praia Shopping Food Park - Av. Roberto Freire','Ponta Negra','RN',null,'BR',-5.865769,-35.185878),
+(3006,'Natal Shopping Food Park - Av. das Brancas Dunas','Natal','RN',null,'BR',-5.842563,-35.210624),
+(3007,'Bar 54 Food Park - Rua Porto Mirim','Natal','RN',null,'BR',-5.874674,-35.183514),
+(3008,'Bar Trove Food Park - Rua Presidente José Bento','Natal','RN',null,'BR',-5.805748,-35.214705);
+
+INSERT INTO reviews (id,customer_id,comment,rating,unit_id) VALUES
+(4001,9002,' Very clean and the customer service is excellent.',4.8,2001),
+(4002,9003,'Broad selection of quality food and creative menu.',4.9,2001),
+(4003,9001,'Thaitanic has the best cart in the city.',4.7,2002),
+(4004,9003,' BIG portions prepared exactly how you request and unreasonably low prices!!!  Love tacos! ',4.6,2003);
+
+INSERT INTO review_approvals (id,review_id,reviewer_id,status,created_at,updated_at) VALUES
+(4001,4001,null,'New',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+(4002,4002,null,'New',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+(4003,4003,null,'New',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+(4004,4004,null,'New',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);
+
+CREATE TABLE daily_specials
+(
+  id serial primary key,
+  name varchar(255),
+  price real,
+  company_id integer references companies (id)
+);
+
+INSERT INTO daily_specials (id,name,price,company_id) VALUES
+(5001,'Buy 1 Entre, Get 1 Free',9.00,1001),
+(5002,'$10 Worth of Food',7.00,1002),
+(5003,'2 Tacos, Chips/Salsa & Drink',8.00,1001);
+
+CREATE TABLE categories
+(
+  id serial primary key,
+  parent_id integer,
+  slug character varying(255),
+  title character varying(255),
+  description text,
+  company_id integer references companies (id)
+);
+
+insert into categories (id,parent_id,slug,title,description,company_id) VALUES
+(6001,null,null,'Paco''s Tacos Menu',null,1001),
+(6002,null,'thaitanic','Thaitanic Menu','Thaitanic Classic Thai Menu',1002),
+(6003,6001,'pacostacos_breakfast','Breakfast Tacos','Hot fast breakfast',1001),
+(6004,6001,'pacostacos_tacos','Tacos','Fresh fast tacos',1001),
+(6005,6002,'thaitanic_curries','Curries','Authentic Thai Curries',1002),
+(6006,6002,'thaitanic_drinks','Drinks','Thai tea, coffee, and bubble teas',1002),
+(6007,null,null,'Drinks',null,1001),
+(6008,null,'grillacheese','Grilla Cheese Menu','Grilla Cheese Grilled Menu',1003),
+(413833482,null,null,null,null,1001),
+(413833483,null,null,null,null,null),
+(255762554,null,null,'xcxc',null,1001);
+
+CREATE TABLE menu_items
+(
+  id serial primary key,
+  name varchar(255),
+  description text,
+  category_id integer references categories (id),
+  photo varchar(255),
+  price real null,
+  company_id integer references companies (id)
+);
+
+INSERT INTO menu_items (id,name,description,category_id,photo,price,company_id) VALUES
+(7001,'Beef Taco','Mouthwatering tacos stuffed with beef',6004,'/path/to/beeftaco.jpg',6.00,1001),
+(7002,'Veggie Taco','Vegans will love this meat-cheese-free, gluten-sensitive alternative',6004,'/path/to/veggietaco2.png',5.00,1001),
+(7003,'Pork Tacos','Smoked pork, pico de gallo and lettuce',6004,'/path/to/ptaco.png',4.00,1001),
+(7004,'Aguas Frescas','Fresh fruit juice and water',6007,'/path/to/aguafresca.png',2.50,1001),
+(7005,'Fountain Drink','Fountain soda sweetened with cane sugar',6007,'/path/to/aguafresca.png',2.25,1001),
+(7006,'Thai Tea','Thai tea with cream',6006,'/path/to/thaitea.png',3.25,1002),
+(7007,'Panang Curry','Panang curry with choice of protein',6005,'/path/to/panangcurry.png',7.25,1002),
+(424990179,'First Item','first item',null,null,5.00,null),
+(413823687,'','',null,null,null,1001),
+(413823688,null,null,null,null,null,null),
+(245354327,'Test','T',null,null,1.00,null),
+(245448297,'','',null,null,null,null),
+(245528032,'For Test','Yes',6003,null,1.00,1001);
+
+CREATE TABLE menu_options
+(
+  id serial primary key,
+  menu_id integer references menu_items (id),
+  title varchar(255),
+  type varchar(255),
+  photo varchar(255),
+  instructions text
+);
+
+INSERT INTO menu_options (id,menu_id,title,type,instructions) VALUES
+(13001,7001,'OptionItems','single',null),
+(12001,7001,'Tortilla','variant','Select one'),
+(12002,7001,'Filling','variant',null),
+(12003,7001,'Hot Sauce','variant',null);
+
+CREATE TABLE menu_option_items
+(
+  id serial primary key,
+  option_id integer references menu_options (id),
+  title varchar(255),
+  mod_price real
+);
+
+INSERT INTO menu_option_items (id,option_id,title,mod_price) VALUES
+(8005,13001,'Extra Beef',2.00),(8006,13001,'Extra Guacamole',1.00),
+(8003,12001,'Hard',0.0),(8004,12001,'Soft',0.0),
+(8007,12002,'Beef',0.0),(8008,12002,'Chicken',0.0),
+(8009,12002,'Tofu',0.0),(8001,12003,'Mild',0.0),
+(8002,12003,'Hot',0.0);
+

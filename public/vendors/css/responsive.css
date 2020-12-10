@@ -1,0 +1,220 @@
+@media screen and (max-width: 991px) 
+{
+    .navbar.navbar-default {padding-top: 12px;padding-bottom: 10px;}
+    .navbar-fixed-top.navbar-default {background: #67c4ea;}
+
+}
+
+@media (max-width: 600px) 
+{
+    .navmenu, .navbar-offcanvas {width: 300px;}
+    .registeration_four ul li {min-width: 52px;margin-bottom: 30px;}
+}
+@media only screen and (min-width:960px) and (max-width:1024px)
+{
+    header{padding-left: 0;}
+    h3{font-size: 20px; margin-bottom: 10px;}
+    .top_head h2{margin-top: 0; padding-top: 15px;}
+    .order_page .menudp {margin-top: 0px; padding-top: 10px; padding-bottom: 20px;}
+    .order_page .menudp img{width: 100%; height: auto; margin-top: 18px;}
+    .order_page h2{font-size: 20px; padding-top: 11px;}
+    .sidenav .menudp h2{margin-top: 24px;}
+    .order_page.sidenav a{font-size: 16px;}
+    .order_page.sidenav .submenu {list-style: none; padding-left: 15px;}
+    .list_contener .list em{width: 45%;}
+    .list_contener .list h3{font-size: 22px;}
+    .inner_wrapper.canvas form{padding-bottom: 10px;}
+    /* ADD ANOTHER MENU */
+    .menu_detail a{font-size: 18px;}
+    .min_height{min-height: 400px;}
+    .menu_detail .add_btn a, .sign_in .btn{padding: 5px 25px; font-size: 15px; font-weight: 300;}
+
+    /* OPTIONS MAIN PAGE */
+    .nav-tabs li a{font-size: 20px;}
+    .main_menu_edit .btn{font-size: 18px;}
+    .shell i{vertical-align: middle}
+    .list_bar ul li:last-child{border: none}
+    .list_bar ul li{width: 20%;}
+
+    /* Add Menu Item */
+    .btn.btn-default{font-size: 20px;}
+
+    /* Add Option Category */
+    .top_head h2{ font-size: 25px;}
+    .radio label{font-size: 16px; vertical-align: top; line-height: 27px;}
+    .radio input[type=radio]:checked + label:before{line-height: 23px;}
+
+    /* Add OPtion Item */
+    .registeration_one h2{font-size: 18px;}
+
+    /* Add Otion to Menu item */
+    .shell i{font-size: 30px;}
+    .shell h1 , .shell h2 span{font-size: 18px; line-height: 40px; vertical-align: top}
+    .onoffswitch-label{margin-top: 0; margin-top: 15px; height: 28px;}
+    .onoffswitch{width: 60px;}
+    .onoffswitch-label:before{width: 28px; right: 30px; height: 28px;}
+    .shell span h1{font-size: 25px; line-height: 35px;}
+    .shell .bttn{padding-top: 0; padding-bottom: 0;}
+    .shell .bttn .add_btn a{padding: 10px 35px;}
+
+    /* Main Menu Vendoe */
+    .map_my_food form .btn{margin-bottom: 0;}
+    .nav-tabs li a{margin-top: 34px; margin-bottom: 30px; font-size: 20px;}
+    .nav-tabs > li.active > a{font-size: 20px;}
+
+    /* Order Menagement */
+    .order_list .order_mng ul li a{font-size: 14px;}
+
+    /*  */
+    #msform .tags_list img{width: 50%;}
+    .tags_list h2{font-size: 25px;}
+    #msform .registeration_four .form-group{margin-bottom: 10px;}
+    #msform .checkbox label{font-size: 18px;}
+    #msform .tags_list.final_review img{ width: 18%;}
+    #msform .final_review .previous{left: 115px;}
+    #msform .final_review .submit{right: 115px;}
+    #progressbar li{width: 18.5%;}
+    #msform .bootstrap-tagsinput input{width: 385px;}
+
+    /* check in  */
+    .check_in_time p{font-size: 25px;}
+    .check_in_time.checkin_fourth p{margin-bottom: 10px;}
+    .check_in_time.checkin_sec h2{font-size: 20px; padding-top: 10px;} 
+    .check_in_time .date .form-control{font-size: 25px;}
+    .check_in.checkin_third .shell h3{ margin-top: 10px;}
+    .check_in.checkin_third .btn.btn-default{margin-bottom: 15px;}
+    .check_in.checkin_third p.large{padding-bottom: 15px;}
+    .checkin_sec .map img{width: 45%;}
+    .checkin_fourth .map img{width: 45%;}
+
+    /* Ratting */
+    .review .list_contener .list .right_section .ratting h4{font-size:11px;}
+    .review .list_contener .list .right_section .ratting h3{font-size: 20px;}
+    .review .list_contener .list label{font-size: 21px;}
+    .review .list_contener .list p{font-size: 19px;}
+    .review .list_contener .list h5{font-size: 16px;}
+}
+@media only screen and (min-width: 768px) and (max-width: 959px)    
+{
+    header{padding-left: 0;}
+    h3{font-size: 20px;}
+    header .sign_in{top: 18px;}
+    .navbar-header h2{font-size: 30px;}
+    #sideNav.order_page{width: 250px;}
+    .order_page.sidenav {padding-top: 95px;}
+    .order_page.sidenav a{font-size: 15px; padding-left: 15px;}
+    .order_page .submenu {padding-left: 25px;}
+    .order_page .menudp img{width: 100%; height: auto; margin-top: 18px;}
+    .menudp{padding-top: 10px;}
+    .inner_wrapper.canvas.canvas{padding-left:250px;}
+    .top_head{height: 85px;}
+    .top_head h2{line-height: 85px; margin: 0;padding: 0;}
+    .list_contener .list h3{font-size: 22px;}
+    .order_page .submenu li{list-style: none;}
+    .order_page h2{font-size: 19px; padding-top: 22px;}
+    .order_page .col-sm-4{padding: 0;}
+    .list_contener .list .left_img{padding: 0; padding-top: 15px; margin-top: 5px;}
+    .list_contener .list .left_img img{width: 100%;}
+    .list_contener .list em{width: 55%;}
+    .btn.btn-default{font-size: 16px; padding: 10px 20px; font-weight: 600;}
+
+    .nav-tabs li a{font-size: 16px; margin-top: 15px; margin-bottom: 15px;}
+    .main_menu_edit .btn{font-size: 16px;}
+    .shell h1 , .shell h2 span{font-size: 25px; line-height: 50px; vertical-align: top}
+    .shell i{vertical-align: top}
+    .list_bar ul li:last-child{border: none}
+    .list_bar ul li{width: 20%;}
+    .list_bar{position: fixed; width: 100%; bottom: 0;}
+    .bt_padd{padding-bottom: 114px;}
+
+    /* Add Option Category */
+    .top_head h2{font-size: 25px;}
+    .form-control{font-size: 45px; font-size: 16px;}
+    .radio input[type=radio]:checked + label:before{line-height: 25px;}
+    .checkbox label, .radio label{font-size: 18px; line-height: 30px;}
+
+    /* Add Otion to Menu item */
+    .shell i{font-size: 30px;}
+    .shell h1 , .shell h2 span{font-size: 18px; line-height: 30px; vertical-align: top}
+    .check_in .shell h1{font-size: 29px;}
+    .onoffswitch-label{margin-top: 0; margin-top: 15px; height: 28px;}
+    .onoffswitch{width: 60px;}
+    .onoffswitch-label:before{width: 28px; right: 30px; height: 28px;}
+    .shell span h1{font-size: 25px; line-height: 35px;}
+    .shell .bttn{padding-top: 0; padding-bottom: 0;}
+    .shell .bttn .add_btn a{padding: 10px 35px;}
+
+    /* Edit Otion Category */
+    .sign_in a{ font-size: 16px;}
+    .sign_in h3{margin-bottom: 20px;}
+
+    /* Order Menagement */
+    .ord_mng .order_list h3{font-size: 18px;}
+    .ord_mng.list_contener .list .right_txt p{font-size: 15px;}
+    .list_contener .list .right_txt .ord_stts h4{font-size: 15px;}
+    .order_list .order_mng ul li{margin-right: 5px;}
+
+    /* Registration page */
+    .registeration_four .schedule [type="checkbox"]:not(:checked) + label, .registeration_four .schedule [type="checkbox"]:checked + label{width: 30px; height: 40px; font-size: 14px;}
+    .registeration_four ul li{min-width: 32px;}
+    .tags_list h2{font-size: 22px;}
+    #msform .checkbox label{font-size: 13px;}
+    #msform .tags_list img{width: 65%;}
+    #msform .registeration_four ul{margin-bottom: 20px;left: -20px;}
+    #msform .bootstrap-tagsinput input{width: 300px;}
+    #msform .tags_list.final_review img{width: 35%;}
+    #msform .food_info p{font-size: 14px;}
+    #msform .food_cont p{font-size: 14px; margin-bottom: 3px;}
+    .food_cont .col-sm-6,.food_cont .col-sm-5 {width: 100%; padding-left: 0;}
+    #msform  .food_cont .col-sm-5.pl15 {width: 100%; padding-left: 0;}
+    #msform .final_review .previous{left: 75px;}
+    #msform .final_review .submit{right: 75px;}
+    #msform .tags_list .btn{width: 30%;}
+
+    /* Check in */
+    .check_in .btn-primary{padding: 15px 85px; font-size: 18px; margin-bottom: 15px;}
+    .check_in .btn.btn-default{margin-top: 15px;}
+    .check_in_time.checkin_sec h2{font-size: 25px; padding-top: 15px;}
+    .check_in_time .date .form-control{font-size: 30px;}
+    .check_in.checkin_third p.large{padding-bottom: 5px;}
+    .check_in .shell .dropdown-toggle span{ float: right;margin-top: 10px;}
+    .check_in .shell .btn-primary{padding: 15px 25px;}
+
+    /* Special */
+    .add_new .btn.btn-default{width: 100%; font-size: 11px; display: block; height: 50px; text-align: center;padding: 15px 0;}
+    .entree .dishes{margin-bottom: 15px;}
+    .entree ul li{padding-right: 20px;}
+
+    /* Ratting */
+    .review .list_contener .list .right_section .ratting h4{font-size:11px;}
+    .review .list_contener .list .right_section .ratting h3{font-size: 15px;}
+    .review .list_contener .list label{font-size: 21px;}
+    .review .list_contener .list p{font-size: 19px;}
+    .review .list_contener .list h5{font-size: 16px;}
+    /* Menu Order */
+    .order_bottom .col-sm-4{width: 50%;}
+
+    /* Vendor Profile */
+    .settings .fa-stack{margin-bottom: 20px;}
+    .social_media input[type="text"]{margin-left: 45px;}
+    .sign_in.profile .fb_btn span{display: block; padding-bottom: 15px;}
+
+    /* Loyalty */
+    .loyalty .list_contener .list .right_section h4{margin-top: 18px;}
+    .loyalty .list_contener .list .right_section a{padding-top: 26px;}
+
+    .special_list .inner_btn{font-size: 16px; margin-top: 0;}
+    .special_list .inner_btn img{width: 20px;}
+    .daily_special h2{font-size: 25px; }
+    .daily_special .dropdown .dropdown-toggle{font-size: 14px;}
+    .entree p{font-size: 20px;}
+
+    /* Check IN */
+    .dropdown .dropdown-toggle#dropdownMenu1{font-size: 18px;}
+    .check_in p.large{font-size: 35px;}
+
+    /* Customer */
+    .customer h3{max-width: 65px;}
+    .customer .visit_of h3{max-width: none;}
+    .customer .visit_of a.filt_arow{position: relative;top: -22px;}
+}

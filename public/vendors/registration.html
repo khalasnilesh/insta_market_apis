@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Main Edit Menu</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/jasny-bootstrap.css" rel="stylesheet">
+        <link href="css/navmenu-reveal.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-tagsinput.css">
+    </head>
+    <body style="overflow-x: hidden;">
+        <div class="loading_contener">
+            <div class="loading">
+                <img src="img/paco.png" alt="">
+            </div>
+        </div>
+        <div id="full_wrapper">
+            <header>
+                <div class="navbar navbar-default">
+                    <div class="navbar-header col-sm-12 text-center">
+                        <div class="row">
+                            <img src="img/logo.png" alt="" class="img-responsive">
+                            <h2>Registration</h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="sideNav" class="sidenav order_page order_page">
+                <div class="col-xs-12 menudp">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="img/paco.png" class="img-responsive">
+                        </div>
+                        <div class="col-sm-8">
+                            <h2>Paco’s Tacos</h2>
+                            <h5>Bob D <a href="javascript:void(0)">Sign-Out</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                      <ul class="list-unstyled mainmenu" >
+                          <li><a href="ordermanagement.html"><img src="img/takeout-01.png" alt="">Order Management</a></li>
+                          <li><a href="checkin1.html"><img src="img/checkin-01.png" alt="">Check-In</a></li>
+                          <li><a href="maineditmenu.html"><img src="img/orders.png" alt="">Menu Management</a></li>
+                          <li><a href="menu_availibility.html"><img src="img/menu_avi.png" alt="">Menu Availability</a></li>
+                          <li><a href="special.html"><img src="img/specials-01.png" alt="">Daily Specials</a></li>
+                          <li><a href="loyalty.html"><img src="img/loyality.png" alt="">Loyalty Rewards</a></li>
+                          <li><a href="reports.html"><img src="img/report-01.png" alt=""> Reports</a></li>
+                          <li><a href="vendorprofile.html"><img src="img/vendor_profile.png"  alt="">Vendor Profile</a></li>
+                          <li><a href="menuorder_1.html"><img src="img/review.png" alt="">Consumer App Preview</a>
+                          <li><a href="customer.html"><img src="img/dancing2-01.png" alt="">Customers</a>
+                          <li><a href="review.html"><img src="img/review_2.png" alt="">Reviews</a></li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas inner_wrapper">
+                <div class="container-fluid col-sm-12 menu_detail shell bg_1">
+                    <form id="msform">
+                        <!-- progressbar -->
+                        <ul id="progressbar">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <!-- fieldsets -->
+                        <fieldset class="registeration_one active">
+                            <div class="col-sm-12">
+                                <h2 class="bold">Step 1</h2>
+                                <h2>Vendor Name</h2>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="ex. Paco's Tacos" type="text">
+                                </div>
+                                <div class="upload_btn">
+                                    <label class="btn-upload col-sm-5">
+                                        <h2>Add a logo or picture of your venue</h2>
+                                        <input name="fileupload" type="file">
+                                        <img src="img/upload_logo.png" class="img-responsive">
+                                    </label>
+                                    <label class="btn-upload col-sm-5">
+                                        <h2>Add a picture of your favorite dish</h2>
+                                        <input name="fileupload" type="file">
+                                        <img src="img/upload_logo_2.jpg" class="img-responsive">
+                                    </label>
+                                </div>
+                            </div>
+                            <input type="button" name="next" class="next action-button btn btn-default" value="Next" />
+                        </fieldset>
+                        <fieldset class="tags_list">
+                            <div class="col-sm-12">
+                                <h2 class="bold">Step 2</h2>
+                                <img src="img/countries.png" class="img-responsive">
+                                <div class="text-left tag_title">
+                                    <h2>Tags</h2>
+                                    <div class="form-group">
+                                        <input class="form-control tag_input" placeholder="Your tags" type="text" data-role="tagsinput"><!--<button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i>Add</button>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="button" name="previous" class="previous action-button btn btn-default" value="Previous" />
+                            <input type="button" name="next" class="next action-button btn btn-default" value="Next" />
+                        </fieldset>
+                        <fieldset class="tags_list">
+                            <div class="col-sm-12">
+                                <h2 class="bold">Step 3</h2>
+
+                                <h2>Tell us what makes you unique </h2>
+                                <img src="img/blue_van.png" class="img-responsive">
+                                <div class="form-group" style="width:100%">
+                                    <h2>Description</h2>
+                                    <textarea rows="5" placeholder="Homemade tortillas, stuffed lime-marinated lengua, smothered in avocado and our famous melt-your-face salsa." class="form-control" style="width:100%"></textarea>
+                                </div>
+                                <div class="text-left register_radio">
+                                    <div class="radio">
+                                        <input id="food_1" name="food" value="male" checked="checked" type="radio">
+                                        <label for="food_1"><img src="img/brick-01.png" alt=""> Brick & Mortar</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input id="food_2" name="food" value="male" checked="checked" type="radio">
+                                        <label for="food_2"><img src="img/foodtruck-01.png" alt="">Food Truck</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input id="food_3" name="food" value="male" checked="checked" type="radio">
+                                        <label for="food_3"><img src="img/foodcart-01.png" alt="">Food Cart</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="button" name="previous" class="previous action-button btn btn-default" value="Previous" />
+                            <input type="button" name="next" class="next action-button btn btn-default" value="Next" />
+                        </fieldset>
+                        <fieldset class="registeration_four tags_list">
+                            <div class="col-sm-12">
+                                <h2>Step 4</h2>
+                                <div class="form-group" >
+                                    <label class="large">Weekly Schedule</label>
+                                    <ul class="list-inline list-unstyled">
+                                        <li>
+                                            <div class="schedule">
+                                                <input id="test2" type="checkbox">
+                                                <label for="test2"> M</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="schedule">
+                                                <input id="test3" type="checkbox">
+                                                <label for="test3"> T</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="schedule">
+                                                <input id="test4" type="checkbox">
+                                                <label for="test4"> W</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="schedule">
+                                                <input id="test5" type="checkbox">
+                                                <label for="test5"> T</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="schedule">
+                                                <input id="test6" type="checkbox">
+                                                <label for="test6"> F</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="schedule">
+                                                <input id="test7" type="checkbox">
+                                                <label for="test7"> S</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="schedule">
+                                                <input id="test8" type="checkbox">
+                                                <label for="test8"> S</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="form-group">
+                                    <label class="large">Typical Hours</label>
+                                    <input class="form-control" placeholder="ex. M-F 11 am - 8 pm" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label class="large">Facebook/Website</label>
+                                    <input class="form-control" placeholder="www.pacostacosmexeria.com" type="text">
+                                </div>
+                                <div class="form-group" >
+                                    <div class="checkbox" >
+                                        <input id="test10" type="checkbox">
+                                        <label for="test10"> Use hours provided on Facebook/Website</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="button" name="previous" class="previous action-button btn btn-default" value="Previous" />
+                            <input type="button" name="next" class="next action-button btn btn-default" value="Next" />
+                        </fieldset>
+                        <fieldset class="tags_list final_review">
+                            <h2 class="bold">Step 5</h2>
+                            <div class="preview">
+                                <h5>Preview:</h5>
+                                <img src="img/paco.png" alt="">
+                                <a href="javascritp:void(0)" class="favourit"><img src="img/heart.png" alt=""><img src="img/heart_fill.png" class="hover_img" alt="">Favorite</a>
+                            </div>
+                            <div class="text-left food_info">
+                                <h2>Paco’s Tacos
+                                    <p>Mexican, Carne Asada, Salads</p>
+                                </h2>
+                                <p>Homemade tortillas, stuffed lime-marinated lengua,
+                                    smothered in avocado and our famous melt-your-face salsa.
+                                </p>
+                                <a href="javascript:void(0)">www.pacostacosmexeria.com</a>
+                            </div>
+                            <div class="col-sm-12 food_cont pd0">
+                                <div class="col-sm-6 pd0">
+                                    <p>Typical Hours:<span>M/W/F 11am - 7pm T/TH 11am - 3pm</span></p>
+                                    <p>Typical Locations:<span>10th & Alder (FP)</span></p>
+                                    <p>Current Status:<span>Open until<em>7pm</em></span></p>
+                                    <p>Current Distance:<span>0.1 mi.</span><a href="javascriprt:void(0)">Map it</a></p>
+                                </div>
+                                <div class="col-sm-5 pd0 pl15">
+                                    <p>Rating:  - <span>/ 5.0</span></p>
+                                    <p>Repeat Customers:<span><em>% </em></span><a href="javascript:void(0)">Reviews</a></p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="bottom_img">
+                            </div>
+                            <input type="button" name="previous" class="previous action-button btn btn-default" value="BACK" />
+                            <input type="submit" name="submit" class="submit action-button btn btn-defaul" value="COMPLETE" />
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/jasny-bootstrap.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/bootstrap-tagsinput.js"></script>
+        <script>
+            $(".tag_input").val();
+        </script>
+    </body>
+</html>

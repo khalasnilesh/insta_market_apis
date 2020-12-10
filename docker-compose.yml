@@ -1,0 +1,27 @@
+app:
+  build: .
+  links:
+    - postgres
+  volumes:
+    - ./:/application
+  ports:
+    - '80'
+  command: nodemon server.js
+  environment:
+    - 'DATABASE_URL=postgresql://pguser:pgpass@postgres:5432/sfez-development'
+    - NODE_ENV=development
+    - PORT=80
+pgadmin:
+  image: postgres:9.5
+  command: tail -f /dev/null
+  links:
+    - postgres
+  environment:
+    - PGUSER=pguser
+    - PGPASSWORD=pgpass
+    - PGHOST=postgres
+postgres:
+  image: postgres:9.5
+  environment:
+    - POSTGRES_USER=pguser
+    - POSTGRES_PASSWORD=pgpass

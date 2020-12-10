@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Vendor Management</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/jasny-bootstrap.css" rel="stylesheet">
+    <link href="css/navmenu-reveal.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-slider.min.css">
+    <!--<script src="js/respond.js"></script>-->
+    </head>
+    <body>
+        <div class="loading_contener">
+            <div class="loading">
+                <img src="img/Jujoman.png" alt="">
+            </div>
+        </div>
+        <div id="full_wrapper">
+            <header>
+                <div class="navbar navbar-default">
+                    <div class="navbar-header col-sm-12 text-center">
+                        <div class="row">
+                            <!-- <i class="fa fa-angle-left fa-3x"></i> -->
+                            <img src="img/logo.png" class="img-responsive">
+                            <h2>Order Management</h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="sideNav" class="sidenav order_page order_page">
+                 <div ng-include="'layout.html'">
+                <div class="col-xs-12 menudp">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="img/paco.png" class="img-responsive">
+                        </div>
+                        <div class="col-sm-8">
+                            <h2>Paco’s Tacos</h2>
+                            <h5>Bob D <a href="javascript:void(0)">Sign-Out</a></h5>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas inner_wrapper">
+                <div class="col-sm-12 black-bg">
+                    <ul class="nav nav-tabs row">
+                        <li class="active"><a data-toggle="tab" href="#order">Express Takeout</a></li>
+                        <li><a data-toggle="tab" href="#ord_mgmt">Orders</a></li>
+                        <li><a data-toggle="tab" href="#config">Configuration</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-sm-12 menu_detail shell bg_1">
+                    <div class="tab-content">
+                        <div id="ord_mgmt" class="tab-pane ">
+                            <div class="top_head">
+                                <div class="col-lg-12">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="list_contener">
+                                <div class="list clearfix">
+                                    <div class="col-lg-12">
+                                        <div class="col-sm-9 right_txt">
+                                            <h3>Bob D.</h3>
+                                            <label><em>Today 12:17pm</em><span>Cooking</span></label>
+                                            <p>Soft Beef Taco (2), Nachos, Lg. Coke</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list clearfix pick_up">
+                                    <div class="col-lg-12">
+                                        <div class="col-sm-9 right_txt">
+                                            <h3>Bob D.</h3>
+                                            <label><em>06/05/16 12:49pm</em><span>Picked Up</span></label>
+                                            <p>Beef Burrito, Soft Chicken Taco (2), Taco Salad, Nachos, Lg. Coke</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list clearfix pick_up">
+                                    <div class="col-lg-12">
+                                        <div class="col-sm-9 right_txt">
+                                            <h3>Bob D.</h3>
+                                            <label><em>06/05/16 12:49pm</em><span>Picked Up</span></label>
+                                            <p>Beef Burrito, Soft Chicken Taco (2), Taco Salad, Nachos, Lg. Coke</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list clearfix pick_up">
+                                    <div class="col-lg-12">
+                                        <div class="col-sm-9 right_txt">
+                                            <h3>Bob D.</h3>
+                                            <label><em>06/05/16 12:49pm</em><span>Picked Up</span></label>
+                                            <p>Beef Burrito, Soft Chicken Taco (2), Taco Salad, Nachos, Lg. Coke</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list clearfix pick_up">
+                                    <div class="col-lg-12">
+                                        <div class="col-sm-9 right_txt">
+                                            <h3>Bob D.</h3>
+                                            <label><em>06/05/16 12:49pm</em><span>Picked Up</span></label>
+                                            <p>Beef Burrito, Soft Chicken Taco (2), Taco Salad, Nachos, Lg. Coke</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list clearfix pick_up">
+                                    <div class="col-lg-12">
+                                        <div class="col-sm-9 right_txt">
+                                            <h3>Bob D.</h3>
+                                            <label><em>06/05/16 12:49pm</em><span>Picked Up</span></label>
+                                            <p>Beef Burrito, Soft Chicken Taco (2), Taco Salad, Nachos, Lg. Coke</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div id="order" class="tab-pane active ord_cont">
+                            <div class="top_head">
+                                <div class="col-lg-12">
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="list_contener ord_mng">
+                                <div class="order_list">
+                                    <div class="list clearfix pickup">
+                                        <div class="col-lg-12">
+                                            <div class="col-sm-2 left_img">
+                                                <img src="img/order_icon_1.png" alt="">
+                                            </div>
+                                            <div class="col-sm-10 right_txt">
+                                                <div class="col-sm-9">
+                                                    <h3>11:55 Am&nbsp;&nbsp;15 Min<span>#00512</span></h3>
+                                                    <p>Heather D</p>
+                                                </div>
+                                                <div class="col-sm-3 ord_stts">
+                                                    <h4>Picked Up</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order_mng">
+                                        <h4>Select Status</h4>
+                                        <ul>
+                                            <li class="hover_1">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/queue.png" alt="">
+                                                        <img src="img/queue_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    In Queue
+                                                </a>
+                                            </li>
+                                            <li class="hover_2">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/cooking.png" alt="">
+                                                        <img src="img/cooking_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    Cooking
+                                                </a>
+                                            </li>
+                                            <li class="hover_3">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/ready.png" alt="">
+                                                        <img src="img/ready_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    Ready
+                                                </a>
+                                            </li>
+                                            <li class="hover_4 pickup">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/ord_pic.png" alt="">
+                                                        <img src="img/ord_pic_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    Order Pickup
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="order_inner">
+                                            <h2>Beef Taco</h2>
+                                            <p>Lettuce, Cheese, Sour Cream</p>
+                                            <h2>Extra Beef</h2>
+                                        </div>
+                                        <div class="order_inner">
+                                            <h2>Cola</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order_list">
+                                    <div class="list clearfix pickup">
+                                        <div class="col-lg-12">
+                                            <div class="col-sm-2 left_img">
+                                                <img src="img/order_icon_1.png" alt="">
+                                            </div>
+                                            <div class="col-sm-10 right_txt">
+                                                <div class="col-sm-9">
+                                                    <h3>11:55 Am&nbsp;&nbsp;15 Min<span>#00512</span></h3>
+                                                    <p>Heather D</p>
+                                                </div>
+                                                <div class="col-sm-3 ord_stts">
+                                                    <h4>Picked Up</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order_mng">
+                                        <h4>Select Status</h4>
+                                        <ul>
+                                            <li class="hover_1">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/queue.png" alt="">
+                                                        <img src="img/queue_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    In Queue
+                                                </a>
+                                            </li>
+                                            <li class="hover_2">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/cooking.png" alt="">
+                                                        <img src="img/cooking_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    Cooking
+                                                </a>
+                                            </li>
+                                            <li class="hover_3">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/ready.png" alt="">
+                                                        <img src="img/ready_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    Ready
+                                                </a>
+                                            </li>
+                                            <li class="hover_4 pickup">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/ord_pic.png" alt="">
+                                                        <img src="img/ord_pic_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    Order Pickup
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="order_inner">
+                                            <h2>Beef Taco</h2>
+                                            <p>Lettuce, Cheese, Sour Cream</p>
+                                            <h2>Extra Beef</h2>
+                                        </div>
+                                        <div class="order_inner">
+                                            <h2>Cola</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order_list">
+                                    <div class="list clearfix pickup">
+                                        <div class="col-lg-12">
+                                            <div class="col-sm-2 left_img">
+                                                <img src="img/order_icon_1.png" alt="">
+                                            </div>
+                                            <div class="col-sm-10 right_txt">
+                                                <div class="col-sm-9">
+                                                    <h3>11:55 Am&nbsp;&nbsp;15 Min<span>#00512</span></h3>
+                                                    <p>Heather D</p>
+                                                </div>
+                                                <div class="col-sm-3 ord_stts">
+                                                    <h4>Picked Up</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order_mng">
+                                        <h4>Select Status</h4>
+                                        <ul>
+                                            <li class="hover_1">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/queue.png" alt="">
+                                                        <img src="img/queue_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    In Queue
+                                                </a>
+                                            </li>
+                                            <li class="hover_2">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/cooking.png" alt="">
+                                                        <img src="img/cooking_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    Cooking
+                                                </a>
+                                            </li>
+                                            <li class="hover_3">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/ready.png" alt="">
+                                                        <img src="img/ready_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    Ready
+                                                </a>
+                                            </li>
+                                            <li class="hover_4 pickup">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/ord_pic.png" alt="">
+                                                        <img src="img/ord_pic_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    Order Pickup
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="order_inner">
+                                            <h2>Beef Taco</h2>
+                                            <p>Lettuce, Cheese, Sour Cream</p>
+                                            <h2>Extra Beef</h2>
+                                        </div>
+                                        <div class="order_inner">
+                                            <h2>Cola</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order_list">
+                                    <div class="list clearfix pickup">
+                                        <div class="col-lg-12">
+                                            <div class="col-sm-2 left_img">
+                                                <img src="img/order_icon_1.png" alt="">
+                                            </div>
+                                            <div class="col-sm-10 right_txt">
+                                                <div class="col-sm-9">
+                                                    <h3>11:55 Am&nbsp;&nbsp;15 Min<span>#00512</span></h3>
+                                                    <p>Heather D</p>
+                                                </div>
+                                                <div class="col-sm-3 ord_stts">
+                                                    <h4>Picked Up</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order_mng">
+                                        <h4>Select Status</h4>
+                                        <ul>
+                                            <li class="hover_1">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/queue.png" alt="">
+                                                        <img src="img/queue_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    In Queue
+                                                </a>
+                                            </li>
+                                            <li class="hover_2">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/cooking.png" alt="">
+                                                        <img src="img/cooking_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    Cooking
+                                                </a>
+                                            </li>
+                                            <li class="hover_3">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/ready.png" alt="">
+                                                        <img src="img/ready_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    Ready
+                                                </a>
+                                            </li>
+                                            <li class="hover_4 pickup">
+                                                <a href="javascript:void(0)">
+                                                    <div class="relative">
+                                                        <img src="img/ord_pic.png" alt="">
+                                                        <img src="img/ord_pic_hover.png" class="hover_img" alt="">
+                                                    </div>
+                                                    Order Pickup
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="order_inner">
+                                            <h2>Beef Taco</h2>
+                                            <p>Lettuce, Cheese, Sour Cream</p>
+                                            <h2>Extra Beef</h2>
+                                        </div>
+                                        <div class="order_inner">
+                                            <h2>Cola</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div id="config" class="tab-pane config">
+                            <div class="top_head">
+                                <div class="col-sm-12">
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <form>
+                                <div id="first_slider">
+                                    <h3>Consumer Order Window <span>(min)</span></h3>
+                                    <div class="ord_win">
+                                        <input id="ex1" data-slider-id="ex1Slider" type="text" data-slider-min="15" data-slider-max="60" data-slider-step="1" data-slider-value="0" style="display: none;" data-value="60" value="60" data-slider-ticks-snap-bounds="30">
+                                    </div>
+                                </div>
+                                <div id="sec_slider">
+                                    <h3>Prep Time Notification <span>(min)</span></h3>
+                                    <div class="ord_win">
+                                        <input id="ex2" data-slider-id="ex1Slider" type="text" data-slider-min="10" data-slider-max="30" data-slider-step="1" data-slider-value="0" style="display: none;" data-value="30" value="30" data-slider-ticks-snap-bounds="30">
+                                    </div>
+                                </div>
+                                <div id="third_slider">
+                                    <h3>Delivery Time <span>(min)</span></h3>
+                                    <div class="ord_win">
+                                        <input id="ex3" data-slider-id="ex1Slider" type="text" data-slider-min="10" data-slider-max="30" data-slider-step="1" data-slider-value="0" style="display: none;" data-value="30" value="30" data-slider-ticks-snap-bounds="30">
+                                    </div>
+                                </div>
+                                <div class="bottom_content">
+                                    <h2>Delivery Charge</h2>
+                                    <input type="text" class="form-control" placeholder="ex. $5, $6, etc...">
+                                    <h2>Food Park Managed</h2>
+                                    <div>
+                                        <div class="radio">
+                                            <input id="food" name="food" value="male" checked="checked" type="radio">
+                                            <label for="food"> Select One</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input id="food_2" name="food" value="male" type="radio">
+                                            <label for="food_2"> Select two</label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-default">SAVE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/jasny-bootstrap.js"></script>
+        <script src="js/bootstrap-slider.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            $('#ex1').slider({
+                ticks_labels: ["15","30","45","60"],
+                step: 1
+            });
+            $('#ex2').slider({
+                /*ticks: [10, 15, 20, 25, 30],*/
+                ticks_labels: ["10","15","20","25","30"],
+                step: 1
+            });
+            $('#ex3').slider({
+                /*ticks: [10, 15, 20, 25, 30],*/
+                ticks_labels: ["10","15","20","25","30"],
+                step: 1
+            });
+        </script>
+    </body>
+</html>

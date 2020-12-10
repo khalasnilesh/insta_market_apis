@@ -1,0 +1,144 @@
+
+COPY countries (id, name, is_enabled, currency_id, currency, moltin_client_id, moltin_client_secret, default_payment, currency_symbol, country_code) FROM stdin;
+1	Brazil	t	1554610428930163616	BRL	eDlPjoMabiu84tszlmr9gcpgm1YJXOJoSZxCBooYuW	hqvxfSwzIz9RP3nTLP3SbDZUUDDpfMteRJtfm3rOv3	SumUp	R$	BR
+2	Chile	f	1599015368771240020	CLP	3HUcPsuH6IFToz1aa0Bzcs3uQlOG0vS76WX4DMhQBQ	bk17wI6w0FUy1aVYEinG7KDk1ztfQBlmTv8VPOtAW8	SumUp	$	CL
+3	Philippines	f	1544371380659684118	PHP	OCQZ6BwRk8OMUk04C08DmJGWTgcnkXoO2TSaVyqJLa	mkOFvvi3gJyuDU3ydONXFJbBzhO2Z4Npqg9CQjBRgw	Veritas	₱	PH
+4	United States	t	1597540818862735439	USD	eDlPjoMabiu84tszlmr9gcpgm1YJXOJoSZxCBooYuW	hqvxfSwzIz9RP3nTLP3SbDZUUDDpfMteRJtfm3rOv3	SumUp	$	US
+\.
+SELECT pg_catalog.setval('countries_id_seq', 4, true);
+
+
+COPY territories (id, city, territory, state, country, country_id, timezone, latitude, longitude, created_at, updated_at, is_deleted) FROM stdin;
+20	\N	NC	\N	Brazil	1	\N	-25.6780000000000008	-45.3340000000000032	2018-02-28 19:16:15.605+00	2018-05-28 14:03:44.148349+00	f
+34	\N	São Paulo - Centro	\N	Brazil	1	\N	45.6700000000000017	23.6780000000000008	2018-04-20 13:43:24.381+00	2018-05-13 14:43:47.454371+00	f
+33	\N	Mato Grosso - Cuiaba	\N	Brazil	1	\N	34	21	2018-04-13 14:02:25.087+00	2018-05-02 12:48:59.359104+00	f
+36	\N	São Paulo - Cotia/Alphaville	\N	Brazil	1	\N	45.8900000000000006	92.4399999999999977	2018-05-02 12:52:27.4301+00	2018-05-02 12:52:27.4301+00	f
+37	\N	São Paulo - Ribeirão Preto	\N	Brazil	1	\N	56.3299999999999983	22.5500000000000007	2018-05-02 12:54:14.066903+00	2018-05-02 12:54:14.066903+00	f
+38	\N	São Paulo - Jundiaí	\N	Brazil	1	\N	45.6599999999999966	89.4300000000000068	2018-05-02 17:42:45.969526+00	2018-05-02 17:42:45.969526+00	f
+39	\N	São Paulo - Campinas	\N	Brazil	1	\N	45.7700000000000031	77.9899999999999949	2018-05-02 17:43:24.374521+00	2018-05-02 17:43:24.374521+00	f
+40	\N	Portland Metro	\N	United States	4	\N	45.670029999999997	-125.9983	2018-05-30 12:28:40.805759+00	2018-05-30 12:28:40.805759+00	f
+41	Los Angeles	LA	CA	US	4	PDT	34.1724900000000034	-118.297399999999996	2018-07-09 15:49:38.396653+00	2018-07-09 16:06:30.782563+00	f
+\.
+SELECT pg_catalog.setval('territories_id_seq', 41, true);
+
+COPY food_park_types (name) FROM stdin;
+MALL
+EVENT
+HOTEL
+FOODPARK
+FARMER
+\.
+
+COPY roles (id, type) FROM stdin;
+1	CUSTOMER
+2	OWNER
+3	UNITMGR
+4	ADMIN
+5	DRIVER
+6	FOODPARKMGR
+\.
+SELECT pg_catalog.setval('roles_id_seq', 6, true);
+
+COPY unit_types (id, type) FROM stdin;
+1	TRUCK
+2	CART
+3	RESTAURANT
+4	BEER
+5	SPA
+6	GIFT
+7	BAR
+8	CAFE
+9	WINE
+10	PIZZA
+11	RETAIL
+12	FITNESS
+13	FARMERS
+14	DESSERT
+15	PAWN
+\.
+SELECT pg_catalog.setval('unit_types_id_seq', 15, true);
+
+
+COPY users (id, username, password, first_name, last_name, role, territory_id, country_id, phone, provider, provider_id, provider_data, fbid, fb_token, fb_login, default_language, created_at, updated_at, is_deleted, custom_id) FROM stdin;
+11011	dn10@gmail.com	e04ddb7bae832648e9d649858ef578cb	Dennis	Nichols	ADMIN	\N	\N	\N	local	local	{}	\N	\N	\N	en	2016-10-20 23:33:15.004572+00	2017-01-31 23:32:49.172208+00	f	{}
+11012	mp_admin	4789d4e7d1316d4dcf8ba7c8868bc6a3	Mike	Peter	ADMIN	\N	\N	\N	local	local	{}	\N	\N	\N	en	2016-10-20 23:33:15.004572+00	2017-06-27 17:11:23.159019+00	f	{}
+11013	mg_admin	2c544a0fca5a8146c790a295e389bbd8	Matt	Guiger	ADMIN	\N	\N	\N	local	local	{}	\N	\N	\N	en	2016-10-20 23:33:15.004572+00	2017-06-27 17:10:50.642758+00	f	{}
+11331	tony@buckets.com	66fd4811ab4c4774fa562ce62e63b371	Tony	Buckets	FOODPARKMGR	17	1	\N	local	local	{}	vinaybhavsar17	\N	\N	en	2017-12-28 15:29:02.565078+00	2018-04-29 18:35:28.826963+00	f	{}
+11535	Joey@butta.com	9a79e46310fadf394b1f2f3996f59cbd	Joey	Butta	FOODPARKMGR	20	1		local	local		1297581103	\N	\N	en	2018-04-23 12:01:56.252633+00	2018-05-09 09:29:27.419193+00	f	{"room": {"number": null, "billing_responsible": true}}
+11559	sam@brown.com	eefa31bb95be2c764bb7adbf8386ceb5	sam	brown	DRIVER	20	\N	551185003344	local	local	{}	\N	\N	\N	en	2018-05-01 22:19:15.770634+00	2018-05-01 22:19:15.770634+00	f	{}
+11633	Jerry@venue.com	30035607ee5bb378c71ab434a6d05410	Jerry	Venue	FOODPARKMGR	20	1	\N	local	local	{}	1455530682	\N	\N	en	2018-05-30 14:53:21.817359+00	2018-05-30 16:21:21.407335+00	f	{}
+11677	Kool@aid.com	2eaeb4e4ede1e00b2f1267aca7a6270f	Kool	Aid	OWNER	\N	1	\N	local	local	{}	\N	\N	\N	en	2018-07-05 12:56:03.308428+00	2018-07-05 12:56:03.308428+00	f	{}
+11689	botuser1	e12b2238182994a70e14ff5ef4c0bad1	Bot	User1	CUSTOMER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2018-07-09 18:40:54.963627+00	2018-07-09 18:40:54.963627+00	f	{}
+11690	botuser4	3bcf0051a448a057b3d1b05a8fb13980	Bot	User4	CUSTOMER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2018-07-09 18:41:29.2913+00	2018-07-09 18:41:29.2913+00	f	{}
+11691	botuser2	0e2775caf81a96e25fddcf632dfd3fc8	Bot	User2	CUSTOMER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2018-07-09 18:42:03.477654+00	2018-07-09 18:42:03.477654+00	f	{}
+11692	botuser3	18b9964cb0bd347b1f37ec2e9d6bd258	Bot	User3	CUSTOMER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2018-07-09 18:42:26.317416+00	2018-07-09 18:42:26.317416+00	f	{}
+11701	Simpson@me.com	c81d76d6c160db37ea82635e5b26a9a0	Homer	Simpson	OWNER	\N	4	\N	local	local	{}	\N	\N	\N	en	2018-07-13 11:23:42.028677+00	2018-07-13 11:23:42.028677+00	f	{}
+\.
+SELECT pg_catalog.setval('users_id_seq', 11701, true);
+
+
+COPY food_parks (id, name, photo, territory_id, city, state, postal_code, country, latitude, longitude, created_at, updated_at, is_deleted, foodpark_mgr_id, foodpark_mgr, type, address) FROM stdin;
+30065	Liberdade Hotel	\N	34	Burbank	CA	91502	US	-23.5599999999999987	-46.6300000000000026	2018-02-17 12:57:36.977+00	2018-07-12 14:45:16.752294+00	f	\N	11535	HOTEL	150 E Angeleno Ave, Burbank
+30088	SP Capital	\N	34	\N	\N	\N	\N	-23.6815309999999997	-46.8754899999999992	2018-04-26 19:20:34.961+00	2018-05-14 21:36:20.009901+00	f	11331	\N	FARMER	\N
+30089	São Caetano do Sul	\N	34	\N	\N	\N	\N	-23.6248441999999983	-46.582410000000003	2018-04-26 19:21:33.147+00	2018-04-27 09:39:50.972611+00	f	\N	\N	FARMER	\N
+30090	Sao Bernardo	\N	34	\N	\N	\N	\N	-23.8043599999999991	-46.6718299999999999	2018-04-26 19:22:14.487+00	2018-04-27 09:38:16.816839+00	f	\N	\N	FARMER	\N
+30091	Santo André	\N	34	\N	\N	\N	\N	-23.7100979999999986	-46.562936999999998	2018-04-26 19:23:25.954+00	2018-04-27 09:38:34.631241+00	f	\N	\N	FARMER	\N
+30100	Plaza Midwood	\N	20	\N	\N	\N	\N	35.2210243999999975	-80.8170424000000054	2018-05-28 13:42:34.651401+00	2018-05-28 13:42:34.651401+00	f	\N	11633	EVENT	\N
+30105	Tigard	\N	40	\N	\N	\N	\N	45.4187000000000012	122.787000000000006	2018-06-04 22:04:34.644494+00	2018-06-04 22:04:34.644494+00	f	\N	\N	EVENT	\N
+30106	Burbank Park	\N	41	Burbank	CA	91502	US	34.1724900000000034	-118.297399999999996	2018-07-09 16:03:39.10951+00	2018-07-13 17:00:21.957936+00	f	\N	\N	HOTEL	150 E Angeleno Ave, Burbank
+30107	Universal Studio	\N	41	Universal City	\N	\N	US	34.1381159999999966	-118.353378000000006	2018-07-15 21:01:15.091665+00	2018-07-15 21:01:15.091665+00	f	\N	\N	\N	\N
+\.
+SELECT pg_catalog.setval('food_parks_id_seq', 30107, true);
+
+
+COPY admins (id, description, photo, super_admin, city, state, country, user_id, created_at, updated_at) FROM stdin;
+1	\N	\N	f	\N	\N	\N	11011	2016-10-20 23:33:15.198515	2016-10-20 23:33:15.198515
+2	\N	\N	f	\N	\N	\N	11012	2016-10-22 18:42:04.186193	2016-10-22 18:42:04.186193
+3	\N	\N	f	\N	\N	\N	11013	2016-10-22 18:41:25.893483	2016-10-22 18:41:25.893483
+\.
+SELECT pg_catalog.setval('admins_id_seq', 4, true);
+
+COPY companies (id, name, order_sys_id, base_slug, default_cat, daily_special_cat_id, daily_special_item_id, delivery_chg_cat_id, delivery_chg_item_id, delivery_chg_amount, description, email, phone, facebook, twitter, instagram, photo, featured_dish, hours, schedule, business_address, city, state, country, country_id, taxband, tags, stub, calculated_rating, user_id, show_vendor_setup, default_unit, created_at, updated_at, is_deleted, veritas_id) FROM stdin;
+11131	Koolaid	2146e7e7-2c26-4331-a6c5-6052e90adc4f	koolaid-1530795364335	fbe99cbc-e3ad-497c-9a46-e1015bcfecaf	9b96ea12-4004-46d2-9f2f-e770efb9b197	73000d79-ff77-48b3-8831-4a82d181dd9c	59ee5d74-04ac-4a48-9b82-22457e04d5a1	84139ed1-1e87-4ed1-9551-aef7e50a8ad1	10	Kids love it!	Kool@aid.com	\N	www.facebook.com/koolaid	\N	\N	https://s3-eu-west-1.amazonaws.com/bkt-svc-files-cmty-api-moltin-com/38e9673d-9fa6-41ca-9db0-9eed531985ef/5e8d0f1b-8b5e-4692-9434-d2eedebc8e7e.	https://s3-eu-west-1.amazonaws.com/bkt-svc-files-cmty-api-moltin-com/38e9673d-9fa6-41ca-9db0-9eed531985ef/d78d729e-9825-4a0e-82d7-eb60abaf57a4.	11:00 AM-8:00 PM	0,1,2,3,4	123 Kool Kid Lane	\N	\N	\N	1	1554615357396746864	Punch	\N	\N	11677	t	\N	2018-07-05 12:56:10.513232+00	2018-07-05 12:56:10.513232+00	f	\N
+11142	Simpsons	f673b08d-9c10-48cb-80ae-967c11a54639	simpsons-1531481022473	b0ec856f-a4fd-44c5-a550-c03b5ecd9db2	64ba7340-d4a6-4a5e-94fe-d5ae470165d8	\N	90202130-fba2-4e35-89f7-4405416f41e5	286086b2-c1ac-4c41-9def-4e220e3d20c9	10	Wow!	Simpson@me.com	\N	www.facebook.com/simpsons	\N	\N	\N	\N	11:00 AM-8:00 PM	0,1,2,3,4,5	\N	\N	\N	\N	4	1554615357396746864	Chimis, Tacos	\N	\N	11701	t	\N	2018-07-13 11:23:49.384411+00	2018-07-13 11:23:49.384411+00	f	\N
+\.
+SELECT pg_catalog.setval('companies_id_seq', 11142, true);
+
+
+COPY customers (id, order_sys_id, description, apns_id, gcm_id, device_type, fcm_id, phone, facebook, twitter, photo, power_reviewer, city, state, country, user_id, created_at, updated_at) FROM stdin;
+9091	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	\N	\N	11689	2018-07-09 18:40:54.966146+00	2018-07-09 18:40:54.966146+00
+9092	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	\N	\N	11690	2018-07-09 18:41:29.29362+00	2018-07-09 18:41:29.29362+00
+9093	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	\N	\N	11691	2018-07-09 18:42:03.480811+00	2018-07-09 18:42:03.480811+00
+9094	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	\N	\N	11692	2018-07-09 18:42:26.320108+00	2018-07-09 18:42:26.320108+00\.
+SELECT pg_catalog.setval('customers_id_seq', 9094, true);
+
+COPY units (id, name, number, type, customer_order_window, prep_notice, delivery, delivery_time_offset, delivery_chg_amount, delivery_radius, description, username, password, qr_code, phone, apns_id, fcm_id, gcm_id, device_type, unit_order_sys_id, territory_id, company_id, unit_mgr_id, created_at, updated_at, currency_id, currency, payment, is_deleted, room_service, cash_on_delivery, prepay, food_park_id, hours, schedule, stub, shipping, shipping_chg_amount, currency_symbol, country_symbol, from_city, from_state, from_zip, from_country, from_street) FROM stdin;
+2154	Simpsons location #1	1	RESTAURANT	20	25	f	15	5	10	\N	simpsonlocation1	simpson	\N	\N	\N	\N	\N	\N	\N	41	11142	11702	2018-07-13 11:23:51.497031+00	2018-07-15 21:05:33.266749+00	1597540818862735439	USD	SumUp	f	f	f	f	30107	\N	\N	\N	\N	\N	\N	\N	Universal City	CA	91608	US	100 Universal City Plaza
+\.
+SELECT pg_catalog.setval('units_id_seq', 2154, true);
+
+
+
+COPY delivery_addresses (id, nickname, address1, address2, city, state, phone, customer_id, created_at, updated_at) FROM stdin;
+64	Zoo	5333 Zoo Dr, Los Angeles		Los Angeles	CA	5559988	9091	2018-07-10 12:53:11.086432+00	2018-07-10 12:53:11.086432+00
+65	Zoo	5333 Zoo Dr, Los Angeles		Los Angeles	CA	5559988	9093	2018-07-10 12:55:29.783896+00	2018-07-10 12:55:29.783896+00
+66	Zoo	5333 Zoo Dr, Los Angeles		Los Angeles	CA	5559988	9094	2018-07-10 12:56:48.922507+00	2018-07-10 12:56:48.922507+00
+67	Zoo	5333 Zoo Dr, Los Angeles		Los Angeles	CA	5559988	9092	2018-07-10 12:57:34.479328+00	2018-07-10 12:57:34.479328+00
+\.
+SELECT pg_catalog.setval('delivery_addresses_id_seq', 67, true);
+
+COPY drivers (id, name, phone, available, unit_id, company_id, created_at, updated_at) FROM stdin;
+\.
+SELECT pg_catalog.setval('drivers_id_seq', 38, true);
+
+COPY drivers_foodpark (food_park_id, user_id, available) FROM stdin;
+30065	11559	t
+30100	11559	t
+\.
+SELECT pg_catalog.setval('drivers_id_seq', 155, true);
+
+
+
+
+
+

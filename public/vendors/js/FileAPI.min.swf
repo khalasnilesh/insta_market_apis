@@ -1,0 +1,1743 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class=" is-copy-enabled emoji-size-boost is-u2f-enabled">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-fef7fdfe41dd435c6d82f93b486dc62bc095ebd12cd24fa2a817c8bb45dc073e.css" integrity="sha256-/vf9/kHdQ1xtgvk7SG3GK8CV69Es0k+iqBfIu0XcBz4=" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-83e53f1624aa604c4ddbe30d30459bf55c8e735d9029f0f10741db45f146f46b.css" integrity="sha256-g+U/FiSqYExN2+MNMEWb9VyOc12QKfDxB0HbRfFG9Gs=" media="all" rel="stylesheet" />
+    
+    
+    
+    
+    
+
+    <link as="script" href="https://assets-cdn.github.com/assets/frameworks-f2de4c863a487a877150989f965232bacfde178abf9c1963d9f84c5c19916f0c.js" rel="preload" />
+    
+    <link as="script" href="https://assets-cdn.github.com/assets/github-06ce76d6a7511ce3a2095752c3575119026281a84f0c9ca9fe739b7317c949c5.js" rel="preload" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width">
+    
+    
+    <title>ng-file-upload/FileAPI.min.js at master · danialfarid/ng-file-upload</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="https://avatars2.githubusercontent.com/u/1676054?v=3&amp;s=400" name="twitter:image:src" /><meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="danialfarid/ng-file-upload" name="twitter:title" /><meta content="ng-file-upload - Lightweight Angular directive to upload files with optional FileAPI shim for cross browser support" name="twitter:description" />
+      <meta content="https://avatars2.githubusercontent.com/u/1676054?v=3&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="danialfarid/ng-file-upload" property="og:title" /><meta content="https://github.com/danialfarid/ng-file-upload" property="og:url" /><meta content="ng-file-upload - Lightweight Angular directive to upload files with optional FileAPI shim for cross browser support" property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/MTM0NzEzNTA6YTdiODVlMjk3ZTM4ZTRmMjMxMDA2MTYwOGQ5NjUyZTY6YWE0ZDRmMGU5NDUzN2UyYzhiYTBkZjQ2MTUyMGZlYTM3YmRmYzlkZTMzM2FhZTdmN2YyYzEzMTVmOGZkYzI4Nw==--b313e2e30df00755e181d6550559a57db06b9d73">
+    <meta name="pjax-timeout" content="1000">
+    <link rel="sudo-modal" href="/sessions/sudo_modal">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="45F33A5D:2B25:6726EAB:5777F5AD" name="octolytics-dimension-request_id" /><meta content="13471350" name="octolytics-actor-id" /><meta content="mpeter88" name="octolytics-actor-login" /><meta content="d1054d5a17f548288b91d247fdfaca7e4aee4dc544e2c7fbe733936a063322fe" name="octolytics-actor-hash" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location" />
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="mpeter88">
+
+        <meta name="expected-hostname" content="github.com">
+      <meta name="js-proxy-site-detection-payload" content="YTQ4NWRkZjk4MTE1ZWI3YWFkZjFhMThhNWI2NzljYjFmM2YxOTE3ZjNlN2UwZDFlMmIzNTFjZjZjZTllOTZlM3x7InJlbW90ZV9hZGRyZXNzIjoiNjkuMjQzLjU4LjkzIiwicmVxdWVzdF9pZCI6IjQ1RjMzQTVEOjJCMjU6NjcyNkVBQjo1Nzc3RjVBRCIsInRpbWVzdGFtcCI6MTQ2NzQ3OTQ3OX0=">
+
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta name="html-safe-nonce" content="dafdd993f62e9849385089c93aa75117c850519e">
+    <meta content="b15740ebad0ec53f4077db6c58910124940f3335" name="form-nonce" />
+
+    <meta http-equiv="x-pjax-version" content="72aaaf9e0537a8c29405d0c6bfe5eeee">
+    
+
+      
+  <meta name="description" content="ng-file-upload - Lightweight Angular directive to upload files with optional FileAPI shim for cross browser support">
+  <meta name="go-import" content="github.com/danialfarid/ng-file-upload git https://github.com/danialfarid/ng-file-upload.git">
+
+  <meta content="1676054" name="octolytics-dimension-user_id" /><meta content="danialfarid" name="octolytics-dimension-user_login" /><meta content="11621778" name="octolytics-dimension-repository_id" /><meta content="danialfarid/ng-file-upload" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="11621778" name="octolytics-dimension-repository_network_root_id" /><meta content="danialfarid/ng-file-upload" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/danialfarid/ng-file-upload/commits/master.atom" rel="alternate" title="Recent Commits to ng-file-upload:master" type="application/atom+xml">
+
+
+      <link rel="canonical" href="https://github.com/danialfarid/ng-file-upload/blob/master/dist/FileAPI.min.js" data-pjax-transient>
+  </head>
+
+
+  <body class="logged-in   env-production macintosh vis-public page-blob">
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"></div>
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+        <div class="header header-logged-in true" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg aria-hidden="true" class="octicon octicon-mark-github" height="28" version="1.1" viewBox="0 0 16 16" width="28"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+
+
+        <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/danialfarid/ng-file-upload/search" class="js-site-search-form" data-scoped-search-url="/danialfarid/ng-file-upload/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope">This repository</div>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
+        data-hotkey="s"
+        name="q"
+        placeholder="Search"
+        aria-label="Search this repository"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        tabindex="1"
+        autocapitalize="off">
+    </label>
+</form></div>
+
+
+      <ul class="header-nav left" role="navigation">
+        <li class="header-nav-item">
+          <a href="/pulls" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="/issues" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item">
+    
+    <a href="/notifications" aria-label="You have no unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s js-socket-channel js-notification-indicator" data-channel="tenant:1:notification-changed:13471350" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
+        <span class="mail-status "></span>
+        <svg aria-hidden="true" class="octicon octicon-bell" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"></path></svg>
+</a>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new"
+       aria-label="Create new…"
+       data-ga-click="Header, create new, icon:add">
+      <svg aria-hidden="true" class="octicon octicon-plus left" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 9H7v5H5V9H0V7h5V2h2v5h5z"></path></svg>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+  <a class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository">
+    Import repository
+  </a>
+
+
+  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="danialfarid/ng-file-upload">This repository</span>
+  </div>
+    <a class="dropdown-item" href="/danialfarid/ng-file-upload/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-sw js-menu-target" href="/mpeter88"
+       aria-label="View profile and more"
+       data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@mpeter88" class="avatar" height="20" src="https://avatars3.githubusercontent.com/u/13471350?v=3&amp;s=40" width="20" />
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu dropdown-menu-sw">
+        <div class="dropdown-header header-nav-current-user css-truncate">
+          Signed in as <strong class="css-truncate-target">mpeter88</strong>
+        </div>
+
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item" href="/mpeter88" data-ga-click="Header, go to profile, text:your profile">
+          Your profile
+        </a>
+        <a class="dropdown-item" href="/stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+        <a class="dropdown-item" href="/explore" data-ga-click="Header, go to explore, text:explore">
+          Explore
+        </a>
+          <a class="dropdown-item" href="/integrations" data-ga-click="Header, go to integrations, text:integrations">
+            Integrations
+          </a>
+        <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+
+
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+          Settings
+        </a>
+
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="b15740ebad0ec53f4077db6c58910124940f3335" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="lpO5RlyZMFq6xxfWHqRJjhNCnqXCQGPS/Pf2WNYtoYwCundEFQ8jAE6eJTvSoOHz/W/mpl2afRcBSLRo5Jg0wg==" /></div>
+          <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+            Sign out
+          </button>
+</form>      </div>
+    </div>
+  </li>
+</ul>
+
+
+    
+  </div>
+</div>
+
+
+      
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main" class="main-content">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container>
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-form-nonce="b15740ebad0ec53f4077db6c58910124940f3335" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="PnvrR4sljrbifJCng4ncPbuvk4Ne8CAKfMYAjC7HitGsp9Q8HEPE8eqiOdJTkl4hctqaq+kjam3xR+aKAvKiyw==" /></div>      <input class="form-control" id="repository_id" name="repository_id" type="hidden" value="11621778" />
+
+        <div class="select-menu js-menu-container js-select-menu">
+          <a href="/danialfarid/ng-file-upload/subscription"
+            class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true"
+            data-ga-click="Repository, click Watch settings, action:blob#show">
+            <span class="js-select-button">
+              <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+              Watch
+            </span>
+          </a>
+          <a class="social-count js-social-count" href="/danialfarid/ng-file-upload/watchers">
+            269
+          </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+            <div class="select-menu-header js-navigation-enable" tabindex="-1">
+              <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+              <span class="select-menu-title">Notifications</span>
+            </div>
+
+              <div class="select-menu-list js-navigation-container" role="menu">
+
+                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input checked="checked" id="do_included" name="do" type="radio" value="included" />
+                    <span class="select-menu-item-heading">Not watching</span>
+                    <span class="description">Be notified when participating or @mentioned.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                      Watch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_subscribed" name="do" type="radio" value="subscribed" />
+                    <span class="select-menu-item-heading">Watching</span>
+                    <span class="description">Be notified of all conversations.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                      Unwatch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_ignore" name="do" type="radio" value="ignore" />
+                    <span class="select-menu-item-heading">Ignoring</span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-mute" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"></path></svg>
+                      Stop ignoring
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/danialfarid/ng-file-upload/unstar" class="starred" data-form-nonce="b15740ebad0ec53f4077db6c58910124940f3335" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Ua9nYSzZngYgnAeBHhE+mulxth/VDtkjYkD7qsooM/UGK2Gt7Dlmi8/gaHITFGmV0I0Xo6cH7UaV/eOMVckFpA==" /></div>
+      <button
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Unstar this repository" title="Unstar danialfarid/ng-file-upload"
+        data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/danialfarid/ng-file-upload/stargazers">
+          6,232
+        </a>
+</form>
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/danialfarid/ng-file-upload/star" class="unstarred" data-form-nonce="b15740ebad0ec53f4077db6c58910124940f3335" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="PpngjJ/aNjLJATenuqT4SMdVMlwtgpjygC6/Buz0IDmMcngQMwjulbyO0Kw8ipOY7ua8QWgoJoD4FHTKcyPzig==" /></div>
+      <button
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Star this repository" title="Star danialfarid/ng-file-upload"
+        data-ga-click="Repository, click star button, action:blob#show; text:Star">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/danialfarid/ng-file-upload/stargazers">
+          6,232
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/danialfarid/ng-file-upload/fork" class="btn-with-count" data-form-nonce="b15740ebad0ec53f4077db6c58910124940f3335" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="xS3myfWN0z8j8UIaaUmsrwi+eNwSnOpEMDPFjTZP/XFPCmQHXy3ijT0pnXdx3EjJ/d1FRHA11dh2Cl9ExQVZQg==" /></div>
+            <button
+                type="submit"
+                class="btn btn-sm btn-with-count"
+                data-ga-click="Repository, show fork modal, action:blob#show; text:Fork"
+                title="Fork your own copy of danialfarid/ng-file-upload to your account"
+                aria-label="Fork your own copy of danialfarid/ng-file-upload to your account">
+              <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+              Fork
+            </button>
+</form>
+    <a href="/danialfarid/ng-file-upload/network" class="social-count">
+      1,290
+    </a>
+  </li>
+</ul>
+
+    <h1 class="public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+  <span class="author" itemprop="author"><a href="/danialfarid" class="url fn" rel="author">danialfarid</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="/danialfarid/ng-file-upload" data-pjax="#js-repo-pjax-container">ng-file-upload</a></strong>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/danialfarid/ng-file-upload" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /danialfarid/ng-file-upload" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="/danialfarid/ng-file-upload/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /danialfarid/ng-file-upload/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+        <span itemprop="name">Issues</span>
+        <span class="counter">74</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/danialfarid/ng-file-upload/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /danialfarid/ng-file-upload/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="counter">11</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+    <a href="/danialfarid/ng-file-upload/wiki" class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /danialfarid/ng-file-upload/wiki">
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
+      Wiki
+</a>
+
+  <a href="/danialfarid/ng-file-upload/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /danialfarid/ng-file-upload/pulse">
+    <svg aria-hidden="true" class="octicon octicon-pulse" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0v2h3.6l.9-1.8.9 5.4L9 8.5l1.6 1.5H14V8z"></path></svg>
+    Pulse
+</a>
+  <a href="/danialfarid/ng-file-upload/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /danialfarid/ng-file-upload/graphs">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"></path></svg>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+
+<a href="/danialfarid/ng-file-upload/blob/e0b6e70f40f2eeeb593ee8418a090b72e88b5dac/dist/FileAPI.min.js" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+<!-- blob contrib key: blob_contributors:v21:ac245cebadcd158e89ff9c9eed92b1ec -->
+
+<div class="file-navigation js-zeroclipboard-container">
+  
+<div class="select-menu branch-select-menu js-menu-container js-select-menu left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    title="master"
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/danialfarid/ng-file-upload/blob/6.3/dist/FileAPI.min.js"
+               data-name="6.3"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text" title="6.3">
+                6.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/danialfarid/ng-file-upload/blob/master/dist/FileAPI.min.js"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text" title="master">
+                master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/danialfarid/ng-file-upload/blob/patch-1/dist/FileAPI.min.js"
+               data-name="patch-1"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text" title="patch-1">
+                patch-1
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/v0.1.4/dist/FileAPI.min.js"
+              data-name="v0.1.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v0.1.4">
+                v0.1.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/nightly-9.0.2/dist/FileAPI.min.js"
+              data-name="nightly-9.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="nightly-9.0.2">
+                nightly-9.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/fixed/dist/FileAPI.min.js"
+              data-name="fixed"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="fixed">
+                fixed
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/12.0.4/dist/FileAPI.min.js"
+              data-name="12.0.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="12.0.4">
+                12.0.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/12.0.3/dist/FileAPI.min.js"
+              data-name="12.0.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="12.0.3">
+                12.0.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/12.0.2/dist/FileAPI.min.js"
+              data-name="12.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="12.0.2">
+                12.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/12.0.1/dist/FileAPI.min.js"
+              data-name="12.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="12.0.1">
+                12.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/12.0.0/dist/FileAPI.min.js"
+              data-name="12.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="12.0.0">
+                12.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/11.2.3/dist/FileAPI.min.js"
+              data-name="11.2.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="11.2.3">
+                11.2.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/11.2.2/dist/FileAPI.min.js"
+              data-name="11.2.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="11.2.2">
+                11.2.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/11.2.1/dist/FileAPI.min.js"
+              data-name="11.2.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="11.2.1">
+                11.2.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/11.2.0/dist/FileAPI.min.js"
+              data-name="11.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="11.2.0">
+                11.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/11.1.1/dist/FileAPI.min.js"
+              data-name="11.1.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="11.1.1">
+                11.1.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/11.1.0/dist/FileAPI.min.js"
+              data-name="11.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="11.1.0">
+                11.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/11.0.2/dist/FileAPI.min.js"
+              data-name="11.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="11.0.2">
+                11.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/11.0.1/dist/FileAPI.min.js"
+              data-name="11.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="11.0.1">
+                11.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/11.0.0/dist/FileAPI.min.js"
+              data-name="11.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="11.0.0">
+                11.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.14/dist/FileAPI.min.js"
+              data-name="10.1.14"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.14">
+                10.1.14
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.13/dist/FileAPI.min.js"
+              data-name="10.1.13"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.13">
+                10.1.13
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.12/dist/FileAPI.min.js"
+              data-name="10.1.12"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.12">
+                10.1.12
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.11/dist/FileAPI.min.js"
+              data-name="10.1.11"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.11">
+                10.1.11
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.9/dist/FileAPI.min.js"
+              data-name="10.1.9"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.9">
+                10.1.9
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.8/dist/FileAPI.min.js"
+              data-name="10.1.8"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.8">
+                10.1.8
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.7/dist/FileAPI.min.js"
+              data-name="10.1.7"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.7">
+                10.1.7
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.6/dist/FileAPI.min.js"
+              data-name="10.1.6"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.6">
+                10.1.6
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.5/dist/FileAPI.min.js"
+              data-name="10.1.5"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.5">
+                10.1.5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.4/dist/FileAPI.min.js"
+              data-name="10.1.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.4">
+                10.1.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.2/dist/FileAPI.min.js"
+              data-name="10.1.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.2">
+                10.1.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.1/dist/FileAPI.min.js"
+              data-name="10.1.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.1">
+                10.1.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.1.0/dist/FileAPI.min.js"
+              data-name="10.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.1.0">
+                10.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.0.4/dist/FileAPI.min.js"
+              data-name="10.0.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.0.4">
+                10.0.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.0.3/dist/FileAPI.min.js"
+              data-name="10.0.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.0.3">
+                10.0.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.0.2/dist/FileAPI.min.js"
+              data-name="10.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.0.2">
+                10.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.0.1/dist/FileAPI.min.js"
+              data-name="10.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.0.1">
+                10.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/10.0.0/dist/FileAPI.min.js"
+              data-name="10.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="10.0.0">
+                10.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.1.2/dist/FileAPI.min.js"
+              data-name="9.1.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.1.2">
+                9.1.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.1.1/dist/FileAPI.min.js"
+              data-name="9.1.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.1.1">
+                9.1.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.1.0/dist/FileAPI.min.js"
+              data-name="9.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.1.0">
+                9.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.19/dist/FileAPI.min.js"
+              data-name="9.0.19"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.19">
+                9.0.19
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.18/dist/FileAPI.min.js"
+              data-name="9.0.18"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.18">
+                9.0.18
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.17/dist/FileAPI.min.js"
+              data-name="9.0.17"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.17">
+                9.0.17
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.16/dist/FileAPI.min.js"
+              data-name="9.0.16"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.16">
+                9.0.16
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.15/dist/FileAPI.min.js"
+              data-name="9.0.15"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.15">
+                9.0.15
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.14/dist/FileAPI.min.js"
+              data-name="9.0.14"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.14">
+                9.0.14
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.13/dist/FileAPI.min.js"
+              data-name="9.0.13"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.13">
+                9.0.13
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.12/dist/FileAPI.min.js"
+              data-name="9.0.12"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.12">
+                9.0.12
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.11/dist/FileAPI.min.js"
+              data-name="9.0.11"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.11">
+                9.0.11
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.10/dist/FileAPI.min.js"
+              data-name="9.0.10"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.10">
+                9.0.10
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.9/dist/FileAPI.min.js"
+              data-name="9.0.9"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.9">
+                9.0.9
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.8/dist/FileAPI.min.js"
+              data-name="9.0.8"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.8">
+                9.0.8
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.7/dist/FileAPI.min.js"
+              data-name="9.0.7"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.7">
+                9.0.7
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.6/dist/FileAPI.min.js"
+              data-name="9.0.6"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.6">
+                9.0.6
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.5/dist/FileAPI.min.js"
+              data-name="9.0.5"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.5">
+                9.0.5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.4/dist/FileAPI.min.js"
+              data-name="9.0.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.4">
+                9.0.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.3/dist/FileAPI.min.js"
+              data-name="9.0.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.3">
+                9.0.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.2/dist/FileAPI.min.js"
+              data-name="9.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.2">
+                9.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.1/dist/FileAPI.min.js"
+              data-name="9.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.1">
+                9.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/9.0.0/dist/FileAPI.min.js"
+              data-name="9.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="9.0.0">
+                9.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/8.0.6/dist/FileAPI.min.js"
+              data-name="8.0.6"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="8.0.6">
+                8.0.6
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/8.0.5/dist/FileAPI.min.js"
+              data-name="8.0.5"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="8.0.5">
+                8.0.5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/8.0.4/dist/FileAPI.min.js"
+              data-name="8.0.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="8.0.4">
+                8.0.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/8.0.3/dist/FileAPI.min.js"
+              data-name="8.0.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="8.0.3">
+                8.0.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/8.0.2/dist/FileAPI.min.js"
+              data-name="8.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="8.0.2">
+                8.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/8.0.1/dist/FileAPI.min.js"
+              data-name="8.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="8.0.1">
+                8.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/8.0.0/dist/FileAPI.min.js"
+              data-name="8.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="8.0.0">
+                8.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.3.9/dist/FileAPI.min.js"
+              data-name="7.3.9"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.3.9">
+                7.3.9
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.3.8/dist/FileAPI.min.js"
+              data-name="7.3.8"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.3.8">
+                7.3.8
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.3.7/dist/FileAPI.min.js"
+              data-name="7.3.7"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.3.7">
+                7.3.7
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.3.6/dist/FileAPI.min.js"
+              data-name="7.3.6"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.3.6">
+                7.3.6
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.3.4/dist/FileAPI.min.js"
+              data-name="7.3.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.3.4">
+                7.3.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.3.3/dist/FileAPI.min.js"
+              data-name="7.3.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.3.3">
+                7.3.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.3.2/dist/FileAPI.min.js"
+              data-name="7.3.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.3.2">
+                7.3.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.3.1/dist/FileAPI.min.js"
+              data-name="7.3.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.3.1">
+                7.3.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.3.0/dist/FileAPI.min.js"
+              data-name="7.3.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.3.0">
+                7.3.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.2.2/dist/FileAPI.min.js"
+              data-name="7.2.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.2.2">
+                7.2.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.2.1/dist/FileAPI.min.js"
+              data-name="7.2.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.2.1">
+                7.2.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.2.0/dist/FileAPI.min.js"
+              data-name="7.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.2.0">
+                7.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.1.0/dist/FileAPI.min.js"
+              data-name="7.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.1.0">
+                7.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.17/dist/FileAPI.min.js"
+              data-name="7.0.17"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.17">
+                7.0.17
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.16/dist/FileAPI.min.js"
+              data-name="7.0.16"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.16">
+                7.0.16
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.15/dist/FileAPI.min.js"
+              data-name="7.0.15"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.15">
+                7.0.15
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.14/dist/FileAPI.min.js"
+              data-name="7.0.14"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.14">
+                7.0.14
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.13/dist/FileAPI.min.js"
+              data-name="7.0.13"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.13">
+                7.0.13
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.12/dist/FileAPI.min.js"
+              data-name="7.0.12"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.12">
+                7.0.12
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.11/dist/FileAPI.min.js"
+              data-name="7.0.11"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.11">
+                7.0.11
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.11-corrupted/dist/FileAPI.min.js"
+              data-name="7.0.11-corrupted"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.11-corrupted">
+                7.0.11-corrupted
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.10/dist/FileAPI.min.js"
+              data-name="7.0.10"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.10">
+                7.0.10
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.9/dist/FileAPI.min.js"
+              data-name="7.0.9"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.9">
+                7.0.9
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.8/dist/FileAPI.min.js"
+              data-name="7.0.8"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.8">
+                7.0.8
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.7/dist/FileAPI.min.js"
+              data-name="7.0.7"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.7">
+                7.0.7
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.6/dist/FileAPI.min.js"
+              data-name="7.0.6"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.6">
+                7.0.6
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.5/dist/FileAPI.min.js"
+              data-name="7.0.5"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.5">
+                7.0.5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.4/dist/FileAPI.min.js"
+              data-name="7.0.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.4">
+                7.0.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.3/dist/FileAPI.min.js"
+              data-name="7.0.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.3">
+                7.0.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.2/dist/FileAPI.min.js"
+              data-name="7.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.2">
+                7.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.1/dist/FileAPI.min.js"
+              data-name="7.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.1">
+                7.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/7.0.0/dist/FileAPI.min.js"
+              data-name="7.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.0">
+                7.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/6.2.1/dist/FileAPI.min.js"
+              data-name="6.2.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="6.2.1">
+                6.2.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/6.2.0/dist/FileAPI.min.js"
+              data-name="6.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="6.2.0">
+                6.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/danialfarid/ng-file-upload/tree/6.1.2/dist/FileAPI.min.js"
+              data-name="6.1.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="6.1.2">
+                6.1.2
+              </span>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="btn-group right">
+    <a href="/danialfarid/ng-file-upload/find/master"
+          class="js-pjax-capture-input btn btn-sm"
+          data-pjax
+          data-hotkey="t">
+      Find file
+    </a>
+    <button aria-label="Copy file path to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button">Copy path</button>
+  </div>
+  <div class="breadcrumb js-zeroclipboard-target">
+    <span class="repo-root js-repo-root"><span class="js-path-segment"><a href="/danialfarid/ng-file-upload"><span>ng-file-upload</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a href="/danialfarid/ng-file-upload/tree/master/dist"><span>dist</span></a></span><span class="separator">/</span><strong class="final-path">FileAPI.min.js</strong>
+  </div>
+</div>
+
+
+  <div class="commit-tease">
+      <span class="right">
+        <a class="commit-tease-sha" href="/danialfarid/ng-file-upload/commit/c92319d4fba5016e84f4f3bd4876ec5fbb0e7124" data-pjax>
+          c92319d
+        </a>
+        <relative-time datetime="2016-03-11T20:42:04Z">Mar 12, 2016</relative-time>
+      </span>
+      <div>
+        <img alt="" class="avatar" height="20" src="https://1.gravatar.com/avatar/6072cbad1e573d6d71dacd7ddf59d17c?d=https%3A%2F%2Fassets-cdn.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=x&amp;s=140" width="20" />
+        <span class="user-mention">Danial Farid</span>
+          <a href="/danialfarid/ng-file-upload/commit/c92319d4fba5016e84f4f3bd4876ec5fbb0e7124" class="message" data-pjax="true" title="fixed file. keys">fixed file. keys</a>
+      </div>
+
+    <div class="commit-tease-contributors">
+      <button type="button" class="btn-link muted-link contributors-toggle" data-facebox="#blob_contributors_box">
+        <strong>1</strong>
+         contributor
+      </button>
+      
+    </div>
+
+    <div id="blob_contributors_box" style="display:none">
+      <h2 class="facebox-header" data-facebox-id="facebox-header">Users who have contributed to this file</h2>
+      <ul class="facebox-user-list" data-facebox-id="facebox-description">
+          <li class="facebox-user-list-item">
+            <img alt="@danialfarid" height="24" src="https://avatars3.githubusercontent.com/u/1676054?v=3&amp;s=48" width="24" />
+            <a href="/danialfarid">danialfarid</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+<div class="file">
+  <div class="file-header">
+  <div class="file-actions">
+
+    <div class="btn-group">
+      <a href="/danialfarid/ng-file-upload/raw/master/dist/FileAPI.min.js" class="btn btn-sm " id="raw-url">Raw</a>
+        <a href="/danialfarid/ng-file-upload/blame/master/dist/FileAPI.min.js" class="btn btn-sm js-update-url-with-hash">Blame</a>
+      <a href="/danialfarid/ng-file-upload/commits/master/dist/FileAPI.min.js" class="btn btn-sm " rel="nofollow">History</a>
+    </div>
+
+        <a class="btn-octicon tooltipped tooltipped-nw"
+           href="https://mac.github.com"
+           aria-label="Open this file in GitHub Desktop"
+           data-ga-click="Repository, open with desktop, type:mac">
+            <svg aria-hidden="true" class="octicon octicon-device-desktop" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"></path></svg>
+        </a>
+
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/danialfarid/ng-file-upload/edit/master/dist/FileAPI.min.js" class="inline-form js-update-url-with-hash" data-form-nonce="b15740ebad0ec53f4077db6c58910124940f3335" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="IGUgcaV+1j7QWQO4yOXGsStNqH/mzffDHK1Gk+89julYkNpaOH8HDSgT00AZhedhL1T7bHunswWfJqf+1hoYfg==" /></div>
+          <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
+            aria-label="Fork this project and edit the file" data-hotkey="e" data-disable-with>
+            <svg aria-hidden="true" class="octicon octicon-pencil" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
+          </button>
+</form>        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/danialfarid/ng-file-upload/delete/master/dist/FileAPI.min.js" class="inline-form" data-form-nonce="b15740ebad0ec53f4077db6c58910124940f3335" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="jawQqGNv35ja+9v58o38NtpUkx9KKjNY0g15dbzxD7xa38f+t50IronKBMQGhg5+hCwzxPYSCsSQsuCaz0a6bw==" /></div>
+          <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
+            aria-label="Fork this project and delete the file" data-disable-with>
+            <svg aria-hidden="true" class="octicon octicon-trashcan" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
+          </button>
+</form>  </div>
+
+  <div class="file-info">
+      6 lines (6 sloc)
+      <span class="file-info-divider"></span>
+    43 KB
+  </div>
+</div>
+
+  
+
+  <div itemprop="text" class="blob-wrapper data type-javascript">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tr>
+        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">/*! 12.0.4 */</td>
+      </tr>
+      <tr>
+        <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line">/*! FileAPI 2.0.7 - BSD | git://github.com/mailru/FileAPI.git</td>
+      </tr>
+      <tr>
+        <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line"> * FileAPI — a set of  javascript tools for working with files. Multiupload, drag&#39;n&#39;drop and chunked file upload. Images: crop, resize and auto orientation by EXIF.</td>
+      </tr>
+      <tr>
+        <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line"> */</td>
+      </tr>
+      <tr>
+        <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line">!function(a){&quot;use strict&quot;;var b=a.HTMLCanvasElement&amp;&amp;a.HTMLCanvasElement.prototype,c=a.Blob&amp;&amp;function(){try{return Boolean(new Blob)}catch(a){return!1}}(),d=c&amp;&amp;a.Uint8Array&amp;&amp;function(){try{return 100===new Blob([new Uint8Array(100)]).size}catch(a){return!1}}(),e=a.BlobBuilder||a.WebKitBlobBuilder||a.MozBlobBuilder||a.MSBlobBuilder,f=(c||e)&amp;&amp;a.atob&amp;&amp;a.ArrayBuffer&amp;&amp;a.Uint8Array&amp;&amp;function(a){var b,f,g,h,i,j;for(b=a.split(&quot;,&quot;)[0].indexOf(&quot;base64&quot;)&gt;=0?atob(a.split(&quot;,&quot;)[1]):decodeURIComponent(a.split(&quot;,&quot;)[1]),f=new ArrayBuffer(b.length),g=new Uint8Array(f),h=0;h&lt;b.length;h+=1)g[h]=b.charCodeAt(h);return i=a.split(&quot;,&quot;)[0].split(&quot;:&quot;)[1].split(&quot;;&quot;)[0],c?new Blob([d?g:f],{type:i}):(j=new e,j.append(f),j.getBlob(i))};a.HTMLCanvasElement&amp;&amp;!b.toBlob&amp;&amp;(b.mozGetAsFile?b.toBlob=function(a,c,d){a(d&amp;&amp;b.toDataURL&amp;&amp;f?f(this.toDataURL(c,d)):this.mozGetAsFile(&quot;blob&quot;,c))}:b.toDataURL&amp;&amp;f&amp;&amp;(b.toBlob=function(a,b,c){a(f(this.toDataURL(b,c)))})),a.dataURLtoBlob=f}(window),function(a,b){&quot;use strict&quot;;function c(a,b,c,d,e){var f={type:c.type||c,target:a,result:d};S(f,e),b(f)}function d(a){return u&amp;&amp;!!u.prototype[&quot;readAs&quot;+a]}function e(a,e,f,g){if(Y.isBlob(a)&amp;&amp;d(f)){var h=new u;T(h,M,function j(b){var d=b.type;&quot;progress&quot;==d?c(a,e,b,b.target.result,{loaded:b.loaded,total:b.total}):&quot;loadend&quot;==d?(U(h,M,j),h=null):c(a,e,b,b.target.result)});try{g?h[&quot;readAs&quot;+f](a,g):h[&quot;readAs&quot;+f](a)}catch(i){c(a,e,&quot;error&quot;,b,{error:i.toString()})}}else c(a,e,&quot;error&quot;,b,{error:&quot;FileReader_not_support_&quot;+f})}function f(a,b){if(!a.type&amp;&amp;a.size%4096===0&amp;&amp;a.size&lt;=102400)if(u)try{var c=new u;V(c,M,function(a){var d=&quot;error&quot;!=a.type;b(d),d&amp;&amp;c.abort()}),c.readAsDataURL(a)}catch(d){b(!1)}else b(null);else b(!0)}function g(a){var b;return a.getAsEntry?b=a.getAsEntry():a.webkitGetAsEntry&amp;&amp;(b=a.webkitGetAsEntry()),b}function h(a,b){if(a)if(a.isFile)a.file(function(c){c.fullPath=a.fullPath,b(!1,[c])},function(a){b(&quot;FileError.code: &quot;+a.code)});else if(a.isDirectory){var c=a.createReader(),d=[];c.readEntries(function(a){Y.afor(a,function(a,c){h(c,function(c,e){c?Y.log(c):d=d.concat(e),a?a():b(!1,d)})})},function(a){b(&quot;directory_reader: &quot;+a)})}else h(g(a),b);else b(&quot;invalid entry&quot;)}function i(a){var b={};return R(a,function(a,c){a&amp;&amp;&quot;object&quot;==typeof a&amp;&amp;void 0===a.nodeType&amp;&amp;(a=S({},a)),b[c]=a}),b}function j(a){return F.test(a&amp;&amp;a.tagName)}function k(a){return(a.originalEvent||a||&quot;&quot;).dataTransfer||{}}function l(a){var b;for(b in a)if(a.hasOwnProperty(b)&amp;&amp;!(a[b]instanceof Object||&quot;overlay&quot;===b||&quot;filter&quot;===b))return!0;return!1}var m=1,n=function(){},o=a.document,p=o.doctype||{},q=a.navigator.userAgent,r=a.createObjectURL&amp;&amp;a||a.URL&amp;&amp;URL.revokeObjectURL&amp;&amp;URL||a.webkitURL&amp;&amp;webkitURL,s=a.Blob,t=a.File,u=a.FileReader,v=a.FormData,w=a.XMLHttpRequest,x=a.jQuery,y=!(!(t&amp;&amp;u&amp;&amp;(a.Uint8Array||v||w.prototype.sendAsBinary))||/safari\//i.test(q)&amp;&amp;!/chrome\//i.test(q)&amp;&amp;/windows/i.test(q)),z=y&amp;&amp;&quot;withCredentials&quot;in new w,A=y&amp;&amp;!!s&amp;&amp;!!(s.prototype.webkitSlice||s.prototype.mozSlice||s.prototype.slice),B=a.dataURLtoBlob,C=/img/i,D=/canvas/i,E=/img|canvas/i,F=/input/i,G=/^data:[^,]+,/,H={}.toString,I=a.Math,J=function(b){return b=new a.Number(I.pow(1024,b)),b.from=function(a){return I.round(a*this)},b},K={},L=[],M=&quot;abort progress error load loadend&quot;,N=&quot;status statusText readyState response responseXML responseText responseBody&quot;.split(&quot; &quot;),O=&quot;currentTarget&quot;,P=&quot;preventDefault&quot;,Q=function(a){return a&amp;&amp;&quot;length&quot;in a},R=function(a,b,c){if(a)if(Q(a))for(var d=0,e=a.length;e&gt;d;d++)d in a&amp;&amp;b.call(c,a[d],d,a);else for(var f in a)a.hasOwnProperty(f)&amp;&amp;b.call(c,a[f],f,a)},S=function(a){for(var b=arguments,c=1,d=function(b,c){a[c]=b};c&lt;b.length;c++)R(b[c],d);return a},T=function(a,b,c){if(a){var d=Y.uid(a);K[d]||(K[d]={});var e=u&amp;&amp;a&amp;&amp;a instanceof u;R(b.split(/\s+/),function(b){x&amp;&amp;!e?x.event.add(a,b,c):(K[d][b]||(K[d][b]=[]),K[d][b].push(c),a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent?a.attachEvent(&quot;on&quot;+b,c):a[&quot;on&quot;+b]=c)})}},U=function(a,b,c){if(a){var d=Y.uid(a),e=K[d]||{},f=u&amp;&amp;a&amp;&amp;a instanceof u;R(b.split(/\s+/),function(b){if(x&amp;&amp;!f)x.event.remove(a,b,c);else{for(var d=e[b]||[],g=d.length;g--;)if(d[g]===c){d.splice(g,1);break}a.addEventListener?a.removeEventListener(b,c,!1):a.detachEvent?a.detachEvent(&quot;on&quot;+b,c):a[&quot;on&quot;+b]=null}})}},V=function(a,b,c){T(a,b,function d(e){U(a,b,d),c(e)})},W=function(b){return b.target||(b.target=a.event&amp;&amp;a.event.srcElement||o),3===b.target.nodeType&amp;&amp;(b.target=b.target.parentNode),b},X=function(a){var b=o.createElement(&quot;input&quot;);return b.setAttribute(&quot;type&quot;,&quot;file&quot;),a in b},Y={version:&quot;2.0.7&quot;,cors:!1,html5:!0,media:!1,formData:!0,multiPassResize:!0,debug:!1,pingUrl:!1,multiFlash:!1,flashAbortTimeout:0,withCredentials:!0,staticPath:&quot;./dist/&quot;,flashUrl:0,flashImageUrl:0,postNameConcat:function(a,b){return a+(null!=b?&quot;[&quot;+b+&quot;]&quot;:&quot;&quot;)},ext2mime:{jpg:&quot;image/jpeg&quot;,tif:&quot;image/tiff&quot;,txt:&quot;text/plain&quot;},accept:{&quot;image/*&quot;:&quot;art bm bmp dwg dxf cbr cbz fif fpx gif ico iefs jfif jpe jpeg jpg jps jut mcf nap nif pbm pcx pgm pict pm png pnm qif qtif ras rast rf rp svf tga tif tiff xbm xbm xpm xwd&quot;,&quot;audio/*&quot;:&quot;m4a flac aac rm mpa wav wma ogg mp3 mp2 m3u mod amf dmf dsm far gdm imf it m15 med okt s3m stm sfx ult uni xm sid ac3 dts cue aif aiff wpl ape mac mpc mpp shn wv nsf spc gym adplug adx dsp adp ymf ast afc hps xs&quot;,&quot;video/*&quot;:&quot;m4v 3gp nsv ts ty strm rm rmvb m3u ifo mov qt divx xvid bivx vob nrg img iso pva wmv asf asx ogm m2v avi bin dat dvr-ms mpg mpeg mp4 mkv avc vp3 svq3 nuv viv dv fli flv wpl&quot;},uploadRetry:0,networkDownRetryTimeout:5e3,chunkSize:0,chunkUploadRetry:0,chunkNetworkDownRetryTimeout:2e3,KB:J(1),MB:J(2),GB:J(3),TB:J(4),EMPTY_PNG:&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQIW2NkAAIAAAoAAggA9GkAAAAASUVORK5CYII=&quot;,expando:&quot;fileapi&quot;+(new Date).getTime(),uid:function(a){return a?a[Y.expando]=a[Y.expando]||Y.uid():(++m,Y.expando+m)},log:function(){Y.debug&amp;&amp;Y._supportConsoleLog&amp;&amp;(Y._supportConsoleLogApply?console.log.apply(console,arguments):console.log([].join.call(arguments,&quot; &quot;)))},newImage:function(a,b){var c=o.createElement(&quot;img&quot;);return b&amp;&amp;Y.event.one(c,&quot;error load&quot;,function(a){b(&quot;error&quot;==a.type,c),c=null}),c.src=a,c},getXHR:function(){var b;if(w)b=new w;else if(a.ActiveXObject)try{b=new ActiveXObject(&quot;MSXML2.XMLHttp.3.0&quot;)}catch(c){b=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;)}return b},isArray:Q,support:{dnd:z&amp;&amp;&quot;ondrop&quot;in o.createElement(&quot;div&quot;),cors:z,html5:y,chunked:A,dataURI:!0,accept:X(&quot;accept&quot;),multiple:X(&quot;multiple&quot;)},event:{on:T,off:U,one:V,fix:W},throttle:function(b,c){var d,e;return function(){e=arguments,d||(b.apply(a,e),d=setTimeout(function(){d=0,b.apply(a,e)},c))}},F:function(){},parseJSON:function(b){var c;return c=a.JSON&amp;&amp;JSON.parse?JSON.parse(b):new Function(&quot;return (&quot;+b.replace(/([\r\n])/g,&quot;\\$1&quot;)+&quot;);&quot;)()},trim:function(a){return a=String(a),a.trim?a.trim():a.replace(/^\s+|\s+$/g,&quot;&quot;)},defer:function(){var a,c,d=[],e={resolve:function(b,f){for(e.resolve=n,c=b||!1,a=f;f=d.shift();)f(c,a)},then:function(e){c!==b?e(c,a):d.push(e)}};return e},queue:function(a){var b=0,c=0,d=!1,e=!1,f={inc:function(){c++},next:function(){b++,setTimeout(f.check,0)},check:function(){b&gt;=c&amp;&amp;!d&amp;&amp;f.end()},isFail:function(){return d},fail:function(){!d&amp;&amp;a(d=!0)},end:function(){e||(e=!0,a())}};return f},each:R,afor:function(a,b){var c=0,d=a.length;Q(a)&amp;&amp;d--?!function e(){b(d!=c&amp;&amp;e,a[c],c++)}():b(!1)},extend:S,isFile:function(a){return&quot;[object File]&quot;===H.call(a)},isBlob:function(a){return this.isFile(a)||&quot;[object Blob]&quot;===H.call(a)},isCanvas:function(a){return a&amp;&amp;D.test(a.nodeName)},getFilesFilter:function(a){return a=&quot;string&quot;==typeof a?a:a.getAttribute&amp;&amp;a.getAttribute(&quot;accept&quot;)||&quot;&quot;,a?new RegExp(&quot;(&quot;+a.replace(/\./g,&quot;\\.&quot;).replace(/,/g,&quot;|&quot;)+&quot;)$&quot;,&quot;i&quot;):/./},readAsDataURL:function(a,b){Y.isCanvas(a)?c(a,b,&quot;load&quot;,Y.toDataURL(a)):e(a,b,&quot;DataURL&quot;)},readAsBinaryString:function(a,b){d(&quot;BinaryString&quot;)?e(a,b,&quot;BinaryString&quot;):e(a,function(a){if(&quot;load&quot;==a.type)try{a.result=Y.toBinaryString(a.result)}catch(c){a.type=&quot;error&quot;,a.message=c.toString()}b(a)},&quot;DataURL&quot;)},readAsArrayBuffer:function(a,b){e(a,b,&quot;ArrayBuffer&quot;)},readAsText:function(a,b,c){c||(c=b,b=&quot;utf-8&quot;),e(a,c,&quot;Text&quot;,b)},toDataURL:function(a,b){return&quot;string&quot;==typeof a?a:a.toDataURL?a.toDataURL(b||&quot;image/png&quot;):void 0},toBinaryString:function(b){return a.atob(Y.toDataURL(b).replace(G,&quot;&quot;))},readAsImage:function(a,d,e){if(Y.isFile(a))if(r){var f=r.createObjectURL(a);f===b?c(a,d,&quot;error&quot;):Y.readAsImage(f,d,e)}else Y.readAsDataURL(a,function(b){&quot;load&quot;==b.type?Y.readAsImage(b.result,d,e):(e||&quot;error&quot;==b.type)&amp;&amp;c(a,d,b,null,{loaded:b.loaded,total:b.total})});else if(Y.isCanvas(a))c(a,d,&quot;load&quot;,a);else if(C.test(a.nodeName))if(a.complete)c(a,d,&quot;load&quot;,a);else{var g=&quot;error abort load&quot;;V(a,g,function i(b){&quot;load&quot;==b.type&amp;&amp;r&amp;&amp;r.revokeObjectURL(a.src),U(a,g,i),c(a,d,b,a)})}else if(a.iframe)c(a,d,{type:&quot;error&quot;});else{var h=Y.newImage(a.dataURL||a);Y.readAsImage(h,d,e)}},checkFileObj:function(a){var b={},c=Y.accept;return&quot;object&quot;==typeof a?b=a:b.name=(a+&quot;&quot;).split(/\\|\//g).pop(),null==b.type&amp;&amp;(b.type=b.name.split(&quot;.&quot;).pop()),R(c,function(a,c){a=new RegExp(a.replace(/\s/g,&quot;|&quot;),&quot;i&quot;),(a.test(b.type)||Y.ext2mime[b.type])&amp;&amp;(b.type=Y.ext2mime[b.type]||c.split(&quot;/&quot;)[0]+&quot;/&quot;+b.type)}),b},getDropFiles:function(a,b){var c=[],d=k(a),e=Q(d.items)&amp;&amp;d.items[0]&amp;&amp;g(d.items[0]),i=Y.queue(function(){b(c)});R((e?d.items:d.files)||[],function(a){i.inc();try{e?h(a,function(a,b){a?Y.log(&quot;[err] getDropFiles:&quot;,a):c.push.apply(c,b),i.next()}):f(a,function(b){b&amp;&amp;c.push(a),i.next()})}catch(b){i.next(),Y.log(&quot;[err] getDropFiles: &quot;,b)}}),i.check()},getFiles:function(a,b,c){var d=[];return c?(Y.filterFiles(Y.getFiles(a),b,c),null):(a.jquery&amp;&amp;(a.each(function(){d=d.concat(Y.getFiles(this))}),a=d,d=[]),&quot;string&quot;==typeof b&amp;&amp;(b=Y.getFilesFilter(b)),a.originalEvent?a=W(a.originalEvent):a.srcElement&amp;&amp;(a=W(a)),a.dataTransfer?a=a.dataTransfer:a.target&amp;&amp;(a=a.target),a.files?(d=a.files,y||(d[0].blob=a,d[0].iframe=!0)):!y&amp;&amp;j(a)?Y.trim(a.value)&amp;&amp;(d=[Y.checkFileObj(a.value)],d[0].blob=a,d[0].iframe=!0):Q(a)&amp;&amp;(d=a),Y.filter(d,function(a){return!b||b.test(a.name)}))},getTotalSize:function(a){for(var b=0,c=a&amp;&amp;a.length;c--;)b+=a[c].size;return b},getInfo:function(a,b){var c={},d=L.concat();Y.isFile(a)?!function e(){var f=d.shift();f?f.test(a.type)?f(a,function(a,d){a?b(a):(S(c,d),e())}):e():b(!1,c)}():b(&quot;not_support_info&quot;,c)},addInfoReader:function(a,b){b.test=function(b){return a.test(b)},L.push(b)},filter:function(a,b){for(var c,d=[],e=0,f=a.length;f&gt;e;e++)e in a&amp;&amp;(c=a[e],b.call(c,c,e,a)&amp;&amp;d.push(c));return d},filterFiles:function(a,b,c){if(a.length){var d,e=a.concat(),f=[],g=[];!function h(){e.length?(d=e.shift(),Y.getInfo(d,function(a,c){(b(d,a?!1:c)?f:g).push(d),h()})):c(f,g)}()}else c([],a)},upload:function(a){a=S({jsonp:&quot;callback&quot;,prepare:Y.F,beforeupload:Y.F,upload:Y.F,fileupload:Y.F,fileprogress:Y.F,filecomplete:Y.F,progress:Y.F,complete:Y.F,pause:Y.F,imageOriginal:!0,chunkSize:Y.chunkSize,chunkUploadRetry:Y.chunkUploadRetry,uploadRetry:Y.uploadRetry},a),a.imageAutoOrientation&amp;&amp;!a.imageTransform&amp;&amp;(a.imageTransform={rotate:&quot;auto&quot;});var b,c=new Y.XHR(a),d=this._getFilesDataArray(a.files),e=this,f=0,g=0,h=!1;return R(d,function(a){f+=a.size}),c.files=[],R(d,function(a){c.files.push(a.file)}),c.total=f,c.loaded=0,c.filesLeft=d.length,a.beforeupload(c,a),b=function(){var j=d.shift(),k=j&amp;&amp;j.file,l=!1,m=i(a);if(c.filesLeft=d.length,k&amp;&amp;k.name===Y.expando&amp;&amp;(k=null,Y.log(&quot;[warn] FileAPI.upload() — called without files&quot;)),(&quot;abort&quot;!=c.statusText||c.current)&amp;&amp;j){if(h=!1,c.currentFile=k,k&amp;&amp;a.prepare(k,m)===!1)return void b.call(e);m.file=k,e._getFormData(m,j,function(h){g||a.upload(c,a);var i=new Y.XHR(S({},m,{upload:k?function(){a.fileupload(k,i,m)}:n,progress:k?function(b){l||(l=b.loaded===b.total,a.fileprogress({type:&quot;progress&quot;,total:j.total=b.total,loaded:j.loaded=b.loaded},k,i,m),a.progress({type:&quot;progress&quot;,total:f,loaded:c.loaded=g+j.size*(b.loaded/b.total)|0},k,i,m))}:n,complete:function(d){R(N,function(a){c[a]=i[a]}),k&amp;&amp;(j.total=j.total||j.size,j.loaded=j.total,d||(this.progress(j),l=!0,g+=j.size,c.loaded=g),a.filecomplete(d,i,k,m)),setTimeout(function(){b.call(e)},0)}}));c.abort=function(a){a||(d.length=0),this.current=a,i.abort()},i.send(h)})}else{var o=200==c.status||201==c.status||204==c.status;a.complete(o?!1:c.statusText||&quot;error&quot;,c,a),h=!0}},setTimeout(b,0),c.append=function(a,g){a=Y._getFilesDataArray([].concat(a)),R(a,function(a){f+=a.size,c.files.push(a.file),g?d.unshift(a):d.push(a)}),c.statusText=&quot;&quot;,h&amp;&amp;b.call(e)},c.remove=function(a){for(var b,c=d.length;c--;)d[c].file==a&amp;&amp;(b=d.splice(c,1),f-=b.size);return b},c},_getFilesDataArray:function(a){var b=[],c={};if(j(a)){var d=Y.getFiles(a);c[a.name||&quot;file&quot;]=null!==a.getAttribute(&quot;multiple&quot;)?d:d[0]}else Q(a)&amp;&amp;j(a[0])?R(a,function(a){c[a.name||&quot;file&quot;]=Y.getFiles(a)}):c=a;return R(c,function e(a,c){Q(a)?R(a,function(a){e(a,c)}):a&amp;&amp;(a.name||a.image)&amp;&amp;b.push({name:c,file:a,size:a.size,total:a.size,loaded:0})}),b.length||b.push({file:{name:Y.expando}}),b},_getFormData:function(a,b,c){var d=b.file,e=b.name,f=d.name,g=d.type,h=Y.support.transform&amp;&amp;a.imageTransform,i=new Y.Form,j=Y.queue(function(){c(i)}),k=h&amp;&amp;l(h),m=Y.postNameConcat;R(a.data,function n(a,b){&quot;object&quot;==typeof a?R(a,function(a,c){n(a,m(b,c))}):i.append(b,a)}),function o(b){b.image?(j.inc(),b.toData(function(a,b){f=f||(new Date).getTime()+&quot;.png&quot;,o(b),j.next()})):Y.Image&amp;&amp;h&amp;&amp;(/^image/.test(b.type)||E.test(b.nodeName))?(j.inc(),k&amp;&amp;(h=[h]),Y.Image.transform(b,h,a.imageAutoOrientation,function(c,d){if(k&amp;&amp;!c)B||Y.flashEngine||(i.multipart=!0),i.append(e,d[0],f,h[0].type||g);else{var l=0;c||R(d,function(a,b){B||Y.flashEngine||(i.multipart=!0),h[b].postName||(l=1),i.append(h[b].postName||m(e,b),a,f,h[b].type||g)}),(c||a.imageOriginal)&amp;&amp;i.append(m(e,l?&quot;original&quot;:null),b,f,g)}j.next()})):f!==Y.expando&amp;&amp;i.append(e,b,f)}(d),j.check()},reset:function(a,b){var c,d;return x?(d=x(a).clone(!0).insertBefore(a).val(&quot;&quot;)[0],b||x(a).remove()):(c=a.parentNode,d=c.insertBefore(a.cloneNode(!0),a),d.value=&quot;&quot;,b||c.removeChild(a),R(K[Y.uid(a)],function(b,c){R(b,function(b){U(a,c,b),T(d,c,b)})})),d},load:function(a,b){var c=Y.getXHR();return c?(c.open(&quot;GET&quot;,a,!0),c.overrideMimeType&amp;&amp;c.overrideMimeType(&quot;text/plain; charset=x-user-defined&quot;),T(c,&quot;progress&quot;,function(a){a.lengthComputable&amp;&amp;b({type:a.type,loaded:a.loaded,total:a.total},c)}),c.onreadystatechange=function(){if(4==c.readyState)if(c.onreadystatechange=null,200==c.status){a=a.split(&quot;/&quot;);var d={name:a[a.length-1],size:c.getResponseHeader(&quot;Content-Length&quot;),type:c.getResponseHeader(&quot;Content-Type&quot;)};d.dataURL=&quot;data:&quot;+d.type+&quot;;base64,&quot;+Y.encode64(c.responseBody||c.responseText),b({type:&quot;load&quot;,result:d},c)}else b({type:&quot;error&quot;},c)},c.send(null)):b({type:&quot;error&quot;}),c},encode64:function(a){var b=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=&quot;,c=&quot;&quot;,d=0;for(&quot;string&quot;!=typeof a&amp;&amp;(a=String(a));d&lt;a.length;){var e,f,g=255&amp;a.charCodeAt(d++),h=255&amp;a.charCodeAt(d++),i=255&amp;a.charCodeAt(d++),j=g&gt;&gt;2,k=(3&amp;g)&lt;&lt;4|h&gt;&gt;4;isNaN(h)?e=f=64:(e=(15&amp;h)&lt;&lt;2|i&gt;&gt;6,f=isNaN(i)?64:63&amp;i),c+=b.charAt(j)+b.charAt(k)+b.charAt(e)+b.charAt(f)}return c}};Y.addInfoReader(/^image/,function(a,b){if(!a.__dimensions){var c=a.__dimensions=Y.defer();Y.readAsImage(a,function(a){var b=a.target;c.resolve(&quot;load&quot;==a.type?!1:&quot;error&quot;,{width:b.width,height:b.height}),b.src=Y.EMPTY_PNG,b=null})}a.__dimensions.then(b)}),Y.event.dnd=function(a,b,c){var d,e;c||(c=b,b=Y.F),u?(T(a,&quot;dragenter dragleave dragover&quot;,b.ff=b.ff||function(a){for(var c=k(a).types,f=c&amp;&amp;c.length,g=!1;f--;)if(~c[f].indexOf(&quot;File&quot;)){a[P](),e!==a.type&amp;&amp;(e=a.type,&quot;dragleave&quot;!=e&amp;&amp;b.call(a[O],!0,a),g=!0);break}g&amp;&amp;(clearTimeout(d),d=setTimeout(function(){b.call(a[O],&quot;dragleave&quot;!=e,a)},50))}),T(a,&quot;drop&quot;,c.ff=c.ff||function(a){a[P](),e=0,b.call(a[O],!1,a),Y.getDropFiles(a,function(b){c.call(a[O],b,a)})})):Y.log(&quot;Drag&#39;n&#39;Drop -- not supported&quot;)},Y.event.dnd.off=function(a,b,c){U(a,&quot;dragenter dragleave dragover&quot;,b.ff),U(a,&quot;drop&quot;,c.ff)},x&amp;&amp;!x.fn.dnd&amp;&amp;(x.fn.dnd=function(a,b){return this.each(function(){Y.event.dnd(this,a,b)})},x.fn.offdnd=function(a,b){return this.each(function(){Y.event.dnd.off(this,a,b)})}),a.FileAPI=S(Y,a.FileAPI),Y.log(&quot;FileAPI: &quot;+Y.version),Y.log(&quot;protocol: &quot;+a.location.protocol),Y.log(&quot;doctype: [&quot;+p.name+&quot;] &quot;+p.publicId+&quot; &quot;+p.systemId),R(o.getElementsByTagName(&quot;meta&quot;),function(a){/x-ua-compatible/i.test(a.getAttribute(&quot;http-equiv&quot;))&amp;&amp;Y.log(&quot;meta.http-equiv: &quot;+a.getAttribute(&quot;content&quot;))});try{Y._supportConsoleLog=!!console.log,Y._supportConsoleLogApply=!!console.log.apply}catch(Z){}Y.flashUrl||(Y.flashUrl=Y.staticPath+&quot;FileAPI.flash.swf&quot;),Y.flashImageUrl||(Y.flashImageUrl=Y.staticPath+&quot;FileAPI.flash.image.swf&quot;),Y.flashWebcamUrl||(Y.flashWebcamUrl=Y.staticPath+&quot;FileAPI.flash.camera.swf&quot;)}(window,void 0),function(a,b,c){&quot;use strict&quot;;function d(b){if(b instanceof d){var c=new d(b.file);return a.extend(c.matrix,b.matrix),c}return this instanceof d?(this.file=b,this.size=b.size||100,void(this.matrix={sx:0,sy:0,sw:0,sh:0,dx:0,dy:0,dw:0,dh:0,resize:0,deg:0,quality:1,filter:0})):new d(b)}var e=Math.min,f=Math.round,g=function(){return b.createElement(&quot;canvas&quot;)},h=!1,i={8:270,3:180,6:90,7:270,4:180,5:90};try{h=g().toDataURL(&quot;image/png&quot;).indexOf(&quot;data:image/png&quot;)&gt;-1}catch(j){}d.prototype={image:!0,constructor:d,set:function(b){return a.extend(this.matrix,b),this},crop:function(a,b,d,e){return d===c&amp;&amp;(d=a,e=b,a=b=0),this.set({sx:a,sy:b,sw:d,sh:e||d})},resize:function(a,b,c){return/min|max/.test(b)&amp;&amp;(c=b,b=a),this.set({dw:a,dh:b||a,resize:c})},preview:function(a,b){return this.resize(a,b||a,&quot;preview&quot;)},rotate:function(a){return this.set({deg:a})},filter:function(a){return this.set({filter:a})},overlay:function(a){return this.set({overlay:a})},clone:function(){return new d(this)},_load:function(b,c){var d=this;/img|video/i.test(b.nodeName)?c.call(d,null,b):a.readAsImage(b,function(a){c.call(d,&quot;load&quot;!=a.type,a.result)})},_apply:function(b,c){var f,h=g(),i=this.getMatrix(b),j=h.getContext(&quot;2d&quot;),k=b.videoWidth||b.width,l=b.videoHeight||b.height,m=i.deg,n=i.dw,o=i.dh,p=k,q=l,r=i.filter,s=b,t=i.overlay,u=a.queue(function(){b.src=a.EMPTY_PNG,c(!1,h)}),v=a.renderImageToCanvas;for(m-=360*Math.floor(m/360),b._type=this.file.type;i.multipass&amp;&amp;e(p/n,q/o)&gt;2;)p=p/2+.5|0,q=q/2+.5|0,f=g(),f.width=p,f.height=q,s!==b?(v(f,s,0,0,s.width,s.height,0,0,p,q),s=f):(s=f,v(s,b,i.sx,i.sy,i.sw,i.sh,0,0,p,q),i.sx=i.sy=i.sw=i.sh=0);h.width=m%180?o:n,h.height=m%180?n:o,h.type=i.type,h.quality=i.quality,j.rotate(m*Math.PI/180),v(j.canvas,s,i.sx,i.sy,i.sw||s.width,i.sh||s.height,180==m||270==m?-n:0,90==m||180==m?-o:0,n,o),n=h.width,o=h.height,t&amp;&amp;a.each([].concat(t),function(b){u.inc();var c=new window.Image,d=function(){var e=0|b.x,f=0|b.y,g=b.w||c.width,h=b.h||c.height,i=b.rel;e=1==i||4==i||7==i?(n-g+e)/2:2==i||5==i||8==i?n-(g+e):e,f=3==i||4==i||5==i?(o-h+f)/2:i&gt;=6?o-(h+f):f,a.event.off(c,&quot;error load abort&quot;,d);try{j.globalAlpha=b.opacity||1,j.drawImage(c,e,f,g,h)}catch(k){}u.next()};a.event.on(c,&quot;error load abort&quot;,d),c.src=b.src,c.complete&amp;&amp;d()}),r&amp;&amp;(u.inc(),d.applyFilter(h,r,u.next)),u.check()},getMatrix:function(b){var c=a.extend({},this.matrix),d=c.sw=c.sw||b.videoWidth||b.naturalWidth||b.width,g=c.sh=c.sh||b.videoHeight||b.naturalHeight||b.height,h=c.dw=c.dw||d,i=c.dh=c.dh||g,j=d/g,k=h/i,l=c.resize;if(&quot;preview&quot;==l){if(h!=d||i!=g){var m,n;k&gt;=j?(m=d,n=m/k):(n=g,m=n*k),(m!=d||n!=g)&amp;&amp;(c.sx=~~((d-m)/2),c.sy=~~((g-n)/2),d=m,g=n)}}else l&amp;&amp;(d&gt;h||g&gt;i?&quot;min&quot;==l?(h=f(k&gt;j?e(d,h):i*j),i=f(k&gt;j?h/j:e(g,i))):(h=f(j&gt;=k?e(d,h):i*j),i=f(j&gt;=k?h/j:e(g,i))):(h=d,i=g));return c.sw=d,c.sh=g,c.dw=h,c.dh=i,c.multipass=a.multiPassResize,c},_trans:function(b){this._load(this.file,function(c,d){if(c)b(c);else try{this._apply(d,b)}catch(c){a.log(&quot;[err] FileAPI.Image.fn._apply:&quot;,c),b(c)}})},get:function(b){if(a.support.transform){var c=this,d=c.matrix;&quot;auto&quot;==d.deg?a.getInfo(c.file,function(a,e){d.deg=i[e&amp;&amp;e.exif&amp;&amp;e.exif.Orientation]||0,c._trans(b)}):c._trans(b)}else b(&quot;not_support_transform&quot;);return this},toData:function(a){return this.get(a)}},d.exifOrientation=i,d.transform=function(b,e,f,g){function h(h,i){var j={},k=a.queue(function(a){g(a,j)});h?k.fail():a.each(e,function(a,e){if(!k.isFail()){var g=new d(i.nodeType?i:b),h=&quot;function&quot;==typeof a;if(h?a(i,g):a.width?g[a.preview?&quot;preview&quot;:&quot;resize&quot;](a.width,a.height,a.strategy):a.maxWidth&amp;&amp;(i.width&gt;a.maxWidth||i.height&gt;a.maxHeight)&amp;&amp;g.resize(a.maxWidth,a.maxHeight,&quot;max&quot;),a.crop){var l=a.crop;g.crop(0|l.x,0|l.y,l.w||l.width,l.h||l.height)}a.rotate===c&amp;&amp;f&amp;&amp;(a.rotate=&quot;auto&quot;),g.set({type:g.matrix.type||a.type||b.type||&quot;image/png&quot;}),h||g.set({deg:a.rotate,overlay:a.overlay,filter:a.filter,quality:a.quality||1}),k.inc(),g.toData(function(a,b){a?k.fail():(j[e]=b,k.next())})}})}b.width?h(!1,b):a.getInfo(b,h)},a.each([&quot;TOP&quot;,&quot;CENTER&quot;,&quot;BOTTOM&quot;],function(b,c){a.each([&quot;LEFT&quot;,&quot;CENTER&quot;,&quot;RIGHT&quot;],function(a,e){d[b+&quot;_&quot;+a]=3*c+e,d[a+&quot;_&quot;+b]=3*c+e})}),d.toCanvas=function(a){var c=b.createElement(&quot;canvas&quot;);return c.width=a.videoWidth||a.width,c.height=a.videoHeight||a.height,c.getContext(&quot;2d&quot;).drawImage(a,0,0),c},d.fromDataURL=function(b,c,d){var e=a.newImage(b);a.extend(e,c),d(e)},d.applyFilter=function(b,c,e){&quot;function&quot;==typeof c?c(b,e):window.Caman&amp;&amp;window.Caman(&quot;IMG&quot;==b.tagName?d.toCanvas(b):b,function(){&quot;string&quot;==typeof c?this[c]():a.each(c,function(a,b){this[b](a)},this),this.render(e)})},a.renderImageToCanvas=function(b,c,d,e,f,g,h,i,j,k){try{return b.getContext(&quot;2d&quot;).drawImage(c,d,e,f,g,h,i,j,k)}catch(l){throw a.log(&quot;renderImageToCanvas failed&quot;),l}},a.support.canvas=a.support.transform=h,a.Image=d}(FileAPI,document),function(a){&quot;use strict&quot;;a(FileAPI)}(function(a){&quot;use strict&quot;;if(window.navigator&amp;&amp;window.navigator.platform&amp;&amp;/iP(hone|od|ad)/.test(window.navigator.platform)){var b=a.renderImageToCanvas;a.detectSubsampling=function(a){var b,c;return a.width*a.height&gt;1048576?(b=document.createElement(&quot;canvas&quot;),b.width=b.height=1,c=b.getContext(&quot;2d&quot;),c.drawImage(a,-a.width+1,0),0===c.getImageData(0,0,1,1).data[3]):!1},a.detectVerticalSquash=function(a,b){var c,d,e,f,g,h=a.naturalHeight||a.height,i=document.createElement(&quot;canvas&quot;),j=i.getContext(&quot;2d&quot;);for(b&amp;&amp;(h/=2),i.width=1,i.height=h,j.drawImage(a,0,0),c=j.getImageData(0,0,1,h).data,d=0,e=h,f=h;f&gt;d;)g=c[4*(f-1)+3],0===g?e=f:d=f,f=e+d&gt;&gt;1;return f/h||1},a.renderImageToCanvas=function(c,d,e,f,g,h,i,j,k,l){if(&quot;image/jpeg&quot;===d._type){var m,n,o,p,q=c.getContext(&quot;2d&quot;),r=document.createElement(&quot;canvas&quot;),s=1024,t=r.getContext(&quot;2d&quot;);if(r.width=s,r.height=s,q.save(),m=a.detectSubsampling(d),m&amp;&amp;(e/=2,f/=2,g/=2,h/=2),n=a.detectVerticalSquash(d,m),m||1!==n){for(f*=n,k=Math.ceil(s*k/g),l=Math.ceil(s*l/h/n),j=0,p=0;h&gt;p;){for(i=0,o=0;g&gt;o;)t.clearRect(0,0,s,s),t.drawImage(d,e,f,g,h,-o,-p,g,h),q.drawImage(r,0,0,s,s,i,j,k,l),o+=s,i+=k;p+=s,j+=l}return q.restore(),c}}return b(c,d,e,f,g,h,i,j,k,l)}}}),function(a,b){&quot;use strict&quot;;function c(b,c,d){var e=b.blob,f=b.file;if(f){if(!e.toDataURL)return void a.readAsBinaryString(e,function(a){&quot;load&quot;==a.type&amp;&amp;c(b,a.result)});var g={&quot;image/jpeg&quot;:&quot;.jpe?g&quot;,&quot;image/png&quot;:&quot;.png&quot;},h=g[b.type]?b.type:&quot;image/png&quot;,i=g[h]||&quot;.png&quot;,j=e.quality||1;f.match(new RegExp(i+&quot;$&quot;,&quot;i&quot;))||(f+=i.replace(&quot;?&quot;,&quot;&quot;)),b.file=f,b.type=h,!d&amp;&amp;e.toBlob?e.toBlob(function(a){c(b,a)},h,j):c(b,a.toBinaryString(e.toDataURL(h,j)))}else c(b,e)}var d=b.document,e=b.FormData,f=function(){this.items=[]},g=b.encodeURIComponent;f.prototype={append:function(a,b,c,d){this.items.push({name:a,blob:b&amp;&amp;b.blob||(void 0==b?&quot;&quot;:b),file:b&amp;&amp;(c||b.name),type:b&amp;&amp;(d||b.type)})},each:function(a){for(var b=0,c=this.items.length;c&gt;b;b++)a.call(this,this.items[b])},toData:function(b,c){c._chunked=a.support.chunked&amp;&amp;c.chunkSize&gt;0&amp;&amp;1==a.filter(this.items,function(a){return a.file}).length,a.support.html5?a.formData&amp;&amp;!this.multipart&amp;&amp;e?c._chunked?(a.log(&quot;FileAPI.Form.toPlainData&quot;),this.toPlainData(b)):(a.log(&quot;FileAPI.Form.toFormData&quot;),this.toFormData(b)):(a.log(&quot;FileAPI.Form.toMultipartData&quot;),this.toMultipartData(b)):(a.log(&quot;FileAPI.Form.toHtmlData&quot;),this.toHtmlData(b))},_to:function(b,c,d,e){var f=a.queue(function(){c(b)});this.each(function(a){d(a,b,f,e)}),f.check()},toHtmlData:function(b){this._to(d.createDocumentFragment(),b,function(b,c){var e,f=b.blob;b.file?(a.reset(f,!0),f.name=b.name,f.disabled=!1,c.appendChild(f)):(e=d.createElement(&quot;input&quot;),e.name=b.name,e.type=&quot;hidden&quot;,e.value=f,c.appendChild(e))})},toPlainData:function(a){this._to({},a,function(a,b,d){a.file&amp;&amp;(b.type=a.file),a.blob.toBlob?(d.inc(),c(a,function(a,c){b.name=a.name,b.file=c,b.size=c.length,b.type=a.type,d.next()})):a.file?(b.name=a.blob.name,b.file=a.blob,b.size=a.blob.size,b.type=a.type):(b.params||(b.params=[]),b.params.push(g(a.name)+&quot;=&quot;+g(a.blob))),b.start=-1,b.end=b.file&amp;&amp;b.file.FileAPIReadPosition||-1,b.retry=0})},toFormData:function(a){this._to(new e,a,function(a,b,d){a.blob&amp;&amp;a.blob.toBlob?(d.inc(),c(a,function(a,c){b.append(a.name,c,a.file),d.next()})):a.file?b.append(a.name,a.blob,a.file):b.append(a.name,a.blob),a.file&amp;&amp;b.append(&quot;_&quot;+a.name,a.file)})},toMultipartData:function(b){this._to([],b,function(a,b,d,e){d.inc(),c(a,function(a,c){b.push(&quot;--_&quot;+e+(&#39;\r\nContent-Disposition: form-data; name=&quot;&#39;+a.name+&#39;&quot;&#39;+(a.file?&#39;; filename=&quot;&#39;+g(a.file)+&#39;&quot;&#39;:&quot;&quot;)+(a.file?&quot;\r\nContent-Type: &quot;+(a.type||&quot;application/octet-stream&quot;):&quot;&quot;)+&quot;\r\n\r\n&quot;+(a.file?c:g(c))+&quot;\r\n&quot;)),d.next()},!0)},a.expando)}},a.Form=f}(FileAPI,window),function(a,b){&quot;use strict&quot;;var c=function(){},d=a.document,e=function(a){this.uid=b.uid(),this.xhr={abort:c,getResponseHeader:c,getAllResponseHeaders:c},this.options=a},f={&quot;&quot;:1,XML:1,Text:1,Body:1};e.prototype={status:0,statusText:&quot;&quot;,constructor:e,getResponseHeader:function(a){return this.xhr.getResponseHeader(a)},getAllResponseHeaders:function(){return this.xhr.getAllResponseHeaders()||{}},end:function(d,e){var f=this,g=f.options;f.end=f.abort=c,f.status=d,e&amp;&amp;(f.statusText=e),b.log(&quot;xhr.end:&quot;,d,e),g.complete(200==d||201==d?!1:f.statusText||&quot;unknown&quot;,f),f.xhr&amp;&amp;f.xhr.node&amp;&amp;setTimeout(function(){var b=f.xhr.node;try{b.parentNode.removeChild(b)}catch(c){}try{delete a[f.uid]}catch(c){}a[f.uid]=f.xhr.node=null},9)},abort:function(){this.end(0,&quot;abort&quot;),this.xhr&amp;&amp;(this.xhr.aborted=!0,this.xhr.abort())},send:function(a){var b=this,c=this.options;a.toData(function(a){c.upload(c,b),b._send.call(b,c,a)},c)},_send:function(c,e){var g,h=this,i=h.uid,j=h.uid+&quot;Load&quot;,k=c.url;if(b.log(&quot;XHR._send:&quot;,e),c.cache||(k+=(~k.indexOf(&quot;?&quot;)?&quot;&amp;&quot;:&quot;?&quot;)+b.uid()),e.nodeName){var l=c.jsonp;k=k.replace(/([a-z]+)=(\?)/i,&quot;$1=&quot;+i),c.upload(c,h);var m=function(a){if(~k.indexOf(a.origin))try{var c=b.parseJSON(a.data);c.id==i&amp;&amp;n(c.status,c.statusText,c.response)}catch(d){n(0,d.message)}},n=a[i]=function(c,d,e){h.readyState=4,h.responseText=e,h.end(c,d),b.event.off(a,&quot;message&quot;,m),a[i]=g=p=a[j]=null};h.xhr.abort=function(){try{p.stop?p.stop():p.contentWindow.stop?p.contentWindow.stop():p.contentWindow.document.execCommand(&quot;Stop&quot;)}catch(a){}n(0,&quot;abort&quot;)},b.event.on(a,&quot;message&quot;,m),a[j]=function(){try{var a=p.contentWindow,c=a.document,d=a.result||b.parseJSON(c.body.innerHTML);n(d.status,d.statusText,d.response)}catch(e){b.log(&quot;[transport.onload]&quot;,e)}},g=d.createElement(&quot;div&quot;),g.innerHTML=&#39;&lt;form target=&quot;&#39;+i+&#39;&quot; action=&quot;&#39;+k+&#39;&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; style=&quot;position: absolute; top: -1000px; overflow: hidden; width: 1px; height: 1px;&quot;&gt;&lt;iframe name=&quot;&#39;+i+&#39;&quot; src=&quot;javascript:false;&quot; onload=&quot;&#39;+j+&#39;()&quot;&gt;&lt;/iframe&gt;&#39;+(l&amp;&amp;c.url.indexOf(&quot;=?&quot;)&lt;0?&#39;&lt;input value=&quot;&#39;+i+&#39;&quot; name=&quot;&#39;+l+&#39;&quot; type=&quot;hidden&quot;/&gt;&#39;:&quot;&quot;)+&quot;&lt;/form&gt;&quot;;var o=g.getElementsByTagName(&quot;form&quot;)[0],p=g.getElementsByTagName(&quot;iframe&quot;)[0];o.appendChild(e),b.log(o.parentNode.innerHTML),d.body.appendChild(g),h.xhr.node=g,h.readyState=2,o.submit(),o=null}else{if(k=k.replace(/([a-z]+)=(\?)&amp;?/i,&quot;&quot;),this.xhr&amp;&amp;this.xhr.aborted)return void b.log(&quot;Error: already aborted&quot;);if(g=h.xhr=b.getXHR(),e.params&amp;&amp;(k+=(k.indexOf(&quot;?&quot;)&lt;0?&quot;?&quot;:&quot;&amp;&quot;)+e.params.join(&quot;&amp;&quot;)),g.open(&quot;POST&quot;,k,!0),b.withCredentials&amp;&amp;(g.withCredentials=&quot;true&quot;),c.headers&amp;&amp;c.headers[&quot;X-Requested-With&quot;]||g.setRequestHeader(&quot;X-Requested-With&quot;,&quot;XMLHttpRequest&quot;),b.each(c.headers,function(a,b){g.setRequestHeader(b,a)}),c._chunked){g.upload&amp;&amp;g.upload.addEventListener(&quot;progress&quot;,b.throttle(function(a){e.retry||c.progress({type:a.type,total:e.size,loaded:e.start+a.loaded,totalSize:e.size},h,c)},100),!1),g.onreadystatechange=function(){var a=parseInt(g.getResponseHeader(&quot;X-Last-Known-Byte&quot;),10);if(h.status=g.status,h.statusText=g.statusText,h.readyState=g.readyState,4==g.readyState){try{for(var d in f)h[&quot;response&quot;+d]=g[&quot;response&quot;+d]}catch(i){}if(g.onreadystatechange=null,!g.status||g.status-201&gt;0)if(b.log(&quot;Error: &quot;+g.status),(!g.status&amp;&amp;!g.aborted||500==g.status||416==g.status)&amp;&amp;++e.retry&lt;=c.chunkUploadRetry){var j=g.status?0:b.chunkNetworkDownRetryTimeout;c.pause(e.file,c),b.log(&quot;X-Last-Known-Byte: &quot;+a),a?e.end=a:(e.end=e.start-1,416==g.status&amp;&amp;(e.end=e.end-c.chunkSize)),setTimeout(function(){h._send(c,e)},j)}else h.end(g.status);else e.retry=0,e.end==e.size-1?h.end(g.status):(b.log(&quot;X-Last-Known-Byte: &quot;+a),a&amp;&amp;(e.end=a),e.file.FileAPIReadPosition=e.end,setTimeout(function(){h._send(c,e)},0));g=null}},e.start=e.end+1,e.end=Math.max(Math.min(e.start+c.chunkSize,e.size)-1,e.start);var q=e.file,r=(q.slice||q.mozSlice||q.webkitSlice).call(q,e.start,e.end+1);e.size&amp;&amp;!r.size?setTimeout(function(){h.end(-1)}):(g.setRequestHeader(&quot;Content-Range&quot;,&quot;bytes &quot;+e.start+&quot;-&quot;+e.end+&quot;/&quot;+e.size),g.setRequestHeader(&quot;Content-Disposition&quot;,&quot;attachment; filename=&quot;+encodeURIComponent(e.name)),g.setRequestHeader(&quot;Content-Type&quot;,e.type||&quot;application/octet-stream&quot;),g.send(r)),q=r=null}else if(g.upload&amp;&amp;g.upload.addEventListener(&quot;progress&quot;,b.throttle(function(a){c.progress(a,h,c)},100),!1),g.onreadystatechange=function(){if(h.status=g.status,h.statusText=g.statusText,h.readyState=g.readyState,4==g.readyState){for(var a in f)h[&quot;response&quot;+a]=g[&quot;response&quot;+a];if(g.onreadystatechange=null,!g.status||g.status&gt;201)if(b.log(&quot;Error: &quot;+g.status),(!g.status&amp;&amp;!g.aborted||500==g.status)&amp;&amp;(c.retry||0)&lt;c.uploadRetry){c.retry=(c.retry||0)+1;var d=b.networkDownRetryTimeout;c.pause(c.file,c),setTimeout(function(){h._send(c,e)},d)}else h.end(g.status);else h.end(g.status);g=null}},b.isArray(e)){g.setRequestHeader(&quot;Content-Type&quot;,&quot;multipart/form-data; boundary=_&quot;+b.expando);var s=e.join(&quot;&quot;)+&quot;--_&quot;+b.expando+&quot;--&quot;;if(g.sendAsBinary)g.sendAsBinary(s);else{var t=Array.prototype.map.call(s,function(a){return 255&amp;a.charCodeAt(0)});g.send(new Uint8Array(t).buffer)}}else g.send(e)}}},b.XHR=e}(window,FileAPI),function(a,b){&quot;use strict&quot;;function c(a){return a&gt;=0?a+&quot;px&quot;:a}function d(a){var b,c=f.createElement(&quot;canvas&quot;),d=!1;try{b=c.getContext(&quot;2d&quot;),b.drawImage(a,0,0,1,1),d=255!=b.getImageData(0,0,1,1).data[4]}catch(e){}return d}var e=a.URL||a.webkitURL,f=a.document,g=a.navigator,h=g.getUserMedia||g.webkitGetUserMedia||g.mozGetUserMedia||g.msGetUserMedia,i=!!h;b.support.media=i;var j=function(a){this.video=a};j.prototype={isActive:function(){return!!this._active},start:function(a){var b,c,f=this,i=f.video,j=function(d){f._active=!d,clearTimeout(c),clearTimeout(b),a&amp;&amp;a(d,f)};h.call(g,{video:!0},function(a){f.stream=a,i.src=e.createObjectURL(a),b=setInterval(function(){d(i)&amp;&amp;j(null)},1e3),c=setTimeout(function(){j(&quot;timeout&quot;)},5e3),i.play()},j)},stop:function(){try{this._active=!1,this.video.pause(),this.stream.stop()}catch(a){}},shot:function(){return new k(this.video)}},j.get=function(a){return new j(a.firstChild)},j.publish=function(d,e,g){&quot;function&quot;==typeof e&amp;&amp;(g=e,e={}),e=b.extend({},{width:&quot;100%&quot;,height:&quot;100%&quot;,start:!0},e),d.jquery&amp;&amp;(d=d[0]);var h=function(a){if(a)g(a);else{var b=j.get(d);e.start?b.start(g):g(null,b)}};if(d.style.width=c(e.width),d.style.height=c(e.height),b.html5&amp;&amp;i){var k=f.createElement(&quot;video&quot;);k.style.width=c(e.width),k.style.height=c(e.height),a.jQuery?jQuery(d).empty():d.innerHTML=&quot;&quot;,d.appendChild(k),h()}else j.fallback(d,e,h)},j.fallback=function(a,b,c){c(&quot;not_support_camera&quot;)};var k=function(a){var c=a.nodeName?b.Image.toCanvas(a):a,d=b.Image(c);return d.type=&quot;image/png&quot;,d.width=c.width,d.height=c.height,d.size=c.width*c.height*4,d};j.Shot=k,b.Camera=j}(window,FileAPI),function(a,b,c){&quot;use strict&quot;;var d=a.document,e=a.location,f=a.navigator,g=c.each;c.support.flash=function(){var b=f.mimeTypes,d=!1;if(f.plugins&amp;&amp;&quot;object&quot;==typeof f.plugins[&quot;Shockwave Flash&quot;])d=f.plugins[&quot;Shockwave Flash&quot;].description&amp;&amp;!(b&amp;&amp;b[&quot;application/x-shockwave-flash&quot;]&amp;&amp;!b[&quot;application/x-shockwave-flash&quot;].enabledPlugin);</td>
+      </tr>
+      <tr>
+        <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line">else try{d=!(!a.ActiveXObject||!new ActiveXObject(&quot;ShockwaveFlash.ShockwaveFlash&quot;))}catch(g){c.log(&quot;Flash -- does not supported.&quot;)}return d&amp;&amp;/^file:/i.test(e)&amp;&amp;c.log(&quot;[warn] Flash does not work on `file:` protocol.&quot;),d}(),c.support.flash&amp;&amp;(0||!c.html5||!c.support.html5||c.cors&amp;&amp;!c.support.cors||c.media&amp;&amp;!c.support.media)&amp;&amp;function(){function h(a){return(&#39;&lt;object id=&quot;#id#&quot; classid=&quot;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&quot; width=&quot;&#39;+(a.width||&quot;100%&quot;)+&#39;&quot; height=&quot;&#39;+(a.height||&quot;100%&quot;)+&#39;&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;#src#&quot; /&gt;&lt;param name=&quot;flashvars&quot; value=&quot;#flashvars#&quot; /&gt;&lt;param name=&quot;swliveconnect&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;allownetworking&quot; value=&quot;all&quot; /&gt;&lt;param name=&quot;menu&quot; value=&quot;false&quot; /&gt;&lt;param name=&quot;wmode&quot; value=&quot;#wmode#&quot; /&gt;&lt;embed flashvars=&quot;#flashvars#&quot; swliveconnect=&quot;true&quot; allownetworking=&quot;all&quot; allowscriptaccess=&quot;always&quot; name=&quot;#id#&quot; src=&quot;#src#&quot; width=&quot;&#39;+(a.width||&quot;100%&quot;)+&#39;&quot; height=&quot;&#39;+(a.height||&quot;100%&quot;)+&#39;&quot; menu=&quot;false&quot; wmode=&quot;transparent&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&#39;).replace(/#(\w+)#/gi,function(b,c){return a[c]})}function i(a,b){if(a&amp;&amp;a.style){var c,d;for(c in b){d=b[c],&quot;number&quot;==typeof d&amp;&amp;(d+=&quot;px&quot;);try{a.style[c]=d}catch(e){}}}}function j(a,b){g(b,function(b,c){var d=a[c];a[c]=function(){return this.parent=d,b.apply(this,arguments)}})}function k(a){return a&amp;&amp;!a.flashId}function l(a){var b=a.wid=c.uid();return v._fn[b]=a,&quot;FileAPI.Flash._fn.&quot;+b}function m(a){try{v._fn[a.wid]=null,delete v._fn[a.wid]}catch(b){}}function n(a,b){if(!u.test(a)){if(/^\.\//.test(a)||&quot;/&quot;!=a.charAt(0)){var c=e.pathname;c=c.substr(0,c.lastIndexOf(&quot;/&quot;)),a=(c+&quot;/&quot;+a).replace(&quot;/./&quot;,&quot;/&quot;)}&quot;//&quot;!=a.substr(0,2)&amp;&amp;(a=&quot;//&quot;+e.host+a),u.test(a)||(a=e.protocol+a)}return b&amp;&amp;(a+=(/\?/.test(a)?&quot;&amp;&quot;:&quot;?&quot;)+b),a}function o(a,b,e){function f(){try{var a=v.get(j);a.setImage(b)}catch(d){c.log(&#39;[err] FlashAPI.Preview.setImage -- can not set &quot;base64&quot;:&#39;,d)}}var g,j=c.uid(),k=d.createElement(&quot;div&quot;),o=10;for(g in a)k.setAttribute(g,a[g]),k[g]=a[g];i(k,a),a.width=&quot;100%&quot;,a.height=&quot;100%&quot;,k.innerHTML=h(c.extend({id:j,src:n(c.flashImageUrl,&quot;r=&quot;+c.uid()),wmode:&quot;opaque&quot;,flashvars:&quot;scale=&quot;+a.scale+&quot;&amp;callback=&quot;+l(function p(){return m(p),--o&gt;0&amp;&amp;f(),!0})},a)),e(!1,k),k=null}function p(a){return{id:a.id,name:a.name,matrix:a.matrix,flashId:a.flashId}}function q(a){function b(a){var b,c;if(b=c=0,a.offsetParent)do b+=a.offsetLeft,c+=a.offsetTop;while(a=a.offsetParent);return{left:b,top:c}}a.getBoundingClientRect(),d.body,(a&amp;&amp;a.ownerDocument).documentElement;return{top:b(a).top,left:b(a).left,width:a.offsetWidth,height:a.offsetHeight}}var r=c.uid(),s=0,t={},u=/^https?:/i,v={_fn:{},publish:function(a,b,d){d=d||{},a.innerHTML=h({id:b,src:n(c.flashUrl,&quot;r=&quot;+c.version),wmode:d.camera?&quot;&quot;:&quot;transparent&quot;,flashvars:&quot;callback=&quot;+(d.onEvent||&quot;FileAPI.Flash.onEvent&quot;)+&quot;&amp;flashId=&quot;+b+&quot;&amp;storeKey=&quot;+f.userAgent.match(/\d/gi).join(&quot;&quot;)+&quot;_&quot;+c.version+(v.isReady||(c.pingUrl?&quot;&amp;ping=&quot;+c.pingUrl:&quot;&quot;))+&quot;&amp;timeout=&quot;+c.flashAbortTimeout+(d.camera?&quot;&amp;useCamera=&quot;+n(c.flashWebcamUrl):&quot;&quot;)+&quot;&amp;debug=&quot;+(c.debug?&quot;1&quot;:&quot;&quot;)},d)},init:function(){var a=d.body&amp;&amp;d.body.firstChild;if(a)do if(1==a.nodeType){c.log(&quot;FlashAPI.state: awaiting&quot;);var b=d.createElement(&quot;div&quot;);return b.id=&quot;_&quot;+r,i(b,{top:1,right:1,width:5,height:5,position:&quot;absolute&quot;,zIndex:1e6+&quot;&quot;}),a.parentNode.insertBefore(b,a),void v.publish(b,r)}while(a=a.nextSibling);10&gt;s&amp;&amp;setTimeout(v.init,50*++s)},ready:function(){c.log(&quot;FlashAPI.state: ready&quot;),v.ready=c.F,v.isReady=!0,v.patch(),v.patchCamera&amp;&amp;v.patchCamera(),c.event.on(d,&quot;mouseover&quot;,v.mouseover),c.event.on(d,&quot;click&quot;,function(a){v.mouseover(a)&amp;&amp;(a.preventDefault?a.preventDefault():a.returnValue=!0)})},getEl:function(){return d.getElementById(&quot;_&quot;+r)},getWrapper:function(a){do if(/js-fileapi-wrapper/.test(a.className))return a;while((a=a.parentNode)&amp;&amp;a!==d.body)},disableMouseover:!1,mouseover:function(a){if(!v.disableMouseover){var b=c.event.fix(a).target;if(/input/i.test(b.nodeName)&amp;&amp;&quot;file&quot;==b.type&amp;&amp;!b.disabled){var e=b.getAttribute(r),f=v.getWrapper(b);if(c.multiFlash){if(&quot;i&quot;==e||&quot;r&quot;==e)return!1;if(&quot;p&quot;!=e){b.setAttribute(r,&quot;i&quot;);var g=d.createElement(&quot;div&quot;);if(!f)return void c.log(&quot;[err] FlashAPI.mouseover: js-fileapi-wrapper not found&quot;);i(g,{top:0,left:0,width:b.offsetWidth,height:b.offsetHeight,zIndex:1e6+&quot;&quot;,position:&quot;absolute&quot;}),f.appendChild(g),v.publish(g,c.uid()),b.setAttribute(r,&quot;p&quot;)}return!0}if(f){var h=q(f);i(v.getEl(),h),v.curInp=b}}else/object|embed/i.test(b.nodeName)||i(v.getEl(),{top:1,left:1,width:5,height:5})}},onEvent:function(a){var b=a.type;if(&quot;ready&quot;==b){try{v.getInput(a.flashId).setAttribute(r,&quot;r&quot;)}catch(d){}return v.ready(),setTimeout(function(){v.mouseenter(a)},50),!0}&quot;ping&quot;===b?c.log(&quot;(flash -&gt; js).ping:&quot;,[a.status,a.savedStatus],a.error):&quot;log&quot;===b?c.log(&quot;(flash -&gt; js).log:&quot;,a.target):b in v&amp;&amp;setTimeout(function(){c.log(&quot;FlashAPI.event.&quot;+a.type+&quot;:&quot;,a),v[b](a)},1)},mouseDown:function(){v.disableMouseover=!0},cancel:function(){v.disableMouseover=!1},mouseenter:function(a){var b=v.getInput(a.flashId);if(b){v.cmd(a,&quot;multiple&quot;,null!=b.getAttribute(&quot;multiple&quot;));var d=[],e={};g((b.getAttribute(&quot;accept&quot;)||&quot;&quot;).split(/,\s*/),function(a){c.accept[a]&amp;&amp;g(c.accept[a].split(&quot; &quot;),function(a){e[a]=1})}),g(e,function(a,b){d.push(b)}),v.cmd(a,&quot;accept&quot;,d.length?d.join(&quot;,&quot;)+&quot;,&quot;+d.join(&quot;,&quot;).toUpperCase():&quot;*&quot;)}},get:function(b){return d[b]||a[b]||d.embeds[b]},getInput:function(a){if(!c.multiFlash)return v.curInp;try{var b=v.getWrapper(v.get(a));if(b)return b.getElementsByTagName(&quot;input&quot;)[0]}catch(d){c.log(&#39;[err] Can not find &quot;input&quot; by flashId:&#39;,a,d)}},select:function(a){try{var e,f=v.getInput(a.flashId),h=c.uid(f),i=a.target.files;g(i,function(a){c.checkFileObj(a)}),t[h]=i,d.createEvent?(e=d.createEvent(&quot;Event&quot;),e.files=i,e.initEvent(&quot;change&quot;,!0,!0),f.dispatchEvent(e)):b?b(f).trigger({type:&quot;change&quot;,files:i}):(e=d.createEventObject(),e.files=i,f.fireEvent(&quot;onchange&quot;,e))}finally{v.disableMouseover=!1}},interval:null,cmd:function(a,b,c,d){v.uploadInProgress&amp;&amp;v.readInProgress?setTimeout(function(){v.cmd(a,b,c,d)},100):this.cmdFn(a,b,c,d)},cmdFn:function(a,b,d,e){try{return c.log(&quot;(js -&gt; flash).&quot;+b+&quot;:&quot;,d),v.get(a.flashId||a).cmd(b,d)}catch(f){c.log(&quot;(js -&gt; flash).onError:&quot;,f),e||setTimeout(function(){v.cmd(a,b,d,!0)},50)}},patch:function(){c.flashEngine=!0,j(c,{readAsDataURL:function(a,b){k(a)?this.parent.apply(this,arguments):(c.log(&quot;FlashAPI.readAsBase64&quot;),v.readInProgress=!0,v.cmd(a,&quot;readAsBase64&quot;,{id:a.id,callback:l(function d(e,f){v.readInProgress=!1,m(d),c.log(&quot;FlashAPI.readAsBase64:&quot;,e),b({type:e?&quot;error&quot;:&quot;load&quot;,error:e,result:&quot;data:&quot;+a.type+&quot;;base64,&quot;+f})})}))},readAsText:function(b,d,e){e?c.log(&quot;[warn] FlashAPI.readAsText not supported `encoding` param&quot;):e=d,c.readAsDataURL(b,function(b){if(&quot;load&quot;==b.type)try{b.result=a.atob(b.result.split(&quot;;base64,&quot;)[1])}catch(c){b.type=&quot;error&quot;,b.error=c.toString()}e(b)})},getFiles:function(a,b,d){if(d)return c.filterFiles(c.getFiles(a),b,d),null;var e=c.isArray(a)?a:t[c.uid(a.target||a.srcElement||a)];return e?(b&amp;&amp;(b=c.getFilesFilter(b),e=c.filter(e,function(a){return b.test(a.name)})),e):this.parent.apply(this,arguments)},getInfo:function(a,b){if(k(a))this.parent.apply(this,arguments);else if(a.isShot)b(null,a.info={width:a.width,height:a.height});else{if(!a.__info){var d=a.__info=c.defer();d.resolve(null,a.info=null)}a.__info.then(b)}}}),c.support.transform=!0,c.Image&amp;&amp;j(c.Image.prototype,{get:function(a,b){return this.set({scaleMode:b||&quot;noScale&quot;}),this.parent(a)},_load:function(a,b){if(c.log(&quot;FlashAPI.Image._load:&quot;,a),k(a))this.parent.apply(this,arguments);else{var d=this;c.getInfo(a,function(c){b.call(d,c,a)})}},_apply:function(a,b){if(c.log(&quot;FlashAPI.Image._apply:&quot;,a),k(a))this.parent.apply(this,arguments);else{var d=this.getMatrix(a.info),e=b;v.cmd(a,&quot;imageTransform&quot;,{id:a.id,matrix:d,callback:l(function f(g,h){c.log(&quot;FlashAPI.Image._apply.callback:&quot;,g),m(f),g?e(g):c.support.html5||c.support.dataURI&amp;&amp;!(h.length&gt;3e4)?(d.filter&amp;&amp;(e=function(a,e){a?b(a):c.Image.applyFilter(e,d.filter,function(){b(a,this.canvas)})}),c.newImage(&quot;data:&quot;+a.type+&quot;;base64,&quot;+h,e)):o({width:d.deg%180?d.dh:d.dw,height:d.deg%180?d.dw:d.dh,scale:d.scaleMode},h,e)})})}},toData:function(a){var b=this.file,d=b.info,e=this.getMatrix(d);c.log(&quot;FlashAPI.Image.toData&quot;),k(b)?this.parent.apply(this,arguments):(&quot;auto&quot;==e.deg&amp;&amp;(e.deg=c.Image.exifOrientation[d&amp;&amp;d.exif&amp;&amp;d.exif.Orientation]||0),a.call(this,!b.info,{id:b.id,flashId:b.flashId,name:b.name,type:b.type,matrix:e}))}}),c.Image&amp;&amp;j(c.Image,{fromDataURL:function(a,b,d){!c.support.dataURI||a.length&gt;3e4?o(c.extend({scale:&quot;exactFit&quot;},b),a.replace(/^data:[^,]+,/,&quot;&quot;),function(a,b){d(b)}):this.parent(a,b,d)}}),j(c.Form.prototype,{toData:function(a){for(var b=this.items,d=b.length;d--;)if(b[d].file&amp;&amp;k(b[d].blob))return this.parent.apply(this,arguments);c.log(&quot;FlashAPI.Form.toData&quot;),a(b)}}),j(c.XHR.prototype,{_send:function(a,b){if(b.nodeName||b.append&amp;&amp;c.support.html5||c.isArray(b)&amp;&amp;&quot;string&quot;==typeof b[0])return this.parent.apply(this,arguments);var d,e,f={},h={},i=this;if(g(b,function(a){a.file?(h[a.name]=a=p(a.blob),e=a.id,d=a.flashId):f[a.name]=a.blob}),e||(d=r),!d)return c.log(&quot;[err] FlashAPI._send: flashId -- undefined&quot;),this.parent.apply(this,arguments);c.log(&quot;FlashAPI.XHR._send: &quot;+d+&quot; -&gt; &quot;+e),i.xhr={headers:{},abort:function(){v.uploadInProgress=!1,v.cmd(d,&quot;abort&quot;,{id:e})},getResponseHeader:function(a){return this.headers[a]},getAllResponseHeaders:function(){return this.headers}};var j=c.queue(function(){v.uploadInProgress=!0,v.cmd(d,&quot;upload&quot;,{url:n(a.url.replace(/([a-z]+)=(\?)&amp;?/i,&quot;&quot;)),data:f,files:e?h:null,headers:a.headers||{},callback:l(function b(d){var e=d.type,f=d.result;c.log(&quot;FlashAPI.upload.&quot;+e),&quot;progress&quot;==e?(d.loaded=Math.min(d.loaded,d.total),d.lengthComputable=!0,a.progress(d)):&quot;complete&quot;==e?(v.uploadInProgress=!1,m(b),&quot;string&quot;==typeof f&amp;&amp;(i.responseText=f.replace(/%22/g,&#39;&quot;&#39;).replace(/%5c/g,&quot;\\&quot;).replace(/%26/g,&quot;&amp;&quot;).replace(/%25/g,&quot;%&quot;)),i.end(d.status||200)):(&quot;abort&quot;==e||&quot;error&quot;==e)&amp;&amp;(v.uploadInProgress=!1,i.end(d.status||0,d.message),m(b))})})});g(h,function(a){j.inc(),c.getInfo(a,j.next)}),j.check()}})}};c.Flash=v,c.newImage(&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==&quot;,function(a,b){c.support.dataURI=!(1!=b.width||1!=b.height),v.init()})}()}(window,window.jQuery,FileAPI),function(a,b,c){&quot;use strict&quot;;var d=c.each,e=[];c.support.flash&amp;&amp;c.media&amp;&amp;!c.support.media&amp;&amp;!function(){function a(a){var b=a.wid=c.uid();return c.Flash._fn[b]=a,&quot;FileAPI.Flash._fn.&quot;+b}function b(a){try{c.Flash._fn[a.wid]=null,delete c.Flash._fn[a.wid]}catch(b){}}var f=c.Flash;c.extend(c.Flash,{patchCamera:function(){c.Camera.fallback=function(d,e,g){var h=c.uid();c.log(&quot;FlashAPI.Camera.publish: &quot;+h),f.publish(d,h,c.extend(e,{camera:!0,onEvent:a(function i(a){&quot;camera&quot;===a.type&amp;&amp;(b(i),a.error?(c.log(&quot;FlashAPI.Camera.publish.error: &quot;+a.error),g(a.error)):(c.log(&quot;FlashAPI.Camera.publish.success: &quot;+h),g(null)))})}))},d(e,function(a){c.Camera.fallback.apply(c.Camera,a)}),e=[],c.extend(c.Camera.prototype,{_id:function(){return this.video.id},start:function(d){var e=this;f.cmd(this._id(),&quot;camera.on&quot;,{callback:a(function g(a){b(g),a.error?(c.log(&quot;FlashAPI.camera.on.error: &quot;+a.error),d(a.error,e)):(c.log(&quot;FlashAPI.camera.on.success: &quot;+e._id()),e._active=!0,d(null,e))})})},stop:function(){this._active=!1,f.cmd(this._id(),&quot;camera.off&quot;)},shot:function(){c.log(&quot;FlashAPI.Camera.shot:&quot;,this._id());var a=c.Flash.cmd(this._id(),&quot;shot&quot;,{});return a.type=&quot;image/png&quot;,a.flashId=this._id(),a.isShot=!0,new c.Camera.Shot(a)}})}}),c.Camera.fallback=function(){e.push(arguments)}}()}(window,window.jQuery,FileAPI),&quot;function&quot;==typeof define&amp;&amp;define.amd&amp;&amp;define(&quot;FileAPI&quot;,[],function(){return FileAPI});</td>
+      </tr>
+</table>
+
+  </div>
+
+</div>
+
+<button type="button" data-facebox="#jump-to-line" data-facebox-class="linejump" data-hotkey="l" class="hidden">Jump to Line</button>
+<div id="jump-to-line" style="display:none">
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="" class="js-jump-to-line-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <input class="form-control linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+    <button type="submit" class="btn">Go</button>
+</form></div>
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+
+    </div>
+  </div>
+
+    </div>
+
+        <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2016 <span title="0.12883s from github-fe154-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+
+    <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      
+      <script crossorigin="anonymous" integrity="sha256-8t5MhjpIeodxUJifllIyus/eF4q/nBlj2fhMXBmRbww=" src="https://assets-cdn.github.com/assets/frameworks-f2de4c863a487a877150989f965232bacfde178abf9c1963d9f84c5c19916f0c.js"></script>
+      <script async="async" crossorigin="anonymous" integrity="sha256-Bs521qdRHOOiCVdSw1dRGQJigahPDJyp/nObcxfJScU=" src="https://assets-cdn.github.com/assets/github-06ce76d6a7511ce3a2095752c3575119026281a84f0c9ca9fe739b7317c949c5.js"></script>
+      
+      
+      
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+    <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+    </button>
+  </div>
+</div>
+
+  </body>
+</html>
+

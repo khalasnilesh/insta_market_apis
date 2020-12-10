@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://dev.ebridge.pk/iosapps/searchpreference.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Search Preferences</title>
+    <link href="http://dev.ebridge.pk/iosapps/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://dev.ebridge.pk/iosapps/css/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="http://dev.ebridge.pk/iosapps/css/navmenu-reveal.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-slider.min.css">
+
+</head>
+
+<body style="">
+<div class="navmenu navmenu-default navmenu-fixed-left search_prefernce">
+    <form>
+        <h1>Search Preferences</h1>
+
+        <div class="col-sm-12">
+            <h2>Distance</h2>
+
+            <div class="form-group">
+                <div class="slider slider-horizontal" id="ex1Slider" style=""><div class="slider-track"><div class="slider-track-low" style="left: 0px; width: 0%;"></div><div class="slider-selection" style="left: 0%; width: 70%;"></div><div class="slider-track-high" style="right: 0px; width: 30%;"></div><div class="slider-handle min-slider-handle round" role="slider" aria-valuemin="0" aria-valuemax="20" style="left: 70%;" aria-valuenow="14" tabindex="0"></div><div class="slider-handle max-slider-handle round hide" role="slider" aria-valuemin="0" aria-valuemax="20" style="left: 0%;" aria-valuenow="0" tabindex="0"></div></div><div class="tooltip tooltip-main top" role="presentation" style="left: 70%; margin-left: -54px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">Current value: 14</div></div><div class="tooltip tooltip-min top" role="presentation"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max bottom" role="presentation" style="top: 18px;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><input id="ex1" data-slider-id="ex1Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" style="display: none;" data-value="14" value="14">
+            </div>
+
+
+            <div class="form-group">
+                <label class="large">Location</label>
+
+                <div class="radio">
+                    <input id="on" type="radio" name="On" value="male" checked="">
+                    <label for="on"> Use my current location</label>
+                </div>
+                <div class="radio">
+                    <input id="off" type="radio" name="On" value="male">
+                    <label for="off"> Search by Postal Code</label>
+                </div>
+                <a href="http://dev.ebridge.pk/iosapps/searchpreference.html#">1234 Main St. Washington DC, 20004</a>
+
+
+            </div>
+            <div class="form-group">
+                <label class="large">Filter</label>
+
+                <div class="radio">
+                    <input id="food" type="radio" name="food" value="male" checked="">
+                    <label for="food"> All vendors</label>
+
+                </div>
+                <div class="radio">
+                    <input id="display" type="radio" name="food" value="male">
+                    <label for="display"> Open vendors only</label>
+
+                </div>
+                <div class="radio">
+                    <input id="fav" type="radio" name="food" value="male">
+                    <label for="fav"> Favorite vendors only</label>
+
+                </div>
+                <div class="radio">
+                    <input id="ven" type="radio" name="food" value="male">
+                    <label for="ven"> Trending vendors only <img src="img/filter.png"> </label>
+
+                </div>
+
+
+            </div>
+            <div class="form-group">
+                <label class="large">Tags:</label>
+                <input type="text" class="form-control" placeholder="ex. pizza, tacos...">
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <input type="checkbox" id="test1">
+                    <label for="test1"> Save these search preferences</label>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-sm-12 text-center">
+                <a href="http://dev.ebridge.pk/iosapps/searchpreference.html#" class="btn btn-default ">SEARCH</a>
+            </div>
+
+
+        </div>
+
+    </form>
+</div>
+<div class="canvas" style="">
+    <header>
+        <div class="navbar navbar-default ">
+
+            <div class="navbar-header col-sm-12 text-center">
+                <div class="row">
+                    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu" data-canvas=".canvas">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="img/logo.png" class="img-responsive">
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <div class="clearfix"></div>
+    <section class="greybg center map_my_food">
+        <div class="container-fluid">
+            <div class="col-sm-12 text-center ">
+                <div class="col-sm-12">
+                    <img src="img/biglogo.png" class="img-responsive">
+
+                    <h1>The easy way to order street food</h1>
+                    <a href="http://dev.ebridge.pk/iosapps/searchpreference.html#" class="btn btn-default btn-block">MAP MY FOOD</a>
+
+                    <h3>OR</h3>
+
+                    <form class="col-sm-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control text-center" placeholder="Postal Code">
+                        </div>
+                        <button type="submit" class="btn btn-default">SEARCH BY LOCATION</button>
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="">
+                <div class="row list_bar">
+                    <ul class="list-inline list-unstyled">
+                        <li><a href="http://dev.ebridge.pk/iosapps/searchpreference.html#"><img src="img/search.png">
+                            Search</a></li>
+                        <li><a href="http://dev.ebridge.pk/iosapps/searchpreference.html#"><img src="img/list.png">
+                            Vendor List</a></li>
+                        <li><a href="http://dev.ebridge.pk/iosapps/searchpreference.html#"><img src="img/loyality.png">
+                            Loyalty</a></li>
+                        <li><a href="http://dev.ebridge.pk/iosapps/searchpreference.html#"><img src="img/favoruite.png">
+                            Favorites</a></li>
+                        <li><a href="http://dev.ebridge.pk/iosapps/searchpreference.html#"><img src="img/orders.png">
+                            Favorites</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<script src="js/jasny-bootstrap.min.js"></script>
+<script>
+
+
+    // With JQuery
+    $('#ex1').slider({
+        formatter: function (value) {
+            return 'Current value: ' + value;
+        }
+    });
+
+    //    // Without JQuery
+    //    var slider = new Slider('#ex1', {
+    //        formatter: function(value) {
+    //            return 'Current value: ' + value;
+    //        }
+    //    });
+</script>
+
+
+
+<div class="drop-hint" id="drop-to-share-hint" style="background-image: url(chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/dropToShareHint@2x.png); background-size: 67px 327px; display: none;"><a class="share-btn-close"></a><a class="btn-options"></a><div class="drop-hint-bubble" id="drop-hint-bubble-share" style="background-image: url(chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/dropToShareHintBubble@2x.png); background-size: 253px 79px; display: none;"></div></div><div class="drop-hint" id="drop-to-search-hint" style="background-image: url(chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/dropToSearchHint@2x.png); background-size: 67px 327px; display: none;"><a class="search-btn-close"></a><a class="btn-options"></a><div class="drop-hint-bubble" id="drop-hint-bubble-search" style="background-image: url(chrome-extension://cipmepknanmbbaneimacddfemfbfgpgo/images/content/dropToSearchHintBubble@2x.png); background-size: 215px 79px; display: none;"></div></div></body></html>

@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  sfez-pgclient:
+    image: sfez/postgres-client-9.5-stretch-slim
+    build:
+      dockerfile: docker/base-images/postgres-client-9.5-stretch-slim/Dockerfile
+      context: ../..
+  sfez-pgserver:
+    image: sfez/postgres-server:9.5.6
+    build:
+      dockerfile: docker/base-images/postgres-server-9.5.6/Dockerfile
+      context: ../..
+  sfez-webservice:
+    image: sfez/node:8.9.1-slim
+    build:
+      dockerfile: docker/base-images/node-8.9.1-slim/Dockerfile
+      context: ../..

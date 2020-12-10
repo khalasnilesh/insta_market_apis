@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Add Menu Category</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/jasny-bootstrap.css" rel="stylesheet">
+        <link href="css/navmenu-reveal.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    </head>
+    <body>
+        <div class="loading_contener">
+            <div class="loading">
+                <img src="img/paco.png" alt="">
+            </div>
+        </div>
+        <div id="full_wrapper">
+            <header>
+                <div class="navbar navbar-default">
+                    <div class="navbar-header col-sm-12 text-center">
+                        <div class="row">
+                            <img src="img/logo.png" alt="" class="img-responsive">
+                            <h2>Food Truck Listing</h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="sideNav" class="sidenav order_page order_page">
+                <div class="col-xs-12 menudp">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="img/paco.png" class="img-responsive">
+                        </div>
+                        <div class="col-sm-8">
+                            <h2>Paco’s Tacos</h2>
+                            <h5>Bob D <a href="javascript:void(0)">Sign-Out</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                      <ul class="list-unstyled mainmenu" >
+                          <li><a href="ordermanagement.html"><img src="img/takeout-01.png" alt="">Order Management</a></li>
+                          <li><a href="checkin1.html"><img src="img/checkin-01.png" alt="">Check-In</a></li>
+                          <li><a href="maineditmenu.html"><img src="img/orders.png" alt="">Menu Management</a></li>
+                          <li><a href="menu_availibility.html"><img src="img/menu_avi.png" alt="">Menu Availability</a></li>
+                          <li><a href="special.html"><img src="img/specials-01.png" alt="">Daily Specials</a></li>
+                          <li><a href="loyalty.html"><img src="img/loyality.png" alt="">Loyalty Rewards</a></li>
+                          <li><a href="reports.html"><img src="img/report-01.png" alt=""> Reports</a></li>
+                          <li><a href="vendorprofile.html"><img src="img/vendor_profile.png"  alt="">Vendor Profile</a></li>
+                          <li><a href="menuorder_1.html"><img src="img/review.png" alt="">Consumer App Preview</a>
+                          <li><a href="customer.html"><img src="img/dancing2-01.png" alt="">Customers</a>
+                          <li><a href="review.html"><img src="img/review_2.png" alt="">Reviews</a></li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas inner_wrapper">
+                <div class="container-fluid col-sm-12 menu_detail shell bg_1">
+                    <div class="col-sm-12 text-center">
+                        <div class="col-sm-12">
+                            <form name="vendorListing">
+                                <h1>Create Food Truck Listing</h1>
+                                <div class="col-sm-12">
+                                    <h2>Company Name</h2>
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="ex. Paco's Tacos" type="text" name="vendorCompanyName" data-ng-model="companyName" required>
+                                    </div>
+                                    <div class="form-group" style="width:400px; float:left">
+                                        <h2>Logo or storefront picture</h2>
+                                        <label class="btn-upload col-sm-12">
+                                            <input name="vendorAvatarInput" type="file" data-ng-model="avatar" >
+                                            <img name="vendorAvatarImage" src="img/upload_logo.png" class="img-responsive" >
+                                        </label>
+                                    </div>
+                                    <div class="form-group" style="margin-left:400px">
+                                        <h2>Favorite dish</h2>
+                                        <label class="btn-upload col-sm-12">
+                                            <input name="vendorFeaturedDishInput" type="file" data-ng-model="featuredDish">
+                                            <img name="vendorFeaturedDishImage" src="img/upload_logo_2.jpg" class="img-responsive">
+                                        </label>
+                                    </div>
+                                    <div class="form-group" style="width:100%; clear:both">
+                                        <h2>Description</h2>
+                                        <textarea rows="5" placeholder="Homemade tortillas, stuffed lime-marinated lengua, smothered in avocado and our famous melt-your-face salsa." class="form-control" style="width:100%" name="vendorDescription" data-ng-model="description" required></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="large">Weekly Schedule</label>
+                                        <ul class="list-inline list-unstyled">
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input id="monday" type="checkbox" ng-model="schedule.monday">
+                                                    <label for="monday"> M</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input id="tuesday" type="checkbox" ng-model="schedule.tuesday">
+                                                    <label for="tuesday"> T</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input id="wednesday" type="checkbox" ng-model="schedule.wednesday">
+                                                    <label for="wednesday"> W</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input id="thursday" type="checkbox" ng-model="schedule.thursday">
+                                                    <label for="thursday"> T</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input id="friday" type="checkbox" ng-model="schedule.friday">
+                                                    <label for="friday"> F</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input id="saturday" type="checkbox"  ng-model="schedule.saturday">
+                                                    <label for="saturday"> S</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input id="sunday" type="checkbox" ng-model="schedule.sunday">
+                                                    <label for="sunday"> S</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="form-group" style="width:400px; float:left;text-align:left">
+                                        <label class="large" >Location</label>
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary btn-block dropdown-toggle" style="width:350px" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                Food Park
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu btn-block" aria-labelledby="dropdownMenu1">
+                                                <li><a href="#">South Congress</a></li>
+                                                <li><a href="#">East 7th Street</a></li>
+                                                <li><a href="#">Convention Center</a></li>
+                                            </ul>
+                                            <select class="btn btn-primary btn-block" ng-options="x.name for x in parks" ng-model="foodPark">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="margin-left:400px;padding-left:10px">
+                                        <label class="large">Typical Hours</label>
+                                        <input class="form-control" placeholder="ex. 11 am - 8 pm" type="text" name="vendorHours" data-ng-model="hours">
+                                    </div>
+                                    <div>
+                                        <h1>status</h1>
+                                        company name:  {{companyName}} <br/>
+                                        avatar: {{avatar}} <br/>
+                                        featured dish: {{featuredDish}} <br/>
+                                        description: {{description}}<br/>
+                                        food park: {{foodPark}} <br/>
+                                        hours: {{hours}} <br/>
+                                        schedule: {{schedule}}
+                                    </div>
+                                    <div class="col-sm-12 text-center" style="clear:both">
+                                        <a href="#result" class="btn btn-default" ng-click="sendData()">DONE</a>
+                                    </div>
+                                    <div>{{PostDataResponse}}</div>
+                                    <div>{{ResponseDetails}}</div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.js"></script>
+        <script src="js/jasny-bootstrap.js"></script>
+        <script src="js/jasny-bootstrap.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

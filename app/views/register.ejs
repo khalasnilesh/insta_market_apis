@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        <%=title %>
+    </title>
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+</head>
+<body>
+    <% for(var i in messages) { %>
+    <div class="flash"><%= messages[i] %></div>
+    <% } %>
+
+    <div class="container">
+        <form class="form-signin" action="/auth/register" method="post">
+            <h2 class="form-signin-heading text-center">Register</h2>
+
+            <label for="username" class="sr-only">Username</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+
+            <label for="first_name" class="sr-only">First Name</label>
+            <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name" required autofocus>
+
+            <label for="last_name" class="sr-only">Last Name</label>
+            <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name" required autofocus>
+
+            <label for="company_name" class="sr-only">Company Name</label>
+            <input type="text" id="company_name" name="company_name" class="form-control" placeholder="XYZ Company" required autofocus>
+
+
+            <label for="company_name" class="sr-only">Country</label>
+            <input type="text" id="country_name" name="country_name" class="form-control" placeholder="XYZ Country" required autofocus>
+
+
+            <label for="company_name" class="sr-only">State</label>
+            <input type="text" id="state_name" name="state_name" class="form-control" placeholder="XYZ State" required autofocus>
+
+            <label for="email" class="sr-only">E-mail</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" required>
+
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+
+            <input type="hidden" name="role" id="role" value="Owner"/>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+          </form>
+
+          <div class="row">
+            <div class="center-block text-center">
+                <a href="/oauth/facebook">Login with Facebook</a> |
+                <a href="/oauth/twitter">Login with Twitter</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

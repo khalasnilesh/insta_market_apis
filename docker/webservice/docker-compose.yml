@@ -1,0 +1,22 @@
+version: '3.0'
+
+services:
+  sfez-webservice:
+    container_name: sfez-webservice
+    hostname: sfez-webservice
+    image: sfez/node:8.9.1-slim
+    command: nodemon /sfez/server.js
+    environment:
+      NODE_ENV: development
+    networks:
+      - default
+    volumes:
+      - ../..:/sfez
+    working_dir: /sfez
+    ports:
+        - "1337:1337"
+
+networks:
+  default:
+    external:
+      name: database_default

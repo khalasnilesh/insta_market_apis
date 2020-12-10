@@ -1,0 +1,37 @@
+version: '3.0'
+
+services:
+  sfez-pgserver:
+    container_name: sfez-pgserver
+    hostname: sfez-pgserver
+    image: sfez/postgres-server:9.5.6
+    environment:
+      POSTGRES_PASSWORD: secret
+    networks:
+      - default
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  sfez-pgclient:
+    container_name: sfez-pgclient
+    hostname: sfez-pgclient
+    image: sfez/postgres-client:9.5-stretch-slim
+    command: tail -f /dev/null
+    depends_on:
+      - sfez-pgserver
+    environment:
+      PGHOST: sfez-pgserver
+      PGPASSWORD: secret
+      PGUSER: postgres
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+    networks:
+      - default
+    volumes:
+      - ../../db:/sqls
+
+volumes:
+  pgdata:
+
+networks:
+  default:

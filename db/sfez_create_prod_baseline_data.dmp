@@ -1,0 +1,148 @@
+
+COPY countries (id, name, is_enabled, tax_band, currency_id, currency) FROM stdin;
+1	Brazil	true	1554615357396746864	1554610428930163616	BRL
+\.
+SELECT pg_catalog.setval('countries_id_seq', 1, true);
+
+
+COPY territories (id, city, territory, state, country, timezone, latitude, longitude, created_at, updated_at) FROM stdin;
+1	Natal	 Natal-RN	RN	Brazil	Buenos Aires	-5.77718199999999982	-35.2003229999999974	2016-09-06 23:00:00+00	2017-03-04 19:56:28.353788+00
+2	Sao Paolo	 Sao Paolo-SP	RN	Brazil	Brasilia	-23.5500000000000007	-46.6333330000000004	2016-09-06 23:00:00+00	2017-03-04 19:56:28.353788+00
+3	Ponta Negra	 Ponta Negra-RN	RN	Brazil	Buenos Aires	-6.22899400000000014	-35.0487759999999966	2016-09-06 23:00:00+00	2017-03-04 19:56:28.353788+00
+\.
+SELECT pg_catalog.setval('territories_id_seq', 3, true);
+
+
+
+COPY food_parks (id, name, photo, territory_id, city, state, postal_code, country, latitude, longitude, created_at, updated_at) FROM stdin;
+3004	Truck Garden Food Park - Av. Roberto Freire	\N	3	Ponta Negra	RN	\N	BR	-5.87437400000000043	-35.1786949999999976	2016-08-21 23:03:07.177813+00	2017-03-22 02:30:49.056127+00
+3005	Neide Artesanato/Praia Shopping Food Park - Av. Roberto Freire	\N	3	Ponta Negra	RN	\N	BR	-5.86576900000000023	-35.1858780000000024	2016-08-21 23:05:04.914807+00	2017-03-22 02:30:49.056127+00
+3006	Natal Shopping Food Park - Av. das Brancas Dunas	\N	1	Natal	RN	\N	BR	-5.84256300000000017	-35.2106240000000028	2016-08-21 23:12:10.112015+00	2017-03-22 02:30:49.056127+00
+3007	Bar 54 Food Park - Rua Porto Mirim	\N	1	Natal	RN	\N	BR	-5.87467399999999973	-35.1835140000000024	2016-08-29 20:54:42.540882+00	2017-03-22 02:30:49.056127+00
+3008	Bar Trove Food Park - Rua Presidente José Bento	\N	1	Natal	RN	\N	BR	-5.80574800000000035	-35.2147050000000021	2016-08-30 21:12:08.717913+00	2017-03-22 02:30:49.056127+00
+30019	Ponta Negra Beach Boardwalk	\N	3	\N	\N	\N	\N	-5.87119999999999997	-35.1799999999999997	2017-04-08 16:01:23.846383+00	2017-04-08 16:03:08.092697+00
+30020	Big 5 Sports Bar Food Park	\N	3	\N	\N	\N	\N	-5.66999999999999993	-36.2100000000000009	2017-04-09 02:27:13.714836+00	2017-04-09 02:27:13.714836+00
+\.
+SELECT pg_catalog.setval('food_parks_id_seq', 30020, true);
+
+
+COPY users (id, username, password, first_name, last_name, role, territory_id, country_id, phone, provider, provider_id, provider_data, fbid, fb_token, fb_login, default_language, created_at, updated_at) FROM stdin;
+11001	mp10	61a71ecc0510731399d2ecdae912760e	Stacy	Tran	CUSTOMER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2016-08-21 23:31:43.131352+00	2017-02-03 09:25:30.279083+00
+11004	mp4@gmail.com	4866d635ea7b0ed8e2452da897143528	Julie	Grant	OWNER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2016-08-21 23:03:07.177813+00	2017-01-31 23:32:49.172208+00
+11013	mg_admin	2c544a0fca5a8146c790a295e389bbd8	Matt	Guiger	ADMIN	\N	\N	\N	local	local	{}	\N	\N	\N	en	2016-10-20 23:33:15.004572+00	2017-06-27 17:10:50.642758+00
+11021	Fogo@thaitanicexpress.com	705eb2cad4537d7ace7fc73bb273f50d	Jimmy	Chu	OWNER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-07-10 17:25:51.747138+00	2017-07-10 17:25:51.747138+00
+11024	pacos@tacos.com	dacedf41210444fe8547f5b1cf085a6c	Pacos	Tacos	OWNER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-07-11 01:13:53.170026+00	2017-07-11 01:13:53.170026+00
+11012	mp_admin	4789d4e7d1316d4dcf8ba7c8868bc6a3	Mike	Peter	ADMIN	\N	\N	\N	local	local	{}	\N	\N	\N	en	2016-10-20 23:33:15.004572+00	2017-06-27 17:11:23.159019+00
+11025	Low@me.com	bbd4ae7d10d1881050d251adb50c8e6d	Low	Down	CUSTOMER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-07-31 17:11:54.420046+00	2017-07-31 17:11:54.420046+00
+11027	mannytruck1	8fe78ac0eaabf2f474b0de3a968e165e	\N	\N	UNITMGR	\N	\N	\N	\N	\N	\N	\N	\N	\N	en	2017-08-01 14:31:09.131805+00	2017-08-01 14:31:09.131805+00
+11034	test_countrytruck1	19780590d8cabc3845bb903f0ad0543e	\N	\N	UNITMGR	\N	\N	\N	\N	\N	\N	\N	\N	\N	en	2017-08-04 09:37:20.961598+00	2017-08-04 09:37:20.961598+00
+11028	pizzariabrtruck1	170f9a8f689fc69157ad6d3a62ecd92f	\N	\N	UNITMGR	\N	\N	\N	\N	\N	\N	\N	\N	\N	en	2017-08-01 14:41:29.768181+00	2017-08-01 14:41:29.768181+00
+11033	test_country@gmail.com	19780590d8cabc3845bb903f0ad0543e	test country	test country	OWNER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-08-04 09:37:13.057037+00	2017-08-04 09:37:13.057037+00
+11035	wonderwoman@gmail.com	03e5bf83eef4b1d1dbb3c566bdef703f	Wonder Woman	Wonder Woman	OWNER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-08-04 09:49:04.983943+00	2017-08-04 09:49:04.983943+00
+11036	wonderwomantruck1	03e5bf83eef4b1d1dbb3c566bdef703f	\N	\N	UNITMGR	\N	\N	\N	\N	\N	\N	\N	\N	\N	en	2017-08-04 09:49:13.333198+00	2017-08-04 09:49:13.333198+00
+11029	Low1@me.com	8d05596d440ea2ddc2bec7f7e9cd935d	Low1	Down1	OWNER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-08-01 22:03:01.67217+00	2017-08-01 22:03:01.67217+00
+11037	Jack@crazyjacks.com	4ff9fc6e4e5d5f590c4f2134a8cc96d1	Crazy	Jack	OWNER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-08-04 10:53:46.640291+00	2017-08-04 10:53:46.640291+00
+11038	jacktruck1	4ff9fc6e4e5d5f590c4f2134a8cc96d1	\N	\N	UNITMGR	\N	\N	\N	\N	\N	\N	\N	\N	\N	en	2017-08-04 10:53:54.072583+00	2017-08-04 10:53:54.072583+00
+11042	ca56	ff5131992322dd78e85fadd5c20c1dce	Candy	Chow	DRIVER	3	\N	888-2222	local	local	{}	\N	\N	\N	en	2017-08-05 20:41:19.496543+00	2017-08-05 20:41:19.496543+00
+11023	Pizzariabr@gmail.com	170f9a8f689fc69157ad6d3a62ecd92f	Luiz	Cobello	OWNER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-07-10 17:29:27.498133+00	2017-07-10 17:29:27.498133+00
+11020	manny@classycuban.com	8fe78ac0eaabf2f474b0de3a968e165e	Manny	Lopez	OWNER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-07-10 17:18:42.696392+00	2017-07-10 17:18:42.696392+00
+11045	l99	c0404ddc488a2e0a4f8790f02e833b40	larry	Mo	DRIVER	3	\N	\N	\N	\N	\N	\N	\N	\N	en	2017-08-06 03:02:05.119895+00	2017-08-06 03:02:05.119895+00
+11046	q56	5d731b803ee2c72e8d142186c7b30525	Que	Bet	DRIVER	3	\N	\N	\N	\N	\N	\N	\N	\N	en	2017-08-06 04:11:50.344243+00	2017-08-06 04:11:50.344243+00
+11032	chunky@monkey.com	a6e87cbd2bad72958aef7f8cbb823be8	Chunky	Monkey	OWNER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-08-04 03:11:07.041783+00	2017-08-04 03:11:07.041783+00
+11039	c56	15faa2ce0bb8fbb9ceb57b38bc3abd6c	Cliff	\N	DRIVER	3	\N	5414104140	\N	\N	\N	\N	\N	\N	en	2017-08-05 17:24:28.728905+00	2017-08-05 17:24:28.728905+00
+11040	j56	ab75a542f5cf2bb17bf700ea393b4326	Joe	Smith	DRIVER	3	\N	888-9999	local	local	{}	\N	\N	\N	en	2017-08-05 17:50:18.163708+00	2017-08-05 17:50:18.163708+00
+11022	Frank@bbq.com	26253c50741faa9c2e2b836773c69fe6	Frank	Smith	OWNER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-07-10 17:27:49.656958+00	2017-07-10 17:27:49.656958+00
+11030	s56	73ebb0e2299c89dc70a54abbde5c0a7c	Sally	Jones	CUSTOMER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-08-03 20:23:51.214036+00	2017-08-03 20:23:51.214036+00
+11047	franktruck2	26253c50741faa9c2e2b836773c69fe6	\N	\N	UNITMGR	\N	\N	\N	\N	\N	\N	\N	\N	\N	en	2017-08-06 16:00:04.548186+00	2017-08-06 16:00:04.548186+00
+11031	bob56	90c4b084124e57b98082ce30f93e87dd	Bob	Ucker	CUSTOMER	\N	\N	\N	local	local	{}	\N	\N	\N	en	2017-08-03 20:31:33.175532+00	2017-08-03 20:31:33.175532+00
+11041	l56	10b1d0f1601e7ed83195d0e79ff0c810	larry	Mo	DRIVER	\N	\N	\N	\N	\N	\N	\N	\N	\N	en	2017-08-05 20:14:53.291507+00	2017-08-05 20:14:53.291507+00
+11026	franktruck1	26253c50741faa9c2e2b836773c69fe6	\N	\N	UNITMGR	\N	\N	\N	\N	\N	\N	\N	\N	\N	en	2017-08-01 14:19:26.57913+00	2017-08-01 14:19:26.57913+00
+11043	p56	4671a7aa8f919718df8fba33f6979ae3	Pat	Childs	DRIVER	\N	\N	\N	\N	\N	\N	\N	\N	\N	en	2017-08-05 21:37:35.116119+00	2017-08-05 21:37:35.116119+00
+11011	dn10@gmail.com	e04ddb7bae832648e9d649858ef578cb	Dennis	Nichols	ADMIN	\N	\N	\N	local	local	{}	\N	\N	\N	en	2016-10-20 23:33:15.004572+00	2017-01-31 23:32:49.172208+00
+\.
+SELECT pg_catalog.setval('users_id_seq', 11047, true);
+
+
+COPY admins (id, description, photo, super_admin, city, state, country, user_id, created_at, updated_at) FROM stdin;
+1	\N	\N	f	\N	\N	\N	11011	2016-10-20 23:33:15.198515	2016-10-20 23:33:15.198515
+2	\N	\N	f	\N	\N	\N	11012	2016-10-20 23:33:15.198515	2016-10-20 23:33:15.198515
+3	\N	\N	f	\N	\N	\N	11013	2016-10-20 23:33:15.198515	2016-10-20 23:33:15.198515
+\.
+SELECT pg_catalog.setval('admins_id_seq', 3, true);
+
+
+COPY companies (id, name, order_sys_id, base_slug, default_cat, daily_special_cat_id, daily_special_item_id, delivery_chg_cat_id, delivery_chg_item_id, delivery_chg_amount, description, email, phone, facebook, twitter, instagram, photo, featured_dish, hours, schedule, business_address, city, state, country, country_id, taxband, tags, stub, calculated_rating, user_id, show_vendor_setup, default_unit, created_at, updated_at, is_deleted) FROM stdin;
+11003	Thaitanic Express	1555982182294487949	thaitanic-express-1499707552245	1555982188913099662	1555982195976307599	\N	1555982202787857296	1555982212535419793	10	\N	Fogo@thaitanicexpress.com	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Brazil	\N	\N	\N	\N	\N	11021	t	\N	2017-07-10 17:25:56.073485+00	2017-07-10 17:25:56.073485+00	f
+11006	Pacos Tacos	1556217747979894867	pacos-tacos-1499735633862	1556217754606895189	1556217761410056279	\N	1556217769018523736	1556217779328122969	10	\N	pacos@tacos.com	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Brazil	\N	\N	\N	\N	\N	11024	t	\N	2017-07-11 01:13:57.822209+00	2017-07-11 01:13:57.822209+00	f
+11002	Classy Cuban	1555978584605066120	classy-cuban-1499707123374	1555978591534056329	1555978598169445258	\N	1555978605408813963	1555978615877796748	10	Manny's secret cuban recipe!	streetfoodez@sumup.com	555-7878	www.facebook.com/classycuban	\N	\N	https://commercecdn.com/1278235777548943678/fe7ae581-d6a9-4d14-86a3-aef5e12e989e.jpeg	https://commercecdn.com/1278235777548943678/ddb53e6f-62aa-4a47-bfef-b912f1fd93a6.jpeg	11:00 AM-9:00 PM	0,1,2,3,4	123 Cuban dr	\N	\N	Brazil	\N	\N	\N	\N	\N	11020	t	\N	2017-07-10 17:18:47.317737+00	2017-07-10 17:18:47.317737+00	f
+11007	Low Down1	1572066754304147666	low-down1-1501624982686	1572066764009767123	1572066773564391636	\N	1572066781860724949	1572066792421982422	10	\N	Low1@me.com	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1	\N	\N	\N	\N	11029	t	\N	2017-08-01 22:03:07.414005+00	2017-08-01 22:03:07.414005+00	f
+11010	wonderwoman	1573871673952698969	wonderwoman-1501840145887	1573871682685239898	1573871690704749147	\N	1573871698690703964	1573871714259960413	10	Description	wonderwoman@gmail.com	0934750347523423	www.wonderwomen.com	\N	\N	https://commercecdn.com/1544371371390271966/cf1a98f0-6893-4bc6-af6f-4b21ef739f92.jpeg	https://commercecdn.com/1544371371390271966/2a1d7cdb-8ff1-4d19-b934-d0d49d3913da.jpeg	11:00 AM-8:00 PM	1,2,3,4,5	USA	\N	\N	\N	1	\N	Cheeseburger	\N	\N	11035	t	\N	2017-08-04 09:49:11.077794+00	2017-08-04 09:49:11.077794+00	f
+11004	Frank's BBQ	1555983171344925586	frank-s-bbq-1499707670148	1555983178106143635	1555983184909304724	1573900915901989480	1555983191687299989	1555983201644577686	10	Frank's Delicious Fresh BBQ	streetfoodez@sumup.com	777-8888	www.facebook.com/bbq	\N	\N	https://commercecdn.com/1278235777548943678/b73963cc-0025-4b0f-a2e3-3d1ac4ec1994.jpeg	https://commercecdn.com/1278235777548943678/3800a579-f9a8-4964-949e-fb53ed5d16d4.jpeg	11:00 AM-8:00 PM	\N	\N	\N	\N	USA	1	\N	bbq, smoked pork	\N	\N	11022	t	\N	2017-07-10 17:27:53.969488+00	2017-07-10 17:27:53.969488+00	f
+11005	Pizzaria Brasil	1555983991952114583	pizzaria-brasil-1499707767975	1555983998528783256	1555984005524882329	\N	1555984012336432026	1555984022696362907	10	Aqui nós temos a mais típica pizza brasileira e os mais variados pratos tradicionais de todas as regiões do Brasil.	streetfoodez@sumup.com	(84) 99999-9999	facebook.com/pizzaria-natal	\N	\N	https://commercecdn.com/1278235777548943678/80c61edd-09b7-40d6-a340-399dc6534eb1.jpeg	https://commercecdn.com/1278235777548943678/b2203621-5caa-482e-b308-b64a932066a6.jpeg	10:00 AM-10:00 PM	1,2,3,4,5,6	Rua Brasil, 123	\N	\N	Brazil	\N	\N	\N	\N	\N	11023	t	\N	2017-07-10 17:29:31.85494+00	2017-07-10 17:29:31.85494+00	f
+11008	Chunky Monkey	1573671370326278711	chunky-monkey-1501816267803	1573671378521948728	1573671386650509881	\N	1573671395055895098	1573671405935919675	10	\N	chunky@monkey.com	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1	\N	\N	\N	\N	11032	t	\N	2017-08-04 03:11:12.245001+00	2017-08-04 03:11:12.245001+00	f
+11009	test_country	1573865702597591636	test_country-1501839434029	1573865712378708565	1573865720691819094	\N	1573865728921043543	1573865740061114968	10	test	test_country@gmail.com	32432424243234	www.test_country.com	\N	\N	https://commercecdn.com/1544371371390271966/f533c8ce-2a74-444a-877a-38e69106baab.jpeg	https://commercecdn.com/1544371371390271966/764c9157-5822-41de-bcf6-347996c9d712.jpeg	11:00 AM-8:00 PM	0,1,2,3,4,5	India	\N	\N	\N	1	\N	pizza	\N	\N	11033	t	\N	2017-08-04 09:37:18.738459+00	2017-08-04 09:37:18.738459+00	f
+11011	Crazy Jack's	1573904234334650985	crazy-jack-s-1501844027350	1573904242479989354	1573904250591773291	\N	1573904259190096492	1573904273165517421	10	A little Texan flavor with "Crazy Jack" as the head chef!	Jack@crazyjacks.com	999-3333	www.facebook.com/crazyjacks	\N	\N	https://commercecdn.com/1544371371390271966/42db8c7f-b722-4c10-83cf-7383dd1a95b0.jpeg	https://commercecdn.com/1544371371390271966/ef38d6a5-05fa-4da9-86cf-97add60b6cc0.jpeg	11:00 AM-9:00 PM	0,1,2,3,4	123 Crazy lane	\N	\N	\N	1	\N	Subs, Deli Sandwiches	\N	\N	11037	t	\N	2017-08-04 10:53:52.33254+00	2017-08-04 10:53:52.33254+00	f
+\.
+SELECT pg_catalog.setval('companies_id_seq', 11011, true);
+
+
+COPY customers (id, order_sys_id, description, apns_id, gcm_id, device_type, fcm_id, phone, facebook, twitter, photo, power_reviewer, city, state, country, user_id, created_at, updated_at) FROM stdin;
+9001	\N	Taco expert. I love tacos.	\N	APA91bECFEhmamkhENoB_sn2N20T0KX8HqF5XxzBG1PseAuJJ9VdoRkkl0sZXtsLosSHCi2oSo01t63XOzRHxTEOLqYtwOF0mF2m0GaCCyE-Op1uVkMuvC-rgoqh1A0rA80OIMgVxkeE	\N	\N	\N	www.facebook.com/stacytfakeaccount	\N	\N	f	\N	\N	\N	11001	2016-08-21 23:31:43.151356+00	2017-01-31 23:32:49.180085+00
+9002	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	\N	\N	11025	2017-07-31 17:11:54.423632+00	2017-07-31 17:11:54.423632+00
+9003	\N	\N	\N	APA91bF1KzWYW2i3JIXuXa7WqTKdyjRIChw5INNssT_O43BmVKp1o00ECVHkl3oTnw-_01cA652Hdzry7VsNEoy0y5XEGrE-mq9RQV0tpR8cz9SkMeCQcc3IlapXj9mw0nLRCODQz8pw	\N	\N	\N	\N	\N	\N	f	\N	\N	\N	11030	2017-08-03 20:23:51.216936+00	2017-08-05 15:55:06.013986+00
+9004	\N	\N	\N	APA91bH89KlHfiaEpOpc6WfxQP8r21ypl6lGehcrzXSmWN3aO2-RJSZEyk7TfYegwpbI-T9Dw8-bscSZVbMHzYGKbgAtw_p3GCQUv1Bcwr6nhqaDjK6b6E8Af-xJSmAKOfCRLN0d1dr6	\N	\N	\N	\N	\N	\N	f	\N	\N	\N	11031	2017-08-03 20:31:33.177725+00	2017-08-06 16:19:45.948001+00
+\.
+SELECT pg_catalog.setval('customers_id_seq', 9004, true);
+
+
+
+COPY units (id, name, number, type, customer_order_window, prep_notice, delivery, delivery_time_offset, delivery_chg_amount, delivery_radius, description, username, password, qr_code, phone, apns_id, fcm_id, gcm_id, device_type, unit_order_sys_id, territory_id, company_id, unit_mgr_id, created_at, updated_at, currency_id, currency, payment, is_deleted) FROM stdin;
+2007	Frank Truck #2	2	TRUCK	30	30	f	15	8	10	\N	franktruck2	frank	\N	\N	\N	\N	\N	\N	\N	1	11004	11047	2017-08-06 16:00:04.541953+00	2017-08-06 16:00:04.541953+00	1554610428930163616	BRL	SumUp	f
+2004	test country Truck #1	1	TRUCK	30	25	f	\N	\N	\N	\N	test_countrytruck1	test_country	\N	\N	\N	\N	\N	\N	\N	1	11009	11034	2017-08-04 09:37:20.956445+00	2017-08-04 09:37:20.956445+00	1554610428930163616	BRL	SumUp	f
+2005	Wonder Woman Truck #1	1	TRUCK	30	25	f	\N	\N	\N	\N	wonderwomantruck1	wonderwoman	\N	\N	\N	\N	\N	\N	\N	1	11010	11036	2017-08-04 09:49:13.329112+00	2017-08-04 09:49:13.329112+00	1554610428930163616	BRL	SumUp	f
+2002	Classy Cuban Truck #1	1	TRUCK	30	30	f	15	8	10	\N	mannytruck1	manny	\N	\N	\N	\N	\N	\N	\N	3	11002	11027	2017-08-01 14:31:09.127709+00	2017-08-01 14:31:09.127709+00	1554610428930163616	BRL	SumUp	f
+2003	Pizzaria Brazil Truck #1	1	CART	30	30	f	15	9	15	\N	pizzariabrtruck1	lui123	\N	\N	\N	\N	\N	\N	\N	3	11005	11028	2017-08-01 14:41:29.762757+00	2017-08-01 14:41:29.762757+00	1554610428930163616	BRL	SumUp	f
+2001	Frank Truck #1	1	TRUCK	30	30	t	15	9	10	\N	franktruck1	frank	\N	\N	\N	fvzwzbCIC54:APA91bEkzTphSti6bbmUGHlXmMEdnrQxgfXkrH6wA5LTFlh5KiOrHT9Xi1vP0HbfnqbNX_HWn3w0MszbA3ALIarE4AMvKvYZJHsWTSRZGCTUdA9l6zvipfruZjTvAKb3k5n9gTr1Vf4e	APA91bH89KlHfiaEpOpc6WfxQP8r21ypl6lGehcrzXSmWN3aO2-RJSZEyk7TfYegwpbI-T9Dw8-bscSZVbMHzYGKbgAtw_p3GCQUv1Bcwr6nhqaDjK6b6E8Af-xJSmAKOfCRLN0d1dr6	\N	\N	3	11004	11026	2017-08-01 14:19:26.554974+00	2017-08-06 16:18:53.1411+00	1554610428930163616	BRL	SumUp	f
+2006	Crazy Truck #1	1	CART	30	25	f	15	12	10	\N	jacktruck1	jack	\N	\N	\N	\N	\N	\N	\N	3	11011	11038	2017-08-04 10:53:54.058314+00	2017-08-04 11:03:52.523246+00	1554610428930163616	BRL	SumUp	f
+\.
+SELECT pg_catalog.setval('units_id_seq', 2007, true);
+
+
+COPY checkins (id, check_in, check_out, latitude, longitude, display_address, food_park_name, note, food_park_id, unit_id, company_id, created_at, updated_at) FROM stdin;
+\.
+SELECT pg_catalog.setval('checkins_id_seq', 1, true);
+
+
+COPY reviews (id, comment, rating, answers, customer_id, company_id, unit_id, status, created_at, updated_at) FROM stdin;
+\.
+SELECT pg_catalog.setval('reviews_id_seq', 1, true);
+
+COPY review_approvals (id, review_id, reviewer_id, status, created_at, updated_at) FROM stdin;
+\.
+SELECT pg_catalog.setval('review_approvals_id_seq', 1, true);
+
+
+COPY delivery_addresses (id, nickname, address1, address2, city, state, phone, customer_id, created_at, updated_at) FROM stdin;
+2	Camarões	Av. Engenheiro Roberto Freire, 2610 - Ponta Negra, Natal - RN, 59090-000	\N	Natal	RN	Bob / 555-9988	9004	2017-08-06 02:26:01.56651+00	2017-08-06 02:26:01.56651+00
+\.
+SELECT pg_catalog.setval('delivery_addresses_id_seq', 2, true);
+
+
+COPY drivers (id, name, phone, available, unit_id, company_id, created_at, updated_at, user_id) FROM stdin;
+2	Cliff	5414104140	t	2001	11004	2017-08-05 17:24:28.715629+00	2017-08-05 17:41:04.196649+00	11039
+5	Joe Smith	888-9999	f	2001	11004	2017-08-05 17:51:57.316845+00	2017-08-05 17:55:02.649875+00	11040
+7	Candy Chow	888-2222	t	2001	11004	2017-08-06 02:14:59.857894+00	2017-08-06 02:49:46.911493+00	11042
+9	Que	12345654	f	2001	11004	2017-08-06 04:11:50.325382+00	2017-08-06 04:11:50.325382+00	11046
+\.
+SELECT pg_catalog.setval('drivers_id_seq', 9, true);
+
+
+COPY order_history (id, order_sys_order_id, amount, initiation_time, payment_time, actual_pickup_time, desired_pickup_time, prep_notice_time, status, messages, qr_code, manual_pickup, for_delivery, desired_delivery_time, delivery_address_id, delivery_address_details, driver_id, contact, order_detail, checkin_id, customer_name, customer_id, unit_id, company_name, company_id, created_at, updated_at) FROM stdin;
+\.
+SELECT pg_catalog.setval('order_history_id_seq', 1, true);
+
+
+COPY loyalty_rewards (id, company_id, gold_reward_item, silver_reward_item, bronze_reward_item, created_at, updated_at) FROM stdin;
+\.
+SELECT pg_catalog.setval('loyalty_rewards_id_seq', 1, true);
+

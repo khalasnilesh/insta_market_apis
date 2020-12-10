@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>ADD Options Category</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/jasny-bootstrap.css" rel="stylesheet">
+        <link href="css/navmenu-reveal.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    </head>
+    <body>
+        <div class="loading_contener" style="display: none;">
+            <div class="loading">
+                <img src="img/paco.png" alt="">
+            </div>
+        </div>
+        <div id="full_wrapper">
+            <header>
+                <div class="navbar navbar-default">
+                    <div class="navbar-header col-sm-12 text-center">
+                        <div class="row">
+                            <img src="img/logo.png" alt="" class="img-responsive">
+                            <h2>Add Options Category</h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="sideNav" class="sidenav order_page order_page" style="min-height: 928px;">
+                <div class="col-xs-12 menudp">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="img/paco.png" class="img-responsive">
+                        </div>
+                        <div class="col-sm-8">
+                            <h2>Paco’s Tacos</h2>
+                            <h5>Bob D <a href="javascript:void(0)">Sign-Out</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                      <ul class="list-unstyled mainmenu" >
+                          <li><a href="ordermanagement.html"><img src="img/takeout-01.png" alt="">Order Management</a></li>
+                          <li><a href="checkin1.html"><img src="img/checkin-01.png" alt="">Check-In</a></li>
+                          <li><a href="maineditmenu.html"><img src="img/orders.png" alt="">Menu Management</a></li>
+                          <li><a href="menu_availibility.html"><img src="img/menu_avi.png" alt="">Menu Availability</a></li>
+                          <li><a href="special.html"><img src="img/specials-01.png" alt="">Daily Specials</a></li>
+                          <li><a href="loyalty.html"><img src="img/loyality.png" alt="">Loyalty Rewards</a></li>
+                          <li><a href="reports.html"><img src="img/report-01.png" alt=""> Reports</a></li>
+                          <li><a href="vendorprofile.html"><img src="img/vendor_profile.png"  alt="">Vendor Profile</a></li>
+                          <li><a href="menuorder_1.html"><img src="img/review.png" alt="">Consumer App Preview</a>
+                          <li><a href="customer.html"><img src="img/dancing2-01.png" alt="">Customers</a>
+                          <li><a href="review.html"><img src="img/review_2.png" alt="">Reviews</a></li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas inner_wrapper" style="min-height: 822px;">
+                <div class="clearfix"></div>
+                <section class="greybg center ">
+                    <div class="container-fluid col-sm-12 menu_detail shell bg_1">
+                        <div class="col-sm-12 sign_in min_height">
+                            <div class="col-sm-12">
+                                <form class="col-sm-12">
+                                    <div class="top_head">
+                                        <h2>Category Name</h2>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="form-group">
+
+                                        <input class="form-control" placeholder="ex. Sandwiches" type="text" value="Toppings">
+                                        <br>
+                                          <h3>Select Menu Item</h3>
+                                           <select class="form-control">
+                                            <option>Chimichanga</option>
+                                            <option>Burritos</option>
+                                            <option>Tacos</option>
+                                        </select>
+                                        <div class="col-sm-6 pl0 mt30">
+                                            <h3>Select Type Category</h3>
+                                            <select class="form-control" id="select">
+                                                <option value="">--Select--</option>
+                                                <option value="0">Select One with Optional Price</option>
+                                                <option value="1">Multiple Select</option>
+                                                <option value="2">Multiple Select with Optional Price</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-12 pl0 mt30 first_section">
+                                            <div class="col-sm-8 pl0">
+                                                <h3>Select One</h3>
+                                                <div class="bar_1">
+                                                    <form>
+                                                        <div class="col-sm-4 pl0 pr0">
+                                                            <input class="form-control" type="text" name="" id="single_item" placeholder="Item">
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <input class="form-control" type="text" name="" id="single_cost" placeholder="Cost ($)">
+                                                        </div>
+                                                        <div class="col-sm-3 pl0 pr0">
+                                                            <input type="submit" name="" id="" value="ADD" class="btn btn-default add_single">
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </form>
+                                                </div>
+                                                <div class="mt30">
+                                                    <select class="form-control" id="single_val"></select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 pl0 mt30 second_section">
+                                            <div class="bar_2">
+                                                <form>
+                                                    <div class="col-sm-8 pr0 pl0">
+                                                        <input type="text" name="" class="form-control" id="multi_item" placeholder="Item">
+                                                    </div>
+                                                    <div class="col-sm-4 pr0 pl0">
+                                                        <input type="submit" value="ADD" id="add_multi" class="btn btn-default">
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </form>
+                                            </div>
+                                            <h2>Multiple Choice</h2>
+                                            <div class="second_val">
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="col-sm-12 pl0 third_section mt30">
+                                            <div class="bar_3">
+                                                <form>
+                                                    <div class="col-sm-4 pr0 pl0">
+                                                        <input type="text" name="" class="form-control" id="cost_item" placeholder="Item">
+                                                    </div>
+                                                    <div class="col-sm-4 ">
+                                                        <input type="text" name="" class="form-control" id="cost_val" placeholder="Cost($)">
+                                                    </div>
+                                                    <div class="col-sm-4 pr0 pl0">
+                                                        <input type="submit" value="ADD" id="add_extra" class="btn btn-default">
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </form>
+                                            </div>
+                                            <h3 class="mt30">Extras</h3>
+                                            <div class="multi_choise">
+
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-default text-center">SAVE</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <script src="js/jquery-1.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/jasny-bootstrap.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            $('#select').change(function(){
+                if($(this).val() == "0")
+                {
+                    $('.first_section').slideDown();
+                    $('.second_section').slideUp();
+                    $('.third_section').slideUp();
+                }
+                else if($(this).val() == "1")
+                {
+                    $('.second_section').slideDown();
+                    $('.first_section').slideUp();
+                    $('.third_section').slideUp();
+                }
+                else if($(this).val() == "2")
+                {
+                    $('.third_section').slideDown();
+                    $('.first_section').slideUp();
+                    $('.second_section').slideUp();
+                }
+            });
+            $('.add_single').click(function(e){
+                e.preventDefault();
+                var new_val = $('#single_item').val();
+                var new_cost = $('#single_cost').val();
+                if(new_val == "")
+                {
+                    alert('Enter the value')
+                }
+                else
+                {
+                    $('#single_val').append('<option>'+ new_val +' ($'+new_cost+')'+'</option>')
+                    $('#single_item').val('');
+                }
+            })
+            $('#add_multi').click(function(e){
+                e.preventDefault();
+                var multi_item = $('#multi_item').val();
+                var html = '<div class="col-sm-6 pl0"><div class="checkbox"><input type="checkbox" checked name="'+ multi_item +'" id="'+ multi_item +'"><label for="'+ multi_item +'"><span>'+multi_item +'</span></label></div></div>'
+                $('.second_val').append(html);
+                $('#multi_item').val('');
+            })
+            $('#add_extra').click(function(e){
+                e.preventDefault();
+                var cost_item = $('#cost_item').val();
+                var cost_val = $('#cost_val').val();
+                var html = '<div class="checkbox"><input type="checkbox" name="'+ cost_item +'" id="'+ cost_item + '"><label for="'+ cost_item +'"><span>'+ cost_item +'</span>$'+ cost_val +'</label></div>'
+                $('.multi_choise').append(html);
+                $('#cost_item').val('');
+                $('#cost_val').val('');
+            })
+        </script>
+    </body>
+</html>

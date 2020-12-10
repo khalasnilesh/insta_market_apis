@@ -1,0 +1,9 @@
+DROP DATABASE IF EXISTS sfezdb;
+DROP ROLE IF EXISTS sfez_rw;
+
+CREATE USER sfez_rw WITH PASSWORD 'sfez';
+
+CREATE DATABASE sfezdb WITH OWNER = postgres;
+
+GRANT CONNECT ON DATABASE sfezdb TO sfez_rw;
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Special</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/jasny-bootstrap.css" rel="stylesheet">
+        <link href="css/navmenu-reveal.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/swiper.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    </head>
+    <body>
+        <div class="loading_contener">
+            <div class="loading">
+                <img src="img/paco.png" alt="">
+            </div>
+        </div>
+        <header>
+            <div class="navbar navbar-default">
+                <div class="navbar-header col-sm-12 text-center">
+                    <div class="row">
+                        <img src="img/logo.png" alt="" class="img-responsive">
+                        <h2>Daily Specials</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="sideNav" class="sidenav order_page order_page">
+            <div class="col-xs-12 menudp">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src="img/paco.png" class="img-responsive">
+                    </div>
+                    <div class="col-sm-8">
+                        <h2>Paco’s Tacos</h2>
+                        <h5>Bob D <a href="javascript:void(0)">Sign-Out</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                  <ul class="list-unstyled mainmenu" >
+                      <li><a href="ordermanagement.html"><img src="img/takeout-01.png" alt="">Order Management</a></li>
+                      <li><a href="checkin1.html"><img src="img/checkin-01.png" alt="">Check-In</a></li>
+                      <li><a href="maineditmenu.html"><img src="img/orders.png" alt="">Menu Management</a></li>
+                      <li><a href="menu_availibility.html"><img src="img/menu_avi.png" alt="">Menu Availability</a></li>
+                      <li><a href="special.html"><img src="img/specials-01.png" alt="">Daily Specials</a></li>
+                      <li><a href="loyalty.html"><img src="img/loyality.png" alt="">Loyalty Rewards</a></li>
+                      <li><a href="reports.html"><img src="img/report-01.png" alt=""> Reports</a></li>
+                      <li><a href="vendorprofile.html"><img src="img/vendor_profile.png"  alt="">Vendor Profile</a></li>
+                      <li><a href="menuorder_1.html"><img src="img/review.png" alt="">Consumer App Preview</a>
+                      <li><a href="customer.html"><img src="img/dancing2-01.png" alt="">Customers</a>
+                      <li><a href="review.html"><img src="img/review_2.png" alt="">Reviews</a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div class="canvas inner_wrapper">
+            <div class="col-sm-12 menu_detail shell bg_1">
+                <div class="col-sm-12 entree">
+                    <div class="col-sm-12 daily_special">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2>Current Special</h2>
+                            </div>
+                            <div class="col-sm-6 dropdown">
+                                <div class="row">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2 Tacos, Chips, Soda   $7.99 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <label class="large">Frequency</label>
+                        <ul>
+                            <li>
+                                <div class="checkbox">
+                                    <input id="test2" type="checkbox">
+                                    <label for="test2">M</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <input id="test3" type="checkbox">
+                                    <label for="test3">Tu</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <input id="test4" type="checkbox">
+                                    <label for="test4">W</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <input id="test5" type="checkbox">
+                                    <label for="test5">Th</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <div class="checkbox">
+                                    <input id="test6" type="checkbox">
+                                    <label for="test6">F</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <input id="test7" type="checkbox">
+                                    <label for="test7">Sa</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <input id="test1" type="checkbox">
+                                    <label for="test1">Su</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="col-sm-12 dishes">
+                        <div class="row">
+                            <div class="col-sm-9 form-group pr0">
+                                <input class="form-control" placeholder="ex. 2 Cheeseburgers, 2 Fries $8" type="text" id="add_special">
+                            </div>
+                            <div class="col-sm-2 text-center add_new">
+                                <div class="row">
+                                    <a href="javascript:void(0)" class="btn btn-default add_specila">Add new</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_special">
+                        <div class="col-md-12 col-sm-12 col-lg-12 dishes special_list">
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <h1>Buy 1 Entrée Get 1 Free</h1>
+                                    <p>M, W, F</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1" checked="">
+                                        <label class="onoffswitch-label" for="myonoffswitch1"></label>
+                                    </div>
+                                    <a href="javascript:void(0)" class="inner_btn">
+                                        edit
+                                        <img src="img/edit_icon_2.png" alt="">
+                                    </a>
+                                    <a href="javascript:void(0)" class="inner_btn">
+                                        Del
+                                        <img src="img/del.png" alt="">
+                                    </a>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12 dishes special_list">
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <h1>1/2 Price Cheeseburgers</h1>
+                                    <p>Su</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2" checked="">
+                                        <label class="onoffswitch-label" for="myonoffswitch2"></label>
+                                    </div>
+                                    <a href="javascript:void(0)" class="inner_btn">
+                                        edit
+                                        <img src="img/edit_icon_2.png" alt="">
+                                    </a>
+                                    <a href="javascript:void(0)" class="inner_btn">
+                                        Del
+                                        <img src="img/del.png" alt="">
+                                    </a>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12 dishes special_list">
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <h1>Free Drink with Sandwich &amp; Side</h1>
+                                    <p>Tu, Th</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch3" checked="">
+                                        <label class="onoffswitch-label" for="myonoffswitch3"></label>
+                                    </div>
+                                    <a href="javascript:void(0)" class="inner_btn">
+                                        edit
+                                        <img src="img/edit_icon_2.png" alt="">
+                                    </a>
+                                    <a href="javascript:void(0)" class="inner_btn">
+                                        Del
+                                        <img src="img/del.png" alt="">
+                                    </a>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12 dishes special_list">
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <h1>Free Side with Sandwich</h1>
+                                    <p>M, F</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch4" checked="">
+                                        <label class="onoffswitch-label" for="myonoffswitch4"></label>
+                                    </div>
+                                    <a href="javascript:void(0)" class="inner_btn">
+                                        edit
+                                        <img src="img/edit_icon_2.png" alt="">
+                                    </a>
+                                    <a href="javascript:void(0)" class="inner_btn">
+                                        Del
+                                        <img src="img/del.png" alt="">
+                                    </a>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <script src="js/jquery-1.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/jasny-bootstrap.js"></script>
+        <script src="js/swiper.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination'
+                , paginationClickable: true
+                , nextButton: '.swiper-button-next'
+                , prevButton: '.swiper-button-prev'
+                , spaceBetween: 30
+            });
+            $('.add_specila').click(function(){
+                var text = "";
+                var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                for( var i=0; i < 5; i++ )
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+                var add_special = $('#add_special').val();
+                var html  = '<div class="col-md-12 col-sm-12 col-lg-12 dishes special_list"><div class="col-sm-6"><div class="row"><h1>'+ add_special +'</h1><p>-</p></div></div><div class="col-sm-6"><div class="row"><div class="onoffswitch"><input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="'+ text +'" checked=""><label class="onoffswitch-label" for="'+ text +'"></label></div><a href="javascript:void(0)" class="inner_btn">edit<img src="img/edit_icon_2.png" alt=""></a><a href="javascript:void(0)" class="inner_btn">Del<img src="img/del.png" alt=""></a><div class="clear"></div></div></div><div class="clear"></div></div>'
+                $('.list_special').prepend(html)
+            })
+        </script>
+    </body>
+</html>

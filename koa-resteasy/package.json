@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "koa-resteasy@^1.0.0-alpha.11",
+        "scope": null,
+        "escapedName": "koa-resteasy",
+        "name": "koa-resteasy",
+        "rawSpec": "^1.0.0-alpha.11",
+        "spec": ">=1.0.0-alpha.11 <2.0.0",
+        "type": "range"
+      },
+      "/Users/michaelpeter/Projects/src/SFEZ_server"
+    ]
+  ],
+  "_from": "koa-resteasy@>=1.0.0-alpha.11 <2.0.0",
+  "_id": "koa-resteasy@1.0.0-alpha.11",
+  "_inCache": true,
+  "_location": "/koa-resteasy",
+  "_nodeVersion": "6.3.1",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/koa-resteasy-1.0.0-alpha.11.tgz_1473196914416_0.4795255814678967"
+  },
+  "_npmUser": {
+    "name": "dstaudigel",
+    "email": "dan@thehumaneffort.com"
+  },
+  "_npmVersion": "3.10.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "koa-resteasy@^1.0.0-alpha.11",
+    "scope": null,
+    "escapedName": "koa-resteasy",
+    "name": "koa-resteasy",
+    "rawSpec": "^1.0.0-alpha.11",
+    "spec": ">=1.0.0-alpha.11 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/koa-resteasy/-/koa-resteasy-1.0.0-alpha.11.tgz",
+  "_shasum": "5d8f93c24ac06146b0d1d5b3f2cc492280405309",
+  "_shrinkwrap": null,
+  "_spec": "koa-resteasy@^1.0.0-alpha.11",
+  "_where": "/Users/michaelpeter/Projects/src/SFEZ_server",
+  "author": {
+    "name": "Daniel Staudigel"
+  },
+  "bugs": {
+    "url": "https://github.com/TheHumanEffort/koa-resteasy/issues"
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "lodash": "^4.15.0"
+  },
+  "description": "REST endpoint middleware for Koa & Knex, currently only supports Koa 1 and Postgres.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "5d8f93c24ac06146b0d1d5b3f2cc492280405309",
+    "tarball": "https://registry.npmjs.org/koa-resteasy/-/koa-resteasy-1.0.0-alpha.11.tgz"
+  },
+  "gitHead": "9ecb844efad7453c985b55d5473adf9e77eed5d8",
+  "homepage": "https://github.com/TheHumanEffort/koa-resteasy#readme",
+  "keywords": [
+    "Koa",
+    "REST",
+    "Postgres"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "dstaudigel",
+      "email": "dan@thehumaneffort.com"
+    }
+  ],
+  "name": "koa-resteasy",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TheHumanEffort/koa-resteasy.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0-alpha.11"
+}
